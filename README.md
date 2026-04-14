@@ -14,8 +14,6 @@ Tout est réuni pour transformer ComfyUI en véritable environnement programmabl
 
 ## 🚧 Status
 
-Ce projet est l'boutissement . De nouveaux nœuds, des améliorations et des exemples seront ajoutés régulièrement.\
-\
 **Version : 1** (14/04/2026)
 
 ---
