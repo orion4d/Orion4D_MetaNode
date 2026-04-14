@@ -151,6 +151,7 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 📋 List Selector Max
 > Un "must have" pour la génération de prompts : Sélecteur de lignes multi-groupes depuis des fichiers `.txt` / `.csv`, avec seed indépendant par groupe.
+> Astuce : le résultat peut être enrichi via PycodeMax avec un modèle LLM, le tout en automatique !
 > 
 <img width="683" height="1163" alt="image" src="https://github.com/user-attachments/assets/892fa828-94b7-43cf-9c90-dc6c039518bb" />
 <img width="1224" height="979" alt="image" src="https://github.com/user-attachments/assets/f98734cf-22ec-46de-94eb-0924a0735df8" />
