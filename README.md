@@ -24,6 +24,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### ⚙️ PyCode Max
 > Véritable "cerveau" de cette suite, exécutez du code Python directement dans votre workflow ComfyUI.
+> 
+<img width="606" height="1110" alt="image" src="https://github.com/user-attachments/assets/702f3a5a-34e5-43b8-8993-c2e97a51f9af" />
 
 - **Deux modes** : saisie directe (`text_input`) ou fichier externe (`file`)
 - **Entrées universelles** : texte, entiers, floats, images, masks, latents, conditioning, model, clip, vae, audio, vidéo, et types personnalisés
@@ -37,6 +39,9 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 📂 Folder File Max
 > Un explorateur de fichiers visuel complet, directement dans un nœud ComfyUI.
+> 
+<img width="1048" height="1089" alt="image" src="https://github.com/user-attachments/assets/d7393eef-8508-40c7-af11-7bfac40e924a" />
+<img width="1068" height="1124" alt="image" src="https://github.com/user-attachments/assets/12f7457f-fde7-449a-ab77-d68e4c15fd8f" />
 
 - **Vue grille ou liste** avec miniatures générées à la volée
 - **Filtrage** par extension, regex (include/exclude), tri par nom/date/taille
@@ -50,6 +55,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 📄 Load Text File
 > Charge n'importe quel fichier texte et expose son contenu dans un widget éditable.
+> 
+<img width="949" height="738" alt="image" src="https://github.com/user-attachments/assets/c60e0b47-92ab-4098-9f94-15f382859d25" />
 
 - **Glisser-déposer** ou sélection de fichier depuis l'interface
 - Le contenu apparaît dans un widget `STRING` multiline **directement éditable** dans le nœud
@@ -61,6 +68,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 💾 Super Saver
 > Sauvegarde avancée d'images et de textes avec gestion fine des noms de fichiers et des métadonnées.
+> 
+<img width="875" height="1103" alt="image" src="https://github.com/user-attachments/assets/fcfe12f8-0a63-4cdb-ae92-79e8bd472f60" />
 
 - **Image** : PNG, JPEG, WEBP, TIFF — qualité configurable par format
 - **Alpha dynamique** : ports `alpha_N` supplémentaires pour sauvegarder des calques (géré par le JS)
