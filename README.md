@@ -244,7 +244,8 @@ Tout est réuni pour transformer ComfyUI en véritable environnement programmabl
 <img width="1873" height="1137" alt="image" src="https://github.com/user-attachments/assets/3f179096-d6c1-4697-8b90-abfc93af72c9" />
 <img width="818" height="818" alt="image" src="https://github.com/user-attachments/assets/916de328-0781-44c7-9e41-fbf8cdd8517b" />
 <img width="1742" height="946" alt="image" src="https://github.com/user-attachments/assets/4940b4e0-3db4-4a56-b09d-ca0f5dd9985b" />
-<img width="1718" height="963" alt="image" src="https://github.com/user-attachments/assets/9a382cfc-c99b-4cf7-a33f-6be6ac3fc566" />
+<img width="1717" height="943" alt="image" src="https://github.com/user-attachments/assets/87a985c1-7ed0-4894-beca-766ee5066f28" />
+
 
 **LUT Generator :**
 - Génère une LUT 3D à partir de deux images (avant/après) — idéal pour **capturer le look d'un grading** existant
@@ -264,6 +265,9 @@ Tout est réuni pour transformer ComfyUI en véritable environnement programmabl
 ---
 
 ### 🔍 Image Comparer  *(Legacy)*
+
+<img width="1001" height="1015" alt="image" src="https://github.com/user-attachments/assets/10cea0dc-f84a-4019-b78a-1decc7267841" />
+
 > Comparateur d'images interactif, optimisé pour l'interface ComfyUI classique (LiteGraph).
 - **Interaction directe** : bascule entre A et B au clic sur l'image, ou via les deux ronds indicateurs sous l'image
 - **Rendu HD** : dessin natif sur le canvas LiteGraph, reste net à tous les niveaux de zoom
@@ -272,6 +276,9 @@ Tout est réuni pour transformer ComfyUI en véritable environnement programmabl
 - **Usage idéal** : utilisateurs de l'interface ComfyUI classique (LiteGraph)
 
 ### 🔍 Image Comparer V2  *(beta, optimisé Nodes 2.0)*
+
+<img width="846" height="991" alt="image" src="https://github.com/user-attachments/assets/c18d7d52-8a1a-42db-8261-b74ca09f2f64" />
+
 > Comparateur d'images interactif, conçu pour la nouvelle interface Nodes 2.0 de ComfyUI.
 - **Deux modes** : `slide` (curseur vertical révèle B sur A) et `click` (toggle entre A et B au clic)
 - **Bouton Swap A/B** : inverse les deux images sans rebrancher les connexions (mode slide uniquement)
