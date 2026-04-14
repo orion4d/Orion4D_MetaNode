@@ -168,7 +168,6 @@ Tout est réuni pour transformer ComfyUI en véritable environnement programmabl
 
 > Slider configurable dynamiquement depuis des fichiers JSON.
 > <img width="849" height="554" alt="image" src="https://github.com/user-attachments/assets/0d187e92-aec2-4087-962d-1e34da1a1658" />
-
 <img width="925" height="779" alt="image" src="https://github.com/user-attachments/assets/a788dfe6-e709-41ab-b5fa-5f4d29a5601b" />
 
 - Chargez vos **presets de plage** depuis le dossier `json_slider/`
@@ -197,6 +196,8 @@ Tout est réuni pour transformer ComfyUI en véritable environnement programmabl
 
 ### 📂 Model Selector
 > Naviguez dans les sous-dossiers de `models/` avec un sélecteur à deux niveaux.
+> 
+<img width="568" height="689" alt="image" src="https://github.com/user-attachments/assets/e110e697-61ef-4e63-a238-8503b7d368b1" />
 
 - **Menu 1** : catégorie (`checkpoints`, `loras`, `upscale_models`…)
 - **Menu 2** : fichier dans cette catégorie
