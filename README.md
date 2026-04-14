@@ -106,7 +106,7 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 ### 🔀 Dynamic Splitter
 > Diffuse une entrée unique vers N sorties dynamiques, avec activation sélective par sortie.
 > 
-<img width="1571" height="782" alt="image" src="https://github.com/user-attachments/assets/a332428e-5783-48db-8c69-91967aab722a" />
+<img width="1348" height="1016" alt="image" src="https://github.com/user-attachments/assets/bec16c4c-688c-43cc-99da-87241e7df216" />
 
 - **1 entrée → N sorties** : la même donnée est broadcastée sur toutes les sorties actives
 - Les sorties apparaissent dynamiquement (gérées par le JS)
@@ -151,6 +151,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 📋 List Selector Max
 > Sélecteur de lignes multi-groupes depuis des fichiers `.txt` / `.csv`, avec seed indépendant par groupe.
+> 
+<img width="683" height="1163" alt="image" src="https://github.com/user-attachments/assets/892fa828-94b7-43cf-9c90-dc6c039518bb" />
 
 - **Multi-groupes** : chaque groupe pointe vers un fichier différent, avec son propre seed et séparateur
 - **Modes de sélection par groupe** : `select` (index manuel), `randomize`, `increment`, `decrement`
