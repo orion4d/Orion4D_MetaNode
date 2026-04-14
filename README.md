@@ -283,7 +283,7 @@ Tout est réuni pour transformer ComfyUI en véritable environnement programmabl
 - **Deux modes** : `slide` (curseur vertical révèle B sur A) et `click` (toggle entre A et B au clic)
 - **Bouton Swap A/B** : inverse les deux images sans rebrancher les connexions (mode slide uniquement)
 - **Tailles différentes** : alignement automatique sur la plus grande dimension, letterbox sur fond noir — idéal pour comparer un original et son upscale
-- **Limitation** : en dézoom extrême du canvas ComfyUI (en dessous d'environ 17%), un léger flou peut apparaître sur l'image
+- **Limitation** : en zoom du canvas ComfyUI (valeurs supérieures à 100%), pixelisation progressive d'affichage d'image
 - **Usage idéal** : utilisateurs de la nouvelle interface Nodes 2.0
 
 ---
