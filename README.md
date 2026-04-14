@@ -7,15 +7,13 @@
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Nodes](https://img.shields.io/badge/Nodes-29+-orange?style=for-the-badge)
 
-**Prenez le contrôle total de ComfyUI grâce à une suite de nœuds avancés, articulée autour du moteur "PyCode Max", qui permet d'exécuter du Python directement dans vos workflows. Routing dynamique, bus de variables, UI enrichie, gestion de fichiers, traitement d'image…\
+**Ce projet est l'aboutissement de mes contributions custom nodes pour ComfyUI, reprenez le contrôle total de l'interface avec ma suite de nœuds avancés, articulée autour du moteur "PyCode Max" qui permet d'exécuter du Python directement dans les workflows. Routing dynamique, bus de variables, UI enrichie, gestion de fichiers, traitement d'image…\
 Tout est réuni pour transformer ComfyUI en véritable environnement programmable. A noter, pratiquement tous les nodes sont compatibles Nodes V2**
 
 </div>
 
 ## 🚧 Status
 
-Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et des exemples seront ajoutés régulièrement.\
-\
 **Version : 1** (14/04/2026)
 
 ---
@@ -24,6 +22,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### ⚙️ PyCode Max
 > Véritable "cerveau" de cette suite, exécutez du code Python directement dans votre workflow ComfyUI.
+> 
+<img width="606" height="1110" alt="image" src="https://github.com/user-attachments/assets/702f3a5a-34e5-43b8-8993-c2e97a51f9af" />
 
 - **Deux modes** : saisie directe (`text_input`) ou fichier externe (`file`)
 - **Entrées universelles** : texte, entiers, floats, images, masks, latents, conditioning, model, clip, vae, audio, vidéo, et types personnalisés
@@ -37,6 +37,9 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 📂 Folder File Max
 > Un explorateur de fichiers visuel complet, directement dans un nœud ComfyUI.
+> 
+<img width="1048" height="1089" alt="image" src="https://github.com/user-attachments/assets/d7393eef-8508-40c7-af11-7bfac40e924a" />
+<img width="1068" height="1124" alt="image" src="https://github.com/user-attachments/assets/12f7457f-fde7-449a-ab77-d68e4c15fd8f" />
 
 - **Vue grille ou liste** avec miniatures générées à la volée
 - **Filtrage** par extension, regex (include/exclude), tri par nom/date/taille
@@ -50,6 +53,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 📄 Load Text File
 > Charge n'importe quel fichier texte et expose son contenu dans un widget éditable.
+> 
+<img width="949" height="738" alt="image" src="https://github.com/user-attachments/assets/c60e0b47-92ab-4098-9f94-15f382859d25" />
 
 - **Glisser-déposer** ou sélection de fichier depuis l'interface
 - Le contenu apparaît dans un widget `STRING` multiline **directement éditable** dans le nœud
@@ -61,6 +66,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 💾 Super Saver
 > Sauvegarde avancée d'images et de textes avec gestion fine des noms de fichiers et des métadonnées.
+> 
+<img width="875" height="1103" alt="image" src="https://github.com/user-attachments/assets/fcfe12f8-0a63-4cdb-ae92-79e8bd472f60" />
 
 - **Image** : PNG, JPEG, WEBP, TIFF — qualité configurable par format
 - **Alpha dynamique** : ports `alpha_N` supplémentaires pour sauvegarder des calques (géré par le JS)
@@ -74,6 +81,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 🔀 Dynamic Road
 > Routeur d'entrées dynamique — connectez N entrées universelles et choisissez laquelle transmettre.
+> 
+<img width="1531" height="992" alt="image" src="https://github.com/user-attachments/assets/9e7731d0-4256-48e4-beb5-256a68988a89" />
 
 - Les ports d'entrée `*` apparaissent automatiquement à la connexion
 - Chaque entrée dispose d'un **champ mémo** (label personnalisable) et d'un **toggle radio**
@@ -94,6 +103,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 🔀 Dynamic Splitter
 > Diffuse une entrée unique vers N sorties dynamiques, avec activation sélective par sortie.
+> 
+<img width="1348" height="1016" alt="image" src="https://github.com/user-attachments/assets/bec16c4c-688c-43cc-99da-87241e7df216" />
 
 - **1 entrée → N sorties** : la même donnée est broadcastée sur toutes les sorties actives
 - Les sorties apparaissent dynamiquement (gérées par le JS)
@@ -105,6 +116,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 🚦 Execution Gate
 > Laisse passer ou bloque proprement un flux selon un booléen.
+> 
+<img width="469" height="284" alt="image" src="https://github.com/user-attachments/assets/907f1395-8fee-4318-af3c-8a172823bbae" />
 
 - **Open ✅** → la donnée passe telle quelle
 - **Blocked 🚫** → émet un `ExecutionBlocker` : tout le graphe en aval est stoppé sans erreur
@@ -116,6 +129,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 🚌 Variable Bus (Set) + Variable Bus (Get)
 > Partagez n'importe quelle donnée entre des nœuds distants sans câble direct.
+
+<img width="546" height="565" alt="image" src="https://github.com/user-attachments/assets/22112a4f-283f-434f-9c46-52a01a6330bc" />
 
 **Bus Set :**
 - Stocke la donnée dans un bus global (dictionnaire Python en mémoire) sous un nom de variable
@@ -133,7 +148,11 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 ---
 
 ### 📋 List Selector Max
-> Sélecteur de lignes multi-groupes depuis des fichiers `.txt` / `.csv`, avec seed indépendant par groupe.
+> Un "must have" pour la génération de prompts : Sélecteur de lignes multi-groupes depuis des fichiers `.txt` / `.csv`, avec seed indépendant par groupe.
+> Astuce : le résultat peut être enrichi via PycodeMax avec un modèle LLM, le tout en automatique !
+> 
+<img width="683" height="1163" alt="image" src="https://github.com/user-attachments/assets/892fa828-94b7-43cf-9c90-dc6c039518bb" />
+<img width="1224" height="979" alt="image" src="https://github.com/user-attachments/assets/f98734cf-22ec-46de-94eb-0924a0735df8" />
 
 - **Multi-groupes** : chaque groupe pointe vers un fichier différent, avec son propre seed et séparateur
 - **Modes de sélection par groupe** : `select` (index manuel), `randomize`, `increment`, `decrement`
@@ -146,7 +165,10 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 ---
 
 ### 🎚️ Parametric Slider
+
 > Slider configurable dynamiquement depuis des fichiers JSON.
+> <img width="849" height="554" alt="image" src="https://github.com/user-attachments/assets/0d187e92-aec2-4087-962d-1e34da1a1658" />
+<img width="925" height="779" alt="image" src="https://github.com/user-attachments/assets/a788dfe6-e709-41ab-b5fa-5f4d29a5601b" />
 
 - Chargez vos **presets de plage** depuis le dossier `json_slider/`
 - Supporte `min`, `max`, `step`, `default`, `label`, `precision`, `unit`
@@ -162,6 +184,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 🔽 Master Combo Box
 > Menu déroulant double lié à des fichiers JSON dans le dossier `dropdowns/`.
+> 
+<img width="1084" height="829" alt="image" src="https://github.com/user-attachments/assets/0cfbc386-411f-47b3-98b2-50b88a36b247" />
 
 - **Menu 1** : choisit le fichier JSON (catégorie)
 - **Menu 2** : affiche le contenu du fichier sélectionné
@@ -172,6 +196,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 📂 Model Selector
 > Naviguez dans les sous-dossiers de `models/` avec un sélecteur à deux niveaux.
+> 
+<img width="568" height="689" alt="image" src="https://github.com/user-attachments/assets/e110e697-61ef-4e63-a238-8503b7d368b1" />
 
 - **Menu 1** : catégorie (`checkpoints`, `loras`, `upscale_models`…)
 - **Menu 2** : fichier dans cette catégorie
@@ -182,6 +208,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 🎨 Color Picker
 > Ouvre la palette de couleur native de l'OS pour sélectionner une couleur.
+> 
+<img width="1123" height="1088" alt="image" src="https://github.com/user-attachments/assets/5d6ca7aa-b86c-4bdf-b6e3-465b9cb1e81c" />
 
 - Aperçu de la couleur dessiné directement sur le nœud
 - Retourne : `hex_value` (ex: `#F54927`), `rgb_string` (ex: `245, 73, 39`), canaux `R`, `G`, `B`
@@ -190,6 +218,10 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 📈 Curves Pro + 🖼️ Curves Pro Image
 > Éditeur de courbes RVB style Photoshop, avec aperçu live.
+> 
+<img width="1847" height="943" alt="image" src="https://github.com/user-attachments/assets/3a5fe5a9-a6ea-412c-9d45-2f0f70936f63" />
+<img width="1230" height="1109" alt="image" src="https://github.com/user-attachments/assets/de0a5aa9-c390-42f9-abf4-479f379ab375" />
+<img width="1694" height="1032" alt="image" src="https://github.com/user-attachments/assets/e420a817-bf39-4763-a740-5dd17f9329f4" />
 
 **Curves Pro (éditeur) :**
 - Canvas interactif pour les canaux **RGB**, **R**, **G**, **B**
@@ -208,6 +240,12 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 🎨 LUT Generator + 🎬 LUT Manager
 > Création et application de LUTs 3D `.cube` directement dans ComfyUI.
+> 
+<img width="1873" height="1137" alt="image" src="https://github.com/user-attachments/assets/3f179096-d6c1-4697-8b90-abfc93af72c9" />
+<img width="818" height="818" alt="image" src="https://github.com/user-attachments/assets/916de328-0781-44c7-9e41-fbf8cdd8517b" />
+<img width="1742" height="946" alt="image" src="https://github.com/user-attachments/assets/4940b4e0-3db4-4a56-b09d-ca0f5dd9985b" />
+<img width="1717" height="943" alt="image" src="https://github.com/user-attachments/assets/87a985c1-7ed0-4894-beca-766ee5066f28" />
+
 
 **LUT Generator :**
 - Génère une LUT 3D à partir de deux images (avant/après) — idéal pour **capturer le look d'un grading** existant
@@ -227,6 +265,9 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 ---
 
 ### 🔍 Image Comparer  *(Legacy)*
+
+<img width="1001" height="1015" alt="image" src="https://github.com/user-attachments/assets/10cea0dc-f84a-4019-b78a-1decc7267841" />
+
 > Comparateur d'images interactif, optimisé pour l'interface ComfyUI classique (LiteGraph).
 - **Interaction directe** : bascule entre A et B au clic sur l'image, ou via les deux ronds indicateurs sous l'image
 - **Rendu HD** : dessin natif sur le canvas LiteGraph, reste net à tous les niveaux de zoom
@@ -235,11 +276,14 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 - **Usage idéal** : utilisateurs de l'interface ComfyUI classique (LiteGraph)
 
 ### 🔍 Image Comparer V2  *(beta, optimisé Nodes 2.0)*
+
+<img width="846" height="991" alt="image" src="https://github.com/user-attachments/assets/c18d7d52-8a1a-42db-8261-b74ca09f2f64" />
+
 > Comparateur d'images interactif, conçu pour la nouvelle interface Nodes 2.0 de ComfyUI.
 - **Deux modes** : `slide` (curseur vertical révèle B sur A) et `click` (toggle entre A et B au clic)
 - **Bouton Swap A/B** : inverse les deux images sans rebrancher les connexions (mode slide uniquement)
 - **Tailles différentes** : alignement automatique sur la plus grande dimension, letterbox sur fond noir — idéal pour comparer un original et son upscale
-- **Limitation** : en dézoom extrême du canvas ComfyUI (en dessous d'environ 17%), un léger flou peut apparaître sur l'image
+- **Limitation** : en zoom du canvas ComfyUI (valeurs supérieures à 100%), pixelisation progressive d'affichage d'image
 - **Usage idéal** : utilisateurs de la nouvelle interface Nodes 2.0
 
 ---
