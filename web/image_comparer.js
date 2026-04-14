@@ -2,7 +2,7 @@
 //
 // Image Comparer — Orion4D (version Legacy / LiteGraph)
 //
-// Approche "tout-canvas" façon Pixaroma Compare :
+// Approche "tout-canvas" :
 //   - Pas de DOM widget. Tout le rendu se fait via onDrawForeground,
 //     directement sur le canvas LiteGraph.
 //   - Rendu toujours net à tout zoom, toujours visible en dézoom extrême.
