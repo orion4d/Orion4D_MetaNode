@@ -240,6 +240,11 @@ Tout est réuni pour transformer ComfyUI en véritable environnement programmabl
 
 ### 🎨 LUT Generator + 🎬 LUT Manager
 > Création et application de LUTs 3D `.cube` directement dans ComfyUI.
+> 
+<img width="1873" height="1137" alt="image" src="https://github.com/user-attachments/assets/3f179096-d6c1-4697-8b90-abfc93af72c9" />
+<img width="818" height="818" alt="image" src="https://github.com/user-attachments/assets/916de328-0781-44c7-9e41-fbf8cdd8517b" />
+<img width="1742" height="946" alt="image" src="https://github.com/user-attachments/assets/4940b4e0-3db4-4a56-b09d-ca0f5dd9985b" />
+![Uploading image.png…]()
 
 **LUT Generator :**
 - Génère une LUT 3D à partir de deux images (avant/après) — idéal pour **capturer le look d'un grading** existant
