@@ -150,9 +150,10 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 ---
 
 ### 📋 List Selector Max
-> Sélecteur de lignes multi-groupes depuis des fichiers `.txt` / `.csv`, avec seed indépendant par groupe.
+> Un "must have" pour la génération de prompts : Sélecteur de lignes multi-groupes depuis des fichiers `.txt` / `.csv`, avec seed indépendant par groupe.
 > 
 <img width="683" height="1163" alt="image" src="https://github.com/user-attachments/assets/892fa828-94b7-43cf-9c90-dc6c039518bb" />
+<img width="1224" height="979" alt="image" src="https://github.com/user-attachments/assets/f98734cf-22ec-46de-94eb-0924a0735df8" />
 
 - **Multi-groupes** : chaque groupe pointe vers un fichier différent, avec son propre seed et séparateur
 - **Modes de sélection par groupe** : `select` (index manuel), `randomize`, `increment`, `decrement`
