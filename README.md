@@ -167,7 +167,11 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 ---
 
 ### 🎚️ Parametric Slider
+
 > Slider configurable dynamiquement depuis des fichiers JSON.
+> <img width="849" height="554" alt="image" src="https://github.com/user-attachments/assets/0d187e92-aec2-4087-962d-1e34da1a1658" />
+
+<img width="925" height="779" alt="image" src="https://github.com/user-attachments/assets/a788dfe6-e709-41ab-b5fa-5f4d29a5601b" />
 
 - Chargez vos **presets de plage** depuis le dossier `json_slider/`
 - Supporte `min`, `max`, `step`, `default`, `label`, `precision`, `unit`
