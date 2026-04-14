@@ -208,6 +208,8 @@ Tout est réuni pour transformer ComfyUI en véritable environnement programmabl
 
 ### 🎨 Color Picker
 > Ouvre la palette de couleur native de l'OS pour sélectionner une couleur.
+> 
+<img width="1123" height="1088" alt="image" src="https://github.com/user-attachments/assets/5d6ca7aa-b86c-4bdf-b6e3-465b9cb1e81c" />
 
 - Aperçu de la couleur dessiné directement sur le nœud
 - Retourne : `hex_value` (ex: `#F54927`), `rgb_string` (ex: `245, 73, 39`), canaux `R`, `G`, `B`
@@ -216,6 +218,10 @@ Tout est réuni pour transformer ComfyUI en véritable environnement programmabl
 
 ### 📈 Curves Pro + 🖼️ Curves Pro Image
 > Éditeur de courbes RVB style Photoshop, avec aperçu live.
+> 
+<img width="1847" height="943" alt="image" src="https://github.com/user-attachments/assets/3a5fe5a9-a6ea-412c-9d45-2f0f70936f63" />
+<img width="1230" height="1109" alt="image" src="https://github.com/user-attachments/assets/de0a5aa9-c390-42f9-abf4-479f379ab375" />
+<img width="1694" height="1032" alt="image" src="https://github.com/user-attachments/assets/e420a817-bf39-4763-a740-5dd17f9329f4" />
 
 **Curves Pro (éditeur) :**
 - Canvas interactif pour les canaux **RGB**, **R**, **G**, **B**
