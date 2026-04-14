@@ -187,6 +187,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 🔽 Master Combo Box
 > Menu déroulant double lié à des fichiers JSON dans le dossier `dropdowns/`.
+> 
+<img width="1084" height="829" alt="image" src="https://github.com/user-attachments/assets/0cfbc386-411f-47b3-98b2-50b88a36b247" />
 
 - **Menu 1** : choisit le fichier JSON (catégorie)
 - **Menu 2** : affiche le contenu du fichier sélectionné
