@@ -1,0 +1,9 @@
+{
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "default": 100,
+    "label": "Percent",
+    "precision": 0, 
+    "unit": "%"
+}

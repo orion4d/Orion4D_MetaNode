@@ -1,0 +1,21 @@
+# Orion4D_MetaNode — dépendances Python
+#
+# Dépendances *runtime* (obligatoires) :
+# Toutes sont normalement déjà installées par ComfyUI lui-même,
+# ce fichier sert surtout de documentation et de garde-fou pour
+# les installations manuelles ou les environnements atypiques.
+
+numpy
+Pillow
+torch
+opencv-python
+
+# Dépendances optionnelles (le pack fonctionne sans, avec fallback) :
+#
+# scipy     → interpolation avancée pour LUT Generator (griddata, gaussian_filter)
+#             Sans scipy : fallback cKDTree nearest-neighbor, qualité dégradée.
+# tifffile  → export TIFF multi-canaux (alpha) dans Super Saver
+#             Sans tifffile : fallback PIL (pas d'alpha multi-canal).
+
+scipy
+tifffile

@@ -1,0 +1,638 @@
+{
+  "id": "e4ff414b-daca-407d-a472-3c296ff1e81c",
+  "revision": 0,
+  "last_node_id": 33,
+  "last_link_id": 41,
+  "nodes": [
+    {
+      "id": 20,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        340.5105318725782,
+        600.9476880771693
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            31,
+            34
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Your text here 2"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        341.7105505542188,
+        377.8476716523036
+      ],
+      "size": [
+        406.359375,
+        181.8125
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            33
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Your text here 1"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1259.324770250264,
+        428.7070151892909
+      ],
+      "size": [
+        270.921875,
+        255.96875
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Your text here 1n\n\n\nYour text here 2n\n\n\nYour text here 3n\n\n\n"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "PyCodeMax_TextRoad",
+      "pos": [
+        790.4306422949417,
+        391.4677067530116
+      ],
+      "size": [
+        380,
+        454
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "txt_1",
+          "type": "STRING",
+          "link": 33
+        },
+        {
+          "name": "txt_2",
+          "type": "STRING",
+          "link": 34
+        },
+        {
+          "name": "txt_3",
+          "type": "STRING",
+          "link": 36
+        },
+        {
+          "name": "txt_4",
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_out",
+          "type": "STRING",
+          "links": [
+            35
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextRoad",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "n\\n\\n\\n",
+        "[{\"enabled\":true,\"prefix\":\"\",\"suffix\":\"\"},{\"enabled\":true,\"prefix\":\"\",\"suffix\":\"\"},{\"enabled\":true,\"prefix\":\"\",\"suffix\":\"\"},{\"enabled\":true,\"prefix\":\"\",\"suffix\":\"\"}]",
+        "Mémo 1",
+        true,
+        "",
+        "",
+        "",
+        "Mémo 2",
+        true,
+        "",
+        "",
+        "",
+        "Mémo 3",
+        true,
+        "",
+        "",
+        "",
+        "Mémo 4",
+        true,
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 26,
+      "type": "Note",
+      "pos": [
+        -416.2319828820607,
+        282.1468207267054
+      ],
+      "size": [
+        675.109375,
+        1343.125
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "# ComfyUI Escape Codes - Text Road & Text\n\n## Line Breaks & Spaces\n\n| Code | Result | Usage |\n|------|--------|-------|\n| `\\n` | 1 line break | Move to next line |\n| `\\n\\n` | 2 line breaks | Create paragraph (blank line) |\n| `\\n\\n\\n` | 3 line breaks | Wider spacing |\n| `\\t` | Tab | Indent text |\n| `\\t\\t` | Double tab | Double indentation |\n| ` ` (space) | Single space | Add a space |\n| `  ` (2 spaces) | Double space | Double spacing |\n\n---\n\n## Special Characters & Punctuation\n\n| Code | Result | Usage |\n|------|--------|-------|\n| `\\-` | Hyphen/Dash | List items |\n| `\\*` | Asterisk | Emphasis or bullets |\n| `\\\\` | Backslash | Display a backslash |\n| `\\\"` | Double quotes | Embed quotes |\n| `\\'` | Apostrophe | Embed apostrophe |\n| `\\|` | Pipe/Vertical bar | Separator |\n| `\\#` | Hash/Pound | Avoid markdown interpretation |\n\n---\n\n## Text Formatting (if supported)\n\n| Code | Result | Usage |\n|------|--------|-------|\n| `**text**` | **Bold text** (Markdown) | Strong emphasis |\n| `*text*` | *Italic text* (Markdown) | Light emphasis |\n| `~~text~~` | ~~Strikethrough~~ (Markdown) | Deleted text |\n| `` ` `` | `Inline code` | Code block |\n\n---\n\n## Practical Combinations for Text Road\n\n| Use Case | Code | Example |\n|----------|------|---------|\n| Separate 2 prompts | `\\n\\n` | prompt1\\n\\nprompt2 |\n| Bullet list | `\\n\\-` | item1\\n\\-item2 |\n| Numbered paragraphs | `\\n\\n1. ` | text\\n\\n1. item1\\n\\n2. item2 |\n| Dash enumeration | `\\n\\- ` | text\\n\\- item1\\n\\- item2 |\n| Indented list | `\\t\\- ` | \\t\\- sub-item |\n| Double line spacing | `\\n\\n\\t` | For elegant formatting |\n\n---\n\n## Text Road Configuration Examples\n\n### Example 1: Prompts separated by double break\n```\nSeparator: \\n\\n\n```\n**Result:**\n```\nprompt1\n\nprompt2\n\nprompt3\n```\n\n### Example 2: Bullet list\n```\nPrefix: \\n\\- \nSeparator: \\n\\- \nSuffix: (empty)\n```\n**Result:**\n```\n- item1\n- item2\n- item3\n```\n\n### Example 3: Indented paragraphs\n```\nPrefix: \\n\\t\nSeparator: \\n\\n\n```\n**Result:**\n```\n\ttext1\n\n\ttext2\n```\n\n### Example 4: Numbered format\n```\nPrefix: \\n1. \nSeparator: \\n2. \n(add suffix to close)\n```\n\n---\n\n## Important Notes\n\n⚠️ **Escaping in Python (if using in PyCodeMax):**\n- Pure Python: `\\n` works directly\n- Raw string: `r\"\\n\"` displays literally as `\\n`\n- Double backslash: `\"\\\\n\"` = backslash + n\n\n✅ **ComfyUI Text Road** interprets `\\n` correctly in text fields\n\n📌 **Tip**: Test different combinations by adding a **Show Text** node to visualize the exact result before use"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 27,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        335.5105195642286,
+        886.9476843711146
+      ],
+      "size": [
+        400,
+        140
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            36
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Your text here 3"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        336.1032548730666,
+        1446.8197030942595
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            39
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Your text here 2"
+      ]
+    },
+    {
+      "id": 29,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        337.3030769592481,
+        1223.7197358182584
+      ],
+      "size": [
+        400,
+        140
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            38
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Your text here 1"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1219.7125546240432,
+        1242.6757648667203
+      ],
+      "size": [
+        232.34375,
+        168.84375
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 37
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Your text here 1 \nYour text here 3 \n"
+      ]
+    },
+    {
+      "id": 31,
+      "type": "PyCodeMax_TextRoad",
+      "pos": [
+        786.0227755090527,
+        1237.3395743235076
+      ],
+      "size": [
+        380,
+        594
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "txt_1",
+          "type": "STRING",
+          "link": 38
+        },
+        {
+          "name": "txt_2",
+          "type": "STRING",
+          "link": 39
+        },
+        {
+          "name": "txt_3",
+          "type": "STRING",
+          "link": 40
+        },
+        {
+          "name": "txt_4",
+          "type": "STRING",
+          "link": 41
+        },
+        {
+          "name": "txt_5",
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_out",
+          "type": "STRING",
+          "links": [
+            37
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextRoad",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        " \\n",
+        "[{\"enabled\":true,\"prefix\":\"\",\"suffix\":\"\"},{\"enabled\":false,\"prefix\":\"\",\"suffix\":\"\"},{\"enabled\":true,\"prefix\":\"\",\"suffix\":\"\"},{\"enabled\":false,\"prefix\":\"\",\"suffix\":\"\"},{\"enabled\":true,\"prefix\":\"\",\"suffix\":\"\"}]",
+        "Mémo 1",
+        true,
+        "",
+        "",
+        "",
+        "Mémo 2",
+        false,
+        "",
+        "",
+        "",
+        "Mémo 3",
+        true,
+        "",
+        "",
+        "",
+        "Mémo 4",
+        false,
+        "",
+        "",
+        "",
+        "Mémo 5",
+        true,
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 32,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        331.103242564717,
+        1732.8195027927459
+      ],
+      "size": [
+        400,
+        140
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            40
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Your text here 3"
+      ]
+    },
+    {
+      "id": 33,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        325.10314915651384,
+        1951.2195607285369
+      ],
+      "size": [
+        400,
+        140
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            41
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Your text here 4"
+      ]
+    }
+  ],
+  "links": [
+    [
+      31,
+      20,
+      0,
+      18,
+      0,
+      "STRING"
+    ],
+    [
+      33,
+      21,
+      0,
+      23,
+      0,
+      "STRING"
+    ],
+    [
+      34,
+      20,
+      0,
+      23,
+      1,
+      "STRING"
+    ],
+    [
+      35,
+      23,
+      0,
+      22,
+      0,
+      "STRING"
+    ],
+    [
+      36,
+      27,
+      0,
+      23,
+      2,
+      "STRING"
+    ],
+    [
+      37,
+      31,
+      0,
+      30,
+      0,
+      "STRING"
+    ],
+    [
+      38,
+      29,
+      0,
+      31,
+      0,
+      "STRING"
+    ],
+    [
+      39,
+      28,
+      0,
+      31,
+      1,
+      "STRING"
+    ],
+    [
+      40,
+      32,
+      0,
+      31,
+      2,
+      "STRING"
+    ],
+    [
+      41,
+      33,
+      0,
+      31,
+      3,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "Vue-corrected",
+    "ue_links": [],
+    "ds": {
+      "scale": 0.6209213230591554,
+      "offset": [
+        1237.740462882059,
+        -156.37866072670545
+      ]
+    },
+    "links_added_by_ue": [],
+    "frontendVersion": "1.42.8",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

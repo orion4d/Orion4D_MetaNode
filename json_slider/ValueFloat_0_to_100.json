@@ -1,0 +1,9 @@
+{
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "default": 50,
+    "label": "Value",
+    "precision": 1, 
+    "unit": ""
+}

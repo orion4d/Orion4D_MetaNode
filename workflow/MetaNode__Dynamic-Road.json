@@ -1,0 +1,829 @@
+{
+  "id": "4d1d39e0-ce22-412a-b4e8-c7a18c82c165",
+  "revision": 0,
+  "last_node_id": 77,
+  "last_link_id": 89,
+  "nodes": [
+    {
+      "id": 47,
+      "type": "PyCodeMax_DynamicRoad",
+      "pos": [
+        1092.0915598674799,
+        2113.240888413946
+      ],
+      "size": [
+        257.359375,
+        278
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_1",
+          "type": "*",
+          "link": 60
+        },
+        {
+          "name": "input_2",
+          "type": "*",
+          "link": 77
+        },
+        {
+          "name": "input_3",
+          "type": "*",
+          "link": 78
+        },
+        {
+          "name": "input_4",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "selected_output",
+          "type": "*",
+          "links": []
+        },
+        {
+          "name": "text_out",
+          "type": "STRING",
+          "links": [
+            72
+          ]
+        },
+        {
+          "name": "log_out",
+          "type": "STRING",
+          "links": [
+            69
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_DynamicRoad",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        2,
+        "Style 1",
+        false,
+        "",
+        "Style 2",
+        true,
+        "",
+        "Style 3",
+        false,
+        "",
+        "Mémo 4",
+        false
+      ]
+    },
+    {
+      "id": 48,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        507.1556892372426,
+        2068.6048191365835
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            60
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "16-bit SNES style"
+      ]
+    },
+    {
+      "id": 57,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1438.0259333093097,
+        2382.941935995954
+      ],
+      "size": [
+        557.328125,
+        204.25
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 69
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "=== 🔀 DYNAMIC ROAD LOG ===\n• Route active : input_2\n• Type de donnée : str\n• Ports connectés (3) : input_1, input_2, input_3"
+      ]
+    },
+    {
+      "id": 60,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1456.5627246659155,
+        2057.708750369231
+      ],
+      "size": [
+        302.578125,
+        176.203125
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 72
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Shaft style"
+      ]
+    },
+    {
+      "id": 62,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        507.92352285126276,
+        2324.2328124772434
+      ],
+      "size": [
+        400,
+        140
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            77
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Shaft style"
+      ]
+    },
+    {
+      "id": 63,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        510.6899552896095,
+        2544.8289559320774
+      ],
+      "size": [
+        400,
+        140
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            78
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Anime speed-lines style"
+      ]
+    },
+    {
+      "id": 68,
+      "type": "PyCodeMax_ColorPicker",
+      "pos": [
+        625.562118223581,
+        2967.4268361791133
+      ],
+      "size": [
+        262.4375,
+        480.296875
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "hex_value",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "rgb_string",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "r",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "g",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "b",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            82
+          ]
+        }
+      ],
+      "title": "🎨 Color Picker 2",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "PyCodeMax_ColorPicker"
+      },
+      "widgets_values": [
+        "#F54927",
+        64,
+        64,
+        "color_btn",
+        ""
+      ]
+    },
+    {
+      "id": 69,
+      "type": "PyCodeMax_ColorPicker",
+      "pos": [
+        324.6936395602025,
+        2968.4069424415543
+      ],
+      "size": [
+        270,
+        480.296875
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "hex_value",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "rgb_string",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "r",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "g",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "b",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            83
+          ]
+        }
+      ],
+      "title": "🎨 Color Picker 1",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "PyCodeMax_ColorPicker"
+      },
+      "widgets_values": [
+        "#36F529",
+        64,
+        64,
+        "color_btn",
+        ""
+      ]
+    },
+    {
+      "id": 70,
+      "type": "PyCodeMax_ColorPicker",
+      "pos": [
+        917.498377656674,
+        2973.266583376091
+      ],
+      "size": [
+        270,
+        480.296875
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "hex_value",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "rgb_string",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "r",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "g",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "b",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            84
+          ]
+        }
+      ],
+      "title": "🎨 Color Picker 3",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "PyCodeMax_ColorPicker"
+      },
+      "widgets_values": [
+        "#433ACB",
+        64,
+        64,
+        "color_btn",
+        ""
+      ]
+    },
+    {
+      "id": 71,
+      "type": "PyCodeMax_DynamicRoad",
+      "pos": [
+        1588.4215338485023,
+        2936.8204089917926
+      ],
+      "size": [
+        257.359375,
+        366
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_1",
+          "type": "*",
+          "link": 82
+        },
+        {
+          "name": "input_2",
+          "type": "*",
+          "link": 83
+        },
+        {
+          "name": "input_3",
+          "type": "*",
+          "link": 84
+        },
+        {
+          "name": "input_4",
+          "type": "*",
+          "link": 85
+        },
+        {
+          "name": "input_5",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "selected_output",
+          "type": "*",
+          "links": [
+            87
+          ]
+        },
+        {
+          "name": "text_out",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "log_out",
+          "type": "STRING",
+          "links": [
+            88
+          ]
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        },
+        "Node name for S&R": "PyCodeMax_DynamicRoad"
+      },
+      "widgets_values": [
+        2,
+        "🎨 Color Picker 1",
+        false,
+        "",
+        "🎨 Color Picker 2",
+        true,
+        "",
+        "🎨 Color Picker 3",
+        false,
+        "",
+        "🎨 Color Picker 4",
+        false,
+        "",
+        "Mémo 5",
+        false
+      ]
+    },
+    {
+      "id": 72,
+      "type": "PyCodeMax_ColorPicker",
+      "pos": [
+        1221.9947634180355,
+        2977.4382557244794
+      ],
+      "size": [
+        270,
+        480.296875
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "hex_value",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "rgb_string",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "r",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "g",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "b",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            85
+          ]
+        }
+      ],
+      "title": "🎨 Color Picker 4",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "PyCodeMax_ColorPicker"
+      },
+      "widgets_values": [
+        "#E91CC3",
+        64,
+        64,
+        "color_btn",
+        ""
+      ]
+    },
+    {
+      "id": 74,
+      "type": "PreviewImage",
+      "pos": [
+        1973.8249950244958,
+        3030.2727133526914
+      ],
+      "size": [
+        225,
+        280
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 87
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 75,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1922.4352089313738,
+        3390.912348281291
+      ],
+      "size": [
+        381.34375,
+        250.5
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 88
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "=== 🔀 DYNAMIC ROAD LOG ===\n• Route active : input_2\n• Type de donnée : Tensor\n• Ports connectés (4) : input_1, input_2, input_3, input_4\n• Dimensions (Shape) : torch.Size([1, 64, 64, 3])"
+      ]
+    }
+  ],
+  "links": [
+    [
+      60,
+      48,
+      0,
+      47,
+      0,
+      "STRING"
+    ],
+    [
+      69,
+      47,
+      2,
+      57,
+      0,
+      "STRING"
+    ],
+    [
+      72,
+      47,
+      1,
+      60,
+      0,
+      "STRING"
+    ],
+    [
+      77,
+      62,
+      0,
+      47,
+      1,
+      "STRING"
+    ],
+    [
+      78,
+      63,
+      0,
+      47,
+      2,
+      "STRING"
+    ],
+    [
+      82,
+      68,
+      5,
+      71,
+      0,
+      "IMAGE"
+    ],
+    [
+      83,
+      69,
+      5,
+      71,
+      1,
+      "IMAGE"
+    ],
+    [
+      84,
+      70,
+      5,
+      71,
+      2,
+      "IMAGE"
+    ],
+    [
+      85,
+      72,
+      5,
+      71,
+      3,
+      "IMAGE"
+    ],
+    [
+      87,
+      71,
+      0,
+      74,
+      0,
+      "IMAGE"
+    ],
+    [
+      88,
+      71,
+      2,
+      75,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "linearData": {
+      "inputs": [
+        [
+          9,
+          "desc_1"
+        ],
+        [
+          9,
+          "toggle_1"
+        ],
+        [
+          9,
+          "desc_2"
+        ],
+        [
+          9,
+          "toggle_2"
+        ]
+      ],
+      "outputs": [
+        10
+      ]
+    },
+    "links_added_by_ue": [],
+    "ds": {
+      "scale": 0.7030273577643511,
+      "offset": [
+        265.6394776581057,
+        -1849.75758630942
+      ]
+    },
+    "frontendVersion": "1.42.8",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

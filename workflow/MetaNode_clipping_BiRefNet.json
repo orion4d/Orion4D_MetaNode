@@ -1,0 +1,1365 @@
+{
+  "id": "16448ebf-98aa-42ca-9f8c-31775719740e",
+  "revision": 0,
+  "last_node_id": 82,
+  "last_link_id": 96,
+  "nodes": [
+    {
+      "id": 57,
+      "type": "Note",
+      "pos": [
+        441.52627044797305,
+        2085.9609752995834
+      ],
+      "size": [
+        504.46875,
+        138.296875
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "https://huggingface.co/1038lab/BiRefNet/tree/main\n\nPlace the .safetensors files in a subfolder within comfy\\models"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 80,
+      "type": "Note",
+      "pos": [
+        -640.8609131385924,
+        2025.913257862539
+      ],
+      "size": [
+        998.75,
+        952.921875
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "BIREFNET_TOONOUT\n────────────────────────────────────────────────────────────────────────────\n \nPurpose:\n  Anime, manga, cartoon, and digital art character extraction\n \nTraining Data:\n  - Stylized art datasets (anime, cartoon illustrations)\n  - Digital art character databases\n  - Optimized for non-photorealistic images\n \nUse Cases:\n  ✓ Anime character cutout\n  ✓ Manga panel extraction\n  ✓ Digital illustration separation\n  ✓ Cartoon character masking\n  ✓ Comic book art processing\n  ✓ Styled/filtered images\n \nPerformance Metrics:\n  - Smeasure: High on stylized content\n  - maxFm: Excellent on line art edges\n  - Focus: Sharp edges, bold outlines, solid colors\n \nStrengths:\n  ✓ Crisp edge detection on drawn characters\n  ✓ Handles bold outlines naturally\n  ✓ Works well with solid color backgrounds\n  ✓ Understands stylized proportions\n  ✓ Good on varying art styles/filters\n \nWeaknesses:\n  ✗ May over-sharpen photorealistic images\n  ✗ Less precise on soft hair (vs portrait mode)\n  ✗ Struggles with photorealistic backgrounds\n  ✗ Not ideal for grayscale/colored pencil art\n \nFile Size:\n  885 MB (safetensors)\n \nVRAM:\n  ~3.45 GB (same as General at 1024x1024)\n \nResolution Trained:\n  Standard resolution (training details not specified)\n  Works well: 512-2048px\n \nSpeed (RTX4090):\n  ~17 FPS at 1024x1024\n \nBest For:\n  - Content creators using anime/manga\n  - Game asset extraction\n  - Illustration processing\n  - Comic book digitization\n  - Stylized digital art workflows\n \nWorst Case:\n  - Photorealistic portraits (use Portrait model)\n  - Mixed photo+illustration (use General-Dynamic)\n  - Soft/blended edges (use Matting)\n \n \nBIREFNET-HR-MATTING\n────────────────────────────────────────────────────────────────────────────\n \nPurpose:\n  High-resolution professional image matting (alpha channel extraction)\n \nRelease Date:\n  February 12, 2025 (newest in matting line)\n \nTraining Data:\n  - P3M-10k (professional matting dataset)\n  - TR-humans (training humans set)\n  - AM-2k (additional matting data)\n  - AIM-500 (aesthetic image matting)\n  - Other professional matting datasets\n \nUse Cases:\n  ✓ Professional image compositing\n  ✓ Portrait background removal (professional)\n  ✓ Product photography editing\n  ✓ Complex soft-edge extraction\n  ✓ Hair and fur matting (precise)\n  ✓ Translucent object handling\n  ✓ Professional photo editing workflow\n \nPerformance Metrics (on TE-P3M-500-NP validation):\n  - Smeasure: 0.979 (excellent)\n  - maxFm: 0.996 (near-perfect precision)\n  - meanEm: 0.988 (exceptional accuracy)\n  - MAE: Very low (excellent alpha blending)\n \nStrengths:\n  ✓ Exceptional soft-edge handling\n  ✓ Professional-grade alpha channels\n  ✓ Handles semi-transparent objects (glass, smoke)\n  ✓ Hair matting superior to general models\n  ✓ Optimized for 2K resolution (2048x2048)\n  ✓ Trimap-free (no manual mask needed)\n  ✓ State-of-the-art performance\n  ✓ Perfect for composite work\n \nWeaknesses:\n  ✗ Slower than lightweight models\n  ✗ Higher VRAM requirement\n  ✗ Trained for fixed 2048x2048 (not dynamic)\n  ✗ Not optimized for anime/cartoon\n  ✗ Overkill for simple solid backgrounds\n \nFile Size:\n  ~450-500 MB estimated\n \nVRAM:\n  ~3.45 GB (at 2048x2048 native resolution)\n \nResolution Trained:\n  2048x2048 native (high-resolution specialist)\n \nSpeed (RTX4090):\n  ~17 FPS at native 2048x2048\n  Works at any resolution but optimized for 2K\n \nBest For:\n  - Professional photography editing\n  - Commercial compositing\n  - Precise hair/fur extraction\n  - Glass and translucent objects\n  - Fashion photography\n  - Product photography\n  - High-end post-production\n  - Creating professional overlays\n \nWorst Case:\n  - Simple flat backgrounds (overkill, use General-Lite)\n  - Real-time processing (too heavy)\n  - Anime/cartoon content (use Toonout)\n  - Variable resolution batches (use General-Dynamic)\n \n \nHEAD-TO-HEAD COMPARISON TABLE\n================================================================================\n \nFeature                TOONOUT          HR-MATTING\n────────────────────────────────────────────────────\nBest Content Type      Anime/Cartoon    Photos/Professional\nEdge Type Handling     Sharp/Bold       Soft/Blended\nHair Quality          Good              EXCELLENT\nBackground Removal    Good              Excellent\nAlpha Precision       Good              PROFESSIONAL\nSoft Edges            Poor              EXCELLENT\nTranslucent Objects   Basic             EXPERT\nTraining Data         Art               Professional\nResolution Optimized  Standard          2048x2048\nVRAM Usage            Standard          Standard\nFile Size             885MB             ~450MB\nSpeed                 17 FPS            17 FPS\nMatting Quality       Good              SOTA\nRealistic Photos      Fair              EXCELLENT\nIllustration Quality  EXCELLENT         Fair\nMixed Content         Fair              Good\n \nVerdict:\n────────────────────────────────────────────────────────────────────────────\nChoose TOONOUT if:\n  - Processing anime, manga, cartoons exclusively\n  - Want crisp line-art results\n  - Working with digital illustration\n \nChoose HR-MATTING if:\n  - Need professional-grade output\n  - Working with photographs\n  - Doing professional compositing\n  - Hair/soft-edge precision matters\n  - Using at 2K+ resolution\n  - Need alpha channel quality\n \n \nWORKFLOW INTEGRATION EXAMPLE (COMFYUI)\n================================================================================\n \nANIME WORKFLOW:\n  Input Image → BiRefNet_toonout → Show Text (preview)\n  Output → Super Saver (PNG alpha)\n \nPROFESSIONAL PHOTO WORKFLOW:\n  Input Image → BiRefNet_HR-matting → Crop/Scale (if >2K)\n  Output → Super Saver (PNG alpha + metadata)\n \nHYBRID WORKFLOW:\n  Input → Check Content Type → Route:\n    - Has anime: Use Toonout branch\n    - Photo: Use HR-Matting branch\n    - Output to respective pipelines\n \n \nSTORAGE RECOMMENDATION\n================================================================================\n \nIf VRAM/Disk Limited (pick ONE):\n  → BiRefNet_toonout (885MB) = Anime focus\n \nIf Balanced Setup (pick TWO):\n  → BiRefNet_toonout + BiRefNet-HR-matting\n  → Total disk: ~1.3 GB\n  → Switch between based on content\n \nIf Professional Only:\n  → BiRefNet_HR-matting + General-Dynamic\n  → Better for mixed workflows\n \n \nCOMMON USE CASES\n================================================================================\n \nTOONOUT Examples:\n  ✓ Extract anime character from fanart\n  ✓ Process manga panels for digitization\n  ✓ Remove background from cartoon\n  ✓ Stylized game asset creation\n  ✓ Digital illustration cleanup\n  ✓ Comic book page extraction\n \nHR-MATTING Examples:\n  ✓ Professional portrait background removal\n  ✓ Create product photo cutouts\n  ✓ Extract actor from movie still\n  ✓ Glass/water object matting\n  ✓ Hair-over-shoulder compositing\n  ✓ Fashion photography editing\n  ✓ Stock photo preparation\n \n \nSOURCES\n================================================================================\n \nOfficial GitHub: https://github.com/ZhengPeng7/BiRefNet\nOfficial Paper: Bilateral Reference for High-Resolution Dichotomous Image Segmentation\nPublished: CAAI AIR 2024\n \nComfyUI Integration: https://github.com/lldacing/ComfyUI_BiRefNet_ll\n \nHuggingFace Models: https://huggingface.co/ZhengPeng7/\n \nBiRefNet Toonout: https://huggingface.co/1038lab/BiRefNet\nBiRefNet HR-Matting: https://huggingface.co/ZhengPeng7/BiRefNet_HR-matting\n \nCurrent Version: February 2025 (HR-Matting latest, Toonout community)\n"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 53,
+      "type": "PyCodeMax_ParametricSlider",
+      "pos": [
+        447.64945985909605,
+        2571.7156468956496
+      ],
+      "size": [
+        270.4341766740147,
+        270
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Flou du masque",
+          "name": "value",
+          "type": "FLOAT",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "float_val",
+          "type": "FLOAT",
+          "links": [
+            68
+          ]
+        },
+        {
+          "name": "int_val",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "text_val",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "label",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "min",
+          "type": "FLOAT",
+          "links": []
+        },
+        {
+          "name": "max",
+          "type": "FLOAT",
+          "links": []
+        },
+        {
+          "name": "step",
+          "type": "FLOAT",
+          "links": []
+        },
+        {
+          "name": "log",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_ParametricSlider",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        },
+        "orion_precision": 0,
+        "orion_step": 1,
+        "orion_min": 0,
+        "orion_max": 64,
+        "orion_label": "Percent"
+      },
+      "widgets_values": [
+        "Value_0_to_100-fix0",
+        0,
+        "fixed",
+        null
+      ]
+    },
+    {
+      "id": 50,
+      "type": "PyCodeMax_ModelSelector",
+      "pos": [
+        487.407571331442,
+        2302.5310518688284
+      ],
+      "size": [
+        226.85942716246382,
+        216
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Models",
+          "name": "file_name",
+          "type": "STRING",
+          "widget": {
+            "name": "file_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "absolute_path",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "relative_path",
+          "type": "STRING",
+          "links": [
+            67
+          ]
+        },
+        {
+          "name": "filename_only",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "any_path",
+          "type": "*",
+          "links": []
+        },
+        {
+          "name": "any_filename",
+          "type": "*",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_ModelSelector",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "BiRefNet",
+        "BiRefNet-HR-matting.safetensors",
+        "",
+        null
+      ]
+    },
+    {
+      "id": 52,
+      "type": "PyCodeMax_MasterCombo",
+      "pos": [
+        467.47972564756515,
+        2916.85076620489
+      ],
+      "size": [
+        247.01653980532296,
+        136
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Décalage du masque",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "selected_text",
+          "type": "STRING",
+          "links": [
+            69
+          ]
+        }
+      ],
+      "title": "Mask offset",
+      "properties": {
+        "Node name for S&R": "PyCodeMax_MasterCombo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "number_-40-40",
+        "0",
+        "",
+        null
+      ]
+    },
+    {
+      "id": 54,
+      "type": "PrimitiveBoolean",
+      "pos": [
+        438.11638330981134,
+        3104.5883579706306
+      ],
+      "size": [
+        278.4035394846087,
+        58
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Inverser le masque",
+          "name": "value",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "links": [
+            70
+          ]
+        }
+      ],
+      "title": "Invert the mask",
+      "properties": {
+        "Node name for S&R": "PrimitiveBoolean",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        false
+      ]
+    },
+    {
+      "id": 73,
+      "type": "PyCodeMax_MasterCombo",
+      "pos": [
+        452.8592545308304,
+        3219.800505770911
+      ],
+      "size": [
+        269.792578125,
+        136
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "selected_text",
+          "type": "STRING",
+          "links": [
+            86
+          ]
+        }
+      ],
+      "title": "Transparent (alpha) or solid (color)",
+      "properties": {
+        "Node name for S&R": "PyCodeMax_MasterCombo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Alpha-Color",
+        "Alpha",
+        "",
+        null
+      ]
+    },
+    {
+      "id": 55,
+      "type": "ShowText|pysssss",
+      "pos": [
+        2034.072195888486,
+        3362.1971424981207
+      ],
+      "size": [
+        337.21875,
+        294.84375
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 75
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "[PyCodeMax | 3161.3 ms]\n────────────────────────────────────────\n=== Inputs connectés ===\n  img_in_1: list length=1\n  custom_in_1: list length=6\n\n🧹 STATE réinitialisé (clear_state = True)\n\n🔧 Launch of BiRefNet with the model : BiRefNet-HR-matting\nUsing BiRefNet-HR-matting model with 2048 resolution\n"
+      ]
+    },
+    {
+      "id": 46,
+      "type": "PreviewImage",
+      "pos": [
+        1851.885567983491,
+        2399.740043980806
+      ],
+      "size": [
+        406,
+        351.109375
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 60
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 75,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1813.454060553507,
+        2168.6137530011224
+      ],
+      "size": [
+        476.28125,
+        140
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 88
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Success! Clipping completed with BiRefNet-HR-matting."
+      ]
+    },
+    {
+      "id": 76,
+      "type": "PyCodeMax_SuperSaver",
+      "pos": [
+        2357.0524857610158,
+        2129.6719661184975
+      ],
+      "size": [
+        419.6182988400428,
+        474
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 89
+        },
+        {
+          "name": "caption_image",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "alpha_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "txt",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "add_metadata",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image_path",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "text_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_SuperSaver",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Disabled",
+        false,
+        4,
+        false,
+        true,
+        "clipping_Images",
+        "img",
+        "PNG",
+        95,
+        90,
+        "deflate",
+        false,
+        "Texts",
+        "text",
+        "txt"
+      ]
+    },
+    {
+      "id": 62,
+      "type": "PreviewImage",
+      "pos": [
+        1852.7481131420675,
+        2804.292869841999
+      ],
+      "size": [
+        399.671875,
+        360.703125
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 78
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 61,
+      "type": "PyCodeMax_SuperSaver",
+      "pos": [
+        2366.722284064496,
+        2678.734306785249
+      ],
+      "size": [
+        420.53569536017176,
+        494
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 79
+        },
+        {
+          "name": "caption_image",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "alpha_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 80
+        },
+        {
+          "name": "alpha_2",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "txt",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "add_metadata",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image_path",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "text_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "💾 Super Saver (tiff)",
+      "properties": {
+        "Node name for S&R": "PyCodeMax_SuperSaver",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Disabled",
+        false,
+        4,
+        false,
+        false,
+        "clipping_Images",
+        "img",
+        "TIFF",
+        95,
+        90,
+        "deflate",
+        false,
+        "Texts",
+        "text",
+        "txt"
+      ]
+    },
+    {
+      "id": 65,
+      "type": "PyCodeMax_ColorPicker",
+      "pos": [
+        512.9180214648103,
+        3456.4922850066555
+      ],
+      "size": [
+        210,
+        339.59682757320934
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "hex_value",
+          "type": "STRING",
+          "links": [
+            82
+          ]
+        },
+        {
+          "name": "rgb_string",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "r",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "g",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "b",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "Background color",
+      "properties": {
+        "Node name for S&R": "PyCodeMax_ColorPicker",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "#154BB7",
+        64,
+        64,
+        null,
+        ""
+      ]
+    },
+    {
+      "id": 44,
+      "type": "PyCodeMax",
+      "pos": [
+        1274.6301319070883,
+        2778.753630257107
+      ],
+      "size": [
+        412.26336920021436,
+        604
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "txt_in_1",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "txt_in_2",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "txt_in_3",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "txt_in_4",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "int_in_1",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        },
+        {
+          "name": "int_in_2",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        },
+        {
+          "name": "float_in_1",
+          "shape": 7,
+          "type": "FLOAT",
+          "link": null
+        },
+        {
+          "name": "float_in_2",
+          "shape": 7,
+          "type": "FLOAT",
+          "link": null
+        },
+        {
+          "name": "img_in_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 57
+        },
+        {
+          "name": "img_in_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "mask_in",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "latent_in",
+          "shape": 7,
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "name": "positive",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "negative",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "model",
+          "shape": 7,
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "audio_in",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "video_in",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "custom_in_1",
+          "shape": 7,
+          "type": "*",
+          "link": 73
+        },
+        {
+          "name": "custom_in_2",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "trigger",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "txt_out_1",
+          "type": "STRING",
+          "links": [
+            88
+          ]
+        },
+        {
+          "name": "txt_out_2",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "txt_out_3",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "txt_out_4",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "int_out_1",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "int_out_2",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "float_out_1",
+          "type": "FLOAT",
+          "links": []
+        },
+        {
+          "name": "float_out_2",
+          "type": "FLOAT",
+          "links": []
+        },
+        {
+          "name": "img_out_1",
+          "type": "IMAGE",
+          "links": [
+            60,
+            89,
+            95
+          ]
+        },
+        {
+          "name": "img_out_2",
+          "type": "IMAGE",
+          "links": [
+            78,
+            80
+          ]
+        },
+        {
+          "name": "mask_out",
+          "type": "MASK",
+          "links": []
+        },
+        {
+          "name": "latent_out",
+          "type": "LATENT",
+          "links": []
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": []
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": []
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": []
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "links": []
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "links": []
+        },
+        {
+          "name": "audio_out",
+          "type": "*",
+          "links": []
+        },
+        {
+          "name": "video_out",
+          "type": "*",
+          "links": []
+        },
+        {
+          "name": "custom_out_1",
+          "type": "*",
+          "links": []
+        },
+        {
+          "name": "custom_out_2",
+          "type": "*",
+          "links": []
+        },
+        {
+          "name": "Console",
+          "type": "STRING",
+          "links": [
+            75
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "file",
+        "# Your Python code is here, important: enable developer mode in config.json and set it to \"true\"\n",
+        "clipping_BiRefNet.py",
+        120,
+        true
+      ]
+    },
+    {
+      "id": 48,
+      "type": "PyCodeMax_ListPacker",
+      "pos": [
+        948.4581050540659,
+        3168.1122472184466
+      ],
+      "size": [
+        225,
+        216
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "item_1",
+          "shape": 7,
+          "type": "*",
+          "link": 67
+        },
+        {
+          "name": "item_2",
+          "type": "*",
+          "link": 68
+        },
+        {
+          "name": "item_3",
+          "type": "*",
+          "link": 69
+        },
+        {
+          "name": "item_4",
+          "type": "*",
+          "link": 70
+        },
+        {
+          "name": "item_5",
+          "type": "*",
+          "link": 86
+        },
+        {
+          "name": "item_6",
+          "type": "*",
+          "link": 82
+        },
+        {
+          "name": "item_7",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "list_out",
+          "type": "*",
+          "links": [
+            73
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_ListPacker",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 41,
+      "type": "LoadImage",
+      "pos": [
+        1216.4606463386958,
+        2182.985439304931
+      ],
+      "size": [
+        524.1554876622306,
+        455.64949834329263
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            57,
+            79,
+            96
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "41cea3f52a930ff631149eb9251b6adb.jpg",
+        "image"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 82,
+      "type": "Orion4D_ImageComparer",
+      "pos": [
+        1806.951373436577,
+        3210.734688716472
+      ],
+      "size": [
+        512,
+        600
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 96
+        },
+        {
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 95
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "Orion4D_ImageComparer"
+      }
+    }
+  ],
+  "links": [
+    [
+      57,
+      41,
+      0,
+      44,
+      8,
+      "IMAGE"
+    ],
+    [
+      60,
+      44,
+      8,
+      46,
+      0,
+      "IMAGE"
+    ],
+    [
+      67,
+      50,
+      1,
+      48,
+      0,
+      "STRING"
+    ],
+    [
+      68,
+      53,
+      0,
+      48,
+      1,
+      "FLOAT"
+    ],
+    [
+      69,
+      52,
+      0,
+      48,
+      2,
+      "STRING"
+    ],
+    [
+      70,
+      54,
+      0,
+      48,
+      3,
+      "BOOLEAN"
+    ],
+    [
+      73,
+      48,
+      0,
+      44,
+      19,
+      "*"
+    ],
+    [
+      75,
+      44,
+      21,
+      55,
+      0,
+      "STRING"
+    ],
+    [
+      78,
+      44,
+      9,
+      62,
+      0,
+      "IMAGE"
+    ],
+    [
+      79,
+      41,
+      0,
+      61,
+      0,
+      "IMAGE"
+    ],
+    [
+      80,
+      44,
+      9,
+      61,
+      2,
+      "IMAGE"
+    ],
+    [
+      82,
+      65,
+      0,
+      48,
+      5,
+      "STRING"
+    ],
+    [
+      86,
+      73,
+      0,
+      48,
+      4,
+      "STRING"
+    ],
+    [
+      88,
+      44,
+      0,
+      75,
+      0,
+      "STRING"
+    ],
+    [
+      89,
+      44,
+      8,
+      76,
+      0,
+      "IMAGE"
+    ],
+    [
+      95,
+      44,
+      8,
+      82,
+      1,
+      "IMAGE"
+    ],
+    [
+      96,
+      41,
+      0,
+      82,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Script : clipping_BiRefNet.py",
+      "bounding": [
+        419.99963758339425,
+        1995.8316550273348,
+        2485.8706251810904,
+        1819.6661282617888
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "ds": {
+      "scale": 0.7624214009490223,
+      "offset": [
+        -119.27175317150868,
+        -2167.129094808776
+      ]
+    },
+    "frontendVersion": "1.42.10",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

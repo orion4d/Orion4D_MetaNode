@@ -1,0 +1,1307 @@
+{
+  "id": "4123de8d-0a8c-4e30-9a6b-1885b1a6a348",
+  "revision": 0,
+  "last_node_id": 29,
+  "last_link_id": 37,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "PyCodeMax",
+      "pos": [
+        -163.96345001628015,
+        -400.6690193433841
+      ],
+      "size": [
+        400,
+        784.3125
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "txt_in_1",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "txt_in_2",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "txt_in_3",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "txt_in_4",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "int_in_1",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        },
+        {
+          "name": "int_in_2",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        },
+        {
+          "name": "float_in_1",
+          "shape": 7,
+          "type": "FLOAT",
+          "link": null
+        },
+        {
+          "name": "float_in_2",
+          "shape": 7,
+          "type": "FLOAT",
+          "link": null
+        },
+        {
+          "name": "img_in_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "img_in_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "mask_in",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "latent_in",
+          "shape": 7,
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "name": "positive",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "negative",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "model",
+          "shape": 7,
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "audio_in",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "video_in",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "custom_in_1",
+          "shape": 7,
+          "type": "*",
+          "link": 6
+        },
+        {
+          "name": "custom_in_2",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "trigger",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "txt_out_1",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "txt_out_2",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "txt_out_3",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "txt_out_4",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "int_out_1",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "int_out_2",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "float_out_1",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "float_out_2",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "img_out_1",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "img_out_2",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "mask_out",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "latent_out",
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "links": null
+        },
+        {
+          "name": "audio_out",
+          "type": "*",
+          "links": null
+        },
+        {
+          "name": "video_out",
+          "type": "*",
+          "links": null
+        },
+        {
+          "name": "custom_out_1",
+          "type": "*",
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "custom_out_2",
+          "type": "*",
+          "links": null
+        },
+        {
+          "name": "Console",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "Node name for S&R": "PyCodeMax"
+      },
+      "widgets_values": [
+        "text_input",
+        "# Your Python code is here, important: enable developer mode in config.json and set it to \"true\"\n",
+        "None",
+        120,
+        false
+      ]
+    },
+    {
+      "id": 2,
+      "type": "PyCodeMax_ListPacker",
+      "pos": [
+        -483.3825480642238,
+        59.9338040206535
+      ],
+      "size": [
+        225,
+        120
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "item_1",
+          "shape": 7,
+          "type": "*",
+          "link": 7
+        },
+        {
+          "name": "item_2",
+          "type": "*",
+          "link": 15
+        },
+        {
+          "name": "item_3",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "list_out",
+          "type": "*",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "Node name for S&R": "PyCodeMax_ListPacker"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 4,
+      "type": "PyCodeMax_ListUnpacker",
+      "pos": [
+        325.0514937406931,
+        68.43274556413951
+      ],
+      "size": [
+        226.078125,
+        240
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "list_in",
+          "type": "*",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "item_1",
+          "type": "*",
+          "links": [
+            2
+          ]
+        },
+        {
+          "name": "item_2",
+          "type": "*",
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "item_3",
+          "type": "*",
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "item_4",
+          "type": "*",
+          "links": [
+            5
+          ]
+        },
+        {
+          "name": "item_5",
+          "type": "*",
+          "links": [
+            9,
+            16
+          ]
+        },
+        {
+          "name": "item_6",
+          "type": "*",
+          "links": [
+            17
+          ]
+        },
+        {
+          "name": "item_7",
+          "type": "*",
+          "links": [
+            36
+          ]
+        },
+        {
+          "name": "item_8",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "Node name for S&R": "PyCodeMax_ListUnpacker"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 6,
+      "type": "PreviewAny",
+      "pos": [
+        701.6770182351022,
+        -284.2023786137517
+      ],
+      "size": [
+        225,
+        166
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 2
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        false
+      ]
+    },
+    {
+      "id": 7,
+      "type": "ShowText|pysssss",
+      "pos": [
+        707.1262985839167,
+        -28.66337726577001
+      ],
+      "size": [
+        225,
+        72
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 8,
+      "type": "EmptyLatentImage",
+      "pos": [
+        706.7172342756445,
+        136.01521059146455
+      ],
+      "size": [
+        270,
+        144
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 4
+        },
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "widget": {
+            "name": "batch_size"
+          },
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        1
+      ]
+    },
+    {
+      "id": 9,
+      "type": "LoadImage",
+      "pos": [
+        -872.7564666896204,
+        -82.22019444452764
+      ],
+      "size": [
+        282.796875,
+        340
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            7
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_1775230509_0001.png",
+        "image"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "KSampler",
+      "pos": [
+        710.8992570745746,
+        355.2497706220357
+      ],
+      "size": [
+        270,
+        0
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 9
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 16
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 17
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "randomize",
+        20,
+        8,
+        "euler",
+        "simple",
+        1
+      ]
+    },
+    {
+      "id": 14,
+      "type": "PyCodeMax",
+      "pos": [
+        1967.0115642266496,
+        -418.2984898922598
+      ],
+      "size": [
+        400,
+        784.3125
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "txt_in_1",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "txt_in_2",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "txt_in_3",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "txt_in_4",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "int_in_1",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        },
+        {
+          "name": "int_in_2",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        },
+        {
+          "name": "float_in_1",
+          "shape": 7,
+          "type": "FLOAT",
+          "link": null
+        },
+        {
+          "name": "float_in_2",
+          "shape": 7,
+          "type": "FLOAT",
+          "link": null
+        },
+        {
+          "name": "img_in_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "img_in_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "mask_in",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "latent_in",
+          "shape": 7,
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "name": "positive",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "negative",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "model",
+          "shape": 7,
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "audio_in",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "video_in",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "custom_in_1",
+          "shape": 7,
+          "type": "*",
+          "link": 33
+        },
+        {
+          "name": "custom_in_2",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "trigger",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "txt_out_1",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "txt_out_2",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "txt_out_3",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "txt_out_4",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "int_out_1",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "int_out_2",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "float_out_1",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "float_out_2",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "img_out_1",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "img_out_2",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "mask_out",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "latent_out",
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "links": null
+        },
+        {
+          "name": "audio_out",
+          "type": "*",
+          "links": null
+        },
+        {
+          "name": "video_out",
+          "type": "*",
+          "links": null
+        },
+        {
+          "name": "custom_out_1",
+          "type": "*",
+          "links": []
+        },
+        {
+          "name": "custom_out_2",
+          "type": "*",
+          "links": null
+        },
+        {
+          "name": "Console",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "Node name for S&R": "PyCodeMax"
+      },
+      "widgets_values": [
+        "text_input",
+        "# Your Python code is here, important: enable developer mode in config.json and set it to \"true\"\n",
+        "None",
+        120,
+        false
+      ]
+    },
+    {
+      "id": 20,
+      "type": "LoadImage",
+      "pos": [
+        1230.7577367991855,
+        -249.49456291911793
+      ],
+      "size": [
+        282.796875,
+        340
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            31
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_1775230509_0001.png",
+        "image"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        1161.2943732127294,
+        169.2082108906443
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            34
+          ]
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "PyCodeMax_TextInput"
+      },
+      "widgets_values": [
+        "Your text here..."
+      ]
+    },
+    {
+      "id": 23,
+      "type": "PyCodeMax_NumberInput",
+      "pos": [
+        1269.173801241681,
+        455.2836449617123
+      ],
+      "size": [
+        270,
+        128
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "float_val",
+          "type": "FLOAT",
+          "links": [
+            35
+          ]
+        },
+        {
+          "name": "int_val",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "PyCodeMax_NumberInput"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 26,
+      "type": "PyCodeMax_DictPacker",
+      "pos": [
+        1638.5126901224835,
+        59.93832684381118
+      ],
+      "size": [
+        225,
+        312
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "val_1",
+          "shape": 7,
+          "type": "*",
+          "link": 31
+        },
+        {
+          "name": "val_2",
+          "type": "*",
+          "link": 34
+        },
+        {
+          "name": "val_3",
+          "type": "*",
+          "link": 35
+        },
+        {
+          "name": "val_4",
+          "type": "*",
+          "link": 37
+        },
+        {
+          "name": "val_5",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "dict_out",
+          "type": "*",
+          "links": [
+            33
+          ]
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "PyCodeMax_DictPacker"
+      },
+      "widgets_values": [
+        "image",
+        "Txt",
+        "number_1",
+        "number_2"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "PyCodeMax_NumberInput",
+      "pos": [
+        1274.1738012416808,
+        654.1433785155344
+      ],
+      "size": [
+        270,
+        0
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "float_val",
+          "type": "FLOAT",
+          "links": [
+            37
+          ]
+        },
+        {
+          "name": "int_val",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "PyCodeMax_NumberInput"
+      },
+      "widgets_values": [
+        1
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      19,
+      4,
+      0,
+      "*"
+    ],
+    [
+      2,
+      4,
+      0,
+      6,
+      0,
+      "*"
+    ],
+    [
+      3,
+      4,
+      1,
+      7,
+      0,
+      "STRING"
+    ],
+    [
+      4,
+      4,
+      2,
+      8,
+      0,
+      "INT"
+    ],
+    [
+      5,
+      4,
+      3,
+      8,
+      1,
+      "INT"
+    ],
+    [
+      6,
+      2,
+      0,
+      1,
+      19,
+      "*"
+    ],
+    [
+      7,
+      9,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      9,
+      4,
+      4,
+      11,
+      0,
+      "MODEL"
+    ],
+    [
+      15,
+      9,
+      1,
+      2,
+      1,
+      "MASK"
+    ],
+    [
+      16,
+      4,
+      4,
+      11,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      17,
+      4,
+      5,
+      11,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      31,
+      20,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      33,
+      26,
+      0,
+      14,
+      19,
+      "*"
+    ],
+    [
+      34,
+      22,
+      0,
+      26,
+      1,
+      "STRING"
+    ],
+    [
+      35,
+      23,
+      0,
+      26,
+      2,
+      "FLOAT"
+    ],
+    [
+      36,
+      4,
+      6,
+      11,
+      3,
+      "LATENT"
+    ],
+    [
+      37,
+      28,
+      0,
+      26,
+      3,
+      "FLOAT"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "ds": {
+      "scale": 0.6588450000000011,
+      "offset": [
+        1237.0387748186179,
+        772.4580032549658
+      ]
+    },
+    "frontendVersion": "1.42.8",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

@@ -1,0 +1,9 @@
+{
+    "min": 64,
+    "max": 8192,
+    "step": 64,
+    "default": 1024,
+    "label": "Taille",
+    "precision": 0, 
+    "unit": "px"
+}
