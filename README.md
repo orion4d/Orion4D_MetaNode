@@ -103,6 +103,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 🔀 Dynamic Splitter
 > Diffuse une entrée unique vers N sorties dynamiques, avec activation sélective par sortie.
+> 
+<img width="1571" height="782" alt="image" src="https://github.com/user-attachments/assets/a332428e-5783-48db-8c69-91967aab722a" />
 
 - **1 entrée → N sorties** : la même donnée est broadcastée sur toutes les sorties actives
 - Les sorties apparaissent dynamiquement (gérées par le JS)
@@ -114,6 +116,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 🚦 Execution Gate
 > Laisse passer ou bloque proprement un flux selon un booléen.
+> 
+<img width="469" height="284" alt="image" src="https://github.com/user-attachments/assets/907f1395-8fee-4318-af3c-8a172823bbae" />
 
 - **Open ✅** → la donnée passe telle quelle
 - **Blocked 🚫** → émet un `ExecutionBlocker` : tout le graphe en aval est stoppé sans erreur
@@ -125,6 +129,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 🚌 Variable Bus (Set) + Variable Bus (Get)
 > Partagez n'importe quelle donnée entre des nœuds distants sans câble direct.
+
+<img width="546" height="565" alt="image" src="https://github.com/user-attachments/assets/22112a4f-283f-434f-9c46-52a01a6330bc" />
 
 **Bus Set :**
 - Stocke la donnée dans un bus global (dictionnaire Python en mémoire) sous un nom de variable
