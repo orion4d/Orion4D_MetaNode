@@ -7,14 +7,14 @@
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Nodes](https://img.shields.io/badge/Nodes-29+-orange?style=for-the-badge)
 
-**Prenez le contrôle total de ComfyUI grâce à une suite de nœuds avancés, articulée autour du moteur "PyCode Max", qui permet d'exécuter du Python directement dans vos workflows. Routing dynamique, bus de variables, UI enrichie, gestion de fichiers, traitement d'image…\
+**Ce projet est l'aboutissement de mes contributions custom nodes pour ComfyUI, reprenez le contrôle total de grâce à une suite de nœuds avancés, articulée autour du moteur "PyCode Max", qui permet d'exécuter du Python directement dans vos workflows. Routing dynamique, bus de variables, UI enrichie, gestion de fichiers, traitement d'image…\
 Tout est réuni pour transformer ComfyUI en véritable environnement programmable. A noter, pratiquement tous les nodes sont compatibles Nodes V2**
 
 </div>
 
 ## 🚧 Status
 
-Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et des exemples seront ajoutés régulièrement.\
+Ce projet est l'boutissement . De nouveaux nœuds, des améliorations et des exemples seront ajoutés régulièrement.\
 \
 **Version : 1** (14/04/2026)
 
