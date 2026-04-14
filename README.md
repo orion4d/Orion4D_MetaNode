@@ -83,6 +83,8 @@ Ce projet est en constante évolution. De nouveaux nœuds, des améliorations et
 
 ### 🔀 Dynamic Road
 > Routeur d'entrées dynamique — connectez N entrées universelles et choisissez laquelle transmettre.
+> 
+<img width="1531" height="992" alt="image" src="https://github.com/user-attachments/assets/9e7731d0-4256-48e4-beb5-256a68988a89" />
 
 - Les ports d'entrée `*` apparaissent automatiquement à la connexion
 - Chaque entrée dispose d'un **champ mémo** (label personnalisable) et d'un **toggle radio**
