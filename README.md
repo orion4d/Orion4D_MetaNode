@@ -93,6 +93,8 @@ Tout est réuni pour transformer ComfyUI en véritable environnement programmabl
 
 ### 📝 Text Road
 > Concaténateur de textes multi-entrées avec contrôle fin par entrée.
+> 
+<img width="1250" height="850" alt="image" src="https://github.com/user-attachments/assets/e9185f96-9480-4e56-b6c4-98fa1f2ee3b1" />
 
 - Entrées `STRING` dynamiques (ports apparaissent à la connexion)
 - Chaque entrée dispose d'un **mémo**, d'un **toggle actif/inactif**, d'un **préfixe** et d'un **suffixe**
@@ -342,6 +344,11 @@ Sert principalement à **piloter l'affichage des câbles** du bus dans le graph 
 ---
 
 ### 📦 List Packer / Dict Packer / 📤 List Unpacker / 🖨️ Logger
+
+<img width="1399" height="1037" alt="image" src="https://github.com/user-attachments/assets/479d8312-1b36-4598-b99f-a3e9e74c28c3" />
+<img width="741" height="1066" alt="image" src="https://github.com/user-attachments/assets/f882f421-d939-48cf-8823-12f8ec7d9eff" />
+<img width="756" height="1101" alt="image" src="https://github.com/user-attachments/assets/261803a3-22a0-4aa1-82a8-6d7a038030b7" />
+
 
 | Nœud | Comportement |
 |------|-------------|
