@@ -1,3 +1,6 @@
+🇬🇧 English version (default)  
+🇫🇷 [Lire la version française](README_FR.md)
+
 # 🚀 Orion4D_Metanode — Custom Nodes ComfyUI
 
 <div align="left">
