@@ -127,23 +127,48 @@ Tout est réuni pour transformer ComfyUI en véritable environnement programmabl
 
 ---
 
-### 🚌 Variable Bus (Set) + Variable Bus (Get)
-> Partagez n'importe quelle donnée entre des nœuds distants sans câble direct.
+### 🚌 Variable Bus (Set) + Variable Bus (Get) + Variable Bus (Clear)
+> Partagez n'importe quelle donnée entre des nœuds distants **sans câble visible**, avec auto-connexion intelligente et typage fort.
 
-<img width="546" height="565" alt="image" src="https://github.com/user-attachments/assets/22112a4f-283f-434f-9c46-52a01a6330bc" />
+**Principe**
+Le bus repose sur un triplet d'identification commun aux Set et aux Get :
+- `variable_name` : nom logique de la variable (ex. `my_image`, `prompt_principal`)
+- `data_type` : type fort (`IMAGE`, `LATENT`, `MASK`, `STRING`, `INT`, `FLOAT`, `MODEL`, `CONDITIONING`, `CLIP`, `VAE`, `LIST`, `*`)
+- `execution_phase` : phase d'exécution (1 à 8) pour ordonner plusieurs Set/Get partageant le même nom
 
-**Bus Set :**
-- Stocke la donnée dans un bus global (dictionnaire Python en mémoire) sous un nom de variable
-- Sortie `passthrough` : retourne la donnée originale pour continuer le flux
-- Sortie `sync` (INT=0) : à brancher sur le port `dependency` du BusGet pour garantir l'ordre d'exécution
-- `OUTPUT_NODE = True` : s'exécute même sans consommateur en aval
+Dès qu'un Set et un Get partagent le même triplet, un lien `sync → dependency` est **créé automatiquement** par le JavaScript — l'utilisateur n'a aucun câble à tirer. Ce lien est invisible par défaut (effet "bus sans fil") mais existe réellement dans le graph, ce qui garantit l'ordre d'exécution côté ComfyUI.
 
-**Bus Get :**
-- Récupère la donnée depuis le bus global par son nom
-- Port optionnel `dependency` : branchez-y le `sync` du BusSet correspondant
+**Variable Bus (Set)**
+- Stocke la donnée dans un bus global (`OrderedDict` Python en mémoire) sous le triplet déclaré
+- Sortie `passthrough` : retourne la donnée originale, typée selon `data_type` (couleur de slot correspondante)
+- Sortie `sync` (INT) : tick d'écriture, auto-connecté au `dependency` du Get correspondant
+- `OUTPUT_NODE = True` + `IS_CHANGED = NaN` : s'exécute à chaque run, garantissant que la valeur écrite est toujours fraîche
+- FIFO de 64 variables max avec éviction des plus anciennes et libération VRAM (`torch.cuda.empty_cache()`)
+
+**Variable Bus (Get)**
+
+<img width="1924" height="1099" alt="image" src="https://github.com/user-attachments/assets/180a63e8-9655-46ac-8dfe-29a8d4438c47" />
+
+
+- Récupère la donnée depuis le bus global par son triplet
+- Sortie `output` : typée dynamiquement selon `data_type`
+- Port `dependency` : auto-connecté au `sync` du Set correspondant (rendu invisible)
+- Auto-reconnexion intelligente : si `variable_name`, `data_type` ou `execution_phase` change, le lien se refait vers le bon Set
 - Si la variable est introuvable → `ExecutionBlocker` propre (pas de crash)
 
-> 💡 Idéal pour partager un modèle, une image ou un latent entre branches sans rallonger les câbles.
+**Variable Bus (Clear) — contrôleur central**
+Sert principalement à **piloter l'affichage des câbles** du bus dans le graph :
+- `show_bus_links` (toggle hidden/visible) : bascule en temps réel la visibilité des liens `sync → dependency` de tout le workflow
+- `clear_mode` :
+  - `none` (défaut) : ne touche à rien, le node sert uniquement de contrôleur visuel
+  - `all` : vide entièrement le bus
+  - `single` : supprime uniquement la variable nommée
+  - `all_except` : vide tout sauf la variable nommée
+- Bouton **🧹 Clear now** : exécute le clear immédiatement via une route HTTP, sans avoir à lancer le workflow
+- Bouton **🔄 Refresh bus links** : force un rescan complet des auto-connexions Set/Get (utile après import d'un workflow ou manipulations manuelles)
+- Le premier `Variable Bus (Clear)` trouvé dans le graph fait foi pour le toggle de visibilité ; sans Clear placé, les câbles sont cachés par défaut
+
+> 💡 Idéal pour partager un modèle, une image, un texte ou un latent entre branches éloignées sans rallonger les câbles. L'auto-connexion sur triplet rend l'usage transparent : on déclare, ça se branche tout seul.
 
 ---
 
