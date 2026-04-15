@@ -7,14 +7,14 @@
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Nodes](https://img.shields.io/badge/Nodes-29+-orange?style=for-the-badge)
 
-This project marks the culmination of my contributions to ComfyUI.
+This project brings together all my work on ComfyUI.
 
 **Orion4D_Metanode transforms ComfyUI into a true programmable environment.**
 Thanks to the **PyCode Max** engine, execute Python directly within your workflows and build your own tools, logic, and interfaces.
 Dynamic routing, variable buses, enriched UI, file management, image processing...  
-Everything is designed to push the boundaries of the traditional node-based system.
+Everything is designed to push beyond the limits of traditional node-based systems.
 
-✔ Compatible with the Nodes V2 standard
+✔ Compatible with the Nodes V2
 
 ## ✨ Why Orion4D_Metanode?
 
@@ -34,7 +34,7 @@ Everything is designed to push the boundaries of the traditional node-based syst
 ## 🔧 Nodes
 
 ### ⚙️ PyCode Max
-> The true "brain" of this suite, execute Python code directly in your ComfyUI workflow.
+> The true "brain" of this suite, run Python code directly inside your workflows.
 > 
 <img width="606" height="1110" alt="image" src="https://github.com/user-attachments/assets/702f3a5a-34e5-43b8-8993-c2e97a51f9af" />
 
@@ -42,9 +42,9 @@ Everything is designed to push the boundaries of the traditional node-based syst
 - **Universal inputs**: text, integers, floats, images, masks, latents, conditioning, model, clip, vae, audio, video, and custom types
 - **Persistent STATE** per node between executions (resettable)
 - **Configurable timeout** (5–600 sec) against infinite loops
-- **Secure mode**: text mode execution is locked by default (requires `"developer_mode": true` in `config.json`)
+- **Security mode**: text mode execution is locked by default (requires `"developer_mode": true` in `config.json`)
 - **Automatic documentation**: comments at the top of a `.py` script are displayed in the console
-- **Console** integrated with execution time and structured logs
+- **Built-in console** with execution time and structured logging
 
 ---
 
