@@ -1,14 +1,27 @@
 # 🚀 Orion4D_Metanode — Custom Nodes ComfyUI
 
-<div align="center">
+<div align="left">
 
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom_Nodes-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Nodes](https://img.shields.io/badge/Nodes-29+-orange?style=for-the-badge)
 
-**Ce projet est l'aboutissement de mes contributions pour ComfyUI, reprenez le contrôle total de l'interface avec ma suite de nœuds avancés, articulée autour du moteur "PyCode Max" qui permet d'exécuter du Python directement dans les workflows. Routing dynamique, bus de variables, UI enrichie, gestion de fichiers, traitement d'image…\
-Tout est réuni pour transformer ComfyUI en véritable environnement programmable. A noter, pratiquement tous les nodes sont compatibles Nodes V2**
+Ce projet marque l’aboutissement de mes contributions à ComfyUI.
+
+**Orion4D_Metanode transforme ComfyUI en un véritable environnement programmable.**
+Grâce au moteur **PyCode Max**, exécutez du Python directement dans vos workflows et construisez vos propres outils, logiques et interfaces.
+Routing dynamique, bus de variables, UI enrichie, gestion de fichiers, traitement d’image…  
+Tout est pensé pour repousser les limites du système nodal classique.
+
+✔ Compatible avec le standard Nodes V2
+
+## ✨ Pourquoi Orion4D_Metanode ?
+
+- Créer des workflows dynamiques et évolutifs
+- Éliminer les câbles complexes avec un système de bus intelligent
+- Développer ses propres outils directement dans ComfyUI
+- Transformer un workflow en véritable pipeline programmable
 
 </div>
 
