@@ -147,7 +147,8 @@ Dès qu'un Set et un Get partagent le même triplet, un lien `sync → dependenc
 
 **Variable Bus (Get)**
 
-<img width="1885" height="1131" alt="image" src="https://github.com/user-attachments/assets/7808417c-8124-4239-82c4-a7da6ab78846" />
+<img width="1924" height="1099" alt="image" src="https://github.com/user-attachments/assets/180a63e8-9655-46ac-8dfe-29a8d4438c47" />
+
 
 - Récupère la donnée depuis le bus global par son triplet
 - Sortie `output` : typée dynamiquement selon `data_type`
