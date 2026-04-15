@@ -348,7 +348,7 @@ Sert principalement à **piloter l'affichage des câbles** du bus dans le graph 
 <img width="1399" height="1037" alt="image" src="https://github.com/user-attachments/assets/479d8312-1b36-4598-b99f-a3e9e74c28c3" />
 <img width="741" height="1066" alt="image" src="https://github.com/user-attachments/assets/f882f421-d939-48cf-8823-12f8ec7d9eff" />
 <img width="756" height="1101" alt="image" src="https://github.com/user-attachments/assets/261803a3-22a0-4aa1-82a8-6d7a038030b7" />
-
+<img width="524" height="375" alt="image" src="https://github.com/user-attachments/assets/f091ac92-dbb0-4265-abd6-29e5d0ec633e" />
 
 | Nœud | Comportement |
 |------|-------------|
