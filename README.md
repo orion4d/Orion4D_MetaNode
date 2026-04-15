@@ -335,7 +335,7 @@ Sert principalement à **piloter l'affichage des câbles** du bus dans le graph 
 | **🎨 Hue/Sat/Light FX** | Ajustement TSL global ou ciblé par famille de teintes (Reds, Yellows, Greens, Cyans, Blues, Magentas) avec transition douce gaussienne. Mode Colorize inclus. |
 | **🎨 Photo Filter FX** | Filtre de réchauffement/refroidissement couleur avec opacité et mode préservation luminosité, inspiré du filtre Photo de Photoshop. |
 | **🎨 Vibrance FX** | Ajustement de Vibrance (protection des tons chair) et Saturation globale, indépendamment contrôlables. |
-| **🎨 Curve Pro** | Compatibilité avec l'outil |
+| **🎨 Curves Pro** | Compatibilité avec l'outil |
 
 > 💡 Les émetteurs peuvent être utilisés en **mode chaîne** (sortie `fx` → slot `fx_N` du Receiver) ou en **mode standalone** (image directe en entrée/sortie), ou les deux simultanément.
 
