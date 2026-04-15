@@ -7,14 +7,14 @@
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Nodes](https://img.shields.io/badge/Nodes-29+-orange?style=for-the-badge)
 
-**Ce projet est l'aboutissement de mes contributions custom nodes pour ComfyUI, reprenez le contrôle total de l'interface avec ma suite de nœuds avancés, articulée autour du moteur "PyCode Max" qui permet d'exécuter du Python directement dans les workflows. Routing dynamique, bus de variables, UI enrichie, gestion de fichiers, traitement d'image…\
+**Ce projet est l'aboutissement de mes contributions pour ComfyUI, reprenez le contrôle total de l'interface avec ma suite de nœuds avancés, articulée autour du moteur "PyCode Max" qui permet d'exécuter du Python directement dans les workflows. Routing dynamique, bus de variables, UI enrichie, gestion de fichiers, traitement d'image…\
 Tout est réuni pour transformer ComfyUI en véritable environnement programmable. A noter, pratiquement tous les nodes sont compatibles Nodes V2**
 
 </div>
 
 ## 🚧 Status
 
-**Version : 1** (14/04/2026)
+**Version : 1** (15/04/2026)
 
 ---
 
@@ -174,6 +174,7 @@ Sert principalement à **piloter l'affichage des câbles** du bus dans le graph 
 
 ### 📋 List Selector Max
 > Un "must have" pour la génération de prompts : Sélecteur de lignes multi-groupes depuis des fichiers `.txt` / `.csv`, avec seed indépendant par groupe.
+> - En Bonus : **lists_starter_pack** comprenant 82 fichiers
 > Astuce : le résultat peut être enrichi via PycodeMax avec un modèle LLM, le tout en automatique !
 > 
 <img width="683" height="1163" alt="image" src="https://github.com/user-attachments/assets/892fa828-94b7-43cf-9c90-dc6c039518bb" />
@@ -186,7 +187,6 @@ Sert principalement à **piloter l'affichage des câbles** du bus dans le graph 
 - **Tokens de chemin** : `{COMFY}` et `{CUSTOM}` pour des chemins portables entre machines
 - **Sécurité** : l'accès est restreint à la racine ComfyUI et au dossier personnalisé défini
 - Retourne : `concatenated` (STRING), `lines_json` (STRING), `total_count` (INT)
-
 ---
 
 ### 🎚️ Parametric Slider
