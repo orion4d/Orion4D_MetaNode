@@ -1,8 +1,8 @@
 {
   "id": "d8a09f2b-4587-4f1e-a7d8-c57f626e1ae7",
   "revision": 0,
-  "last_node_id": 196,
-  "last_link_id": 286,
+  "last_node_id": 197,
+  "last_link_id": 299,
   "nodes": [
     {
       "id": 85,
@@ -58,7 +58,7 @@
         348
       ],
       "flags": {},
-      "order": 33,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -118,7 +118,7 @@
         390
       ],
       "flags": {},
-      "order": 31,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -170,47 +170,6 @@
       ]
     },
     {
-      "id": 87,
-      "type": "Reroute",
-      "pos": [
-        3660.622587740602,
-        -1230.2044821283448
-      ],
-      "size": [
-        75,
-        26
-      ],
-      "flags": {},
-      "order": 25,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 162
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": [
-            150,
-            151
-          ]
-        }
-      ],
-      "properties": {
-        "showOutputText": true,
-        "horizontal": false,
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.8",
-          "input_ue_unconnectable": {}
-        }
-      }
-    },
-    {
       "id": 26,
       "type": "PyCodeMax_VibranceFX",
       "pos": [
@@ -222,7 +181,7 @@
         334.77962631177
       ],
       "flags": {},
-      "order": 34,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -282,7 +241,7 @@
         390
       ],
       "flags": {},
-      "order": 32,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -345,7 +304,7 @@
         26
       ],
       "flags": {},
-      "order": 23,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -386,7 +345,7 @@
         26
       ],
       "flags": {},
-      "order": 24,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -427,7 +386,7 @@
         26
       ],
       "flags": {},
-      "order": 26,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -468,7 +427,7 @@
         26
       ],
       "flags": {},
-      "order": 22,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -582,98 +541,6 @@
       ]
     },
     {
-      "id": 96,
-      "type": "PyCodeMax_BusSet",
-      "pos": [
-        2897.0527377451276,
-        -1605.1460579786144
-      ],
-      "size": [
-        270,
-        78
-      ],
-      "flags": {},
-      "order": 19,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "input",
-          "type": "*",
-          "link": 161
-        }
-      ],
-      "outputs": [
-        {
-          "name": "passthrough",
-          "type": "IMAGE",
-          "links": null
-        },
-        {
-          "label": "⬡ sync",
-          "name": "sync",
-          "type": "INT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PyCodeMax_BusSet",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "image1"
-      ]
-    },
-    {
-      "id": 114,
-      "type": "PyCodeMax_BusGet",
-      "pos": [
-        3409.713599127303,
-        1756.4449261824645
-      ],
-      "size": [
-        210,
-        58
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [
-        {
-          "color_off": "#445544",
-          "color_on": "#445544",
-          "label": "⬡ dependency",
-          "name": "dependency",
-          "shape": 7,
-          "type": "INT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "*",
-          "links": [
-            172
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PyCodeMax_BusGet",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "image1"
-      ]
-    },
-    {
       "id": 132,
       "type": "PyCodeMax_CSSFiltersFX",
       "pos": [
@@ -685,7 +552,7 @@
         414
       ],
       "flags": {},
-      "order": 35,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -746,10 +613,10 @@
       ],
       "size": [
         270,
-        78
+        126
       ],
       "flags": {},
-      "order": 45,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -761,7 +628,7 @@
       "outputs": [
         {
           "name": "passthrough",
-          "type": "COLOR_FX",
+          "type": "*",
           "links": null
         },
         {
@@ -780,7 +647,9 @@
         }
       },
       "widgets_values": [
-        "Vibrance"
+        "Vibrance",
+        "*",
+        "1"
       ]
     },
     {
@@ -792,10 +661,10 @@
       ],
       "size": [
         270,
-        78
+        126
       ],
       "flags": {},
-      "order": 43,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -807,7 +676,7 @@
       "outputs": [
         {
           "name": "passthrough",
-          "type": "COLOR_FX",
+          "type": "*",
           "links": []
         },
         {
@@ -826,7 +695,9 @@
         }
       },
       "widgets_values": [
-        "Photo_Filter"
+        "Photo_Filter",
+        "*",
+        "1"
       ]
     },
     {
@@ -838,10 +709,10 @@
       ],
       "size": [
         270,
-        78
+        126
       ],
       "flags": {},
-      "order": 41,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -853,7 +724,7 @@
       "outputs": [
         {
           "name": "passthrough",
-          "type": "COLOR_FX",
+          "type": "*",
           "links": null
         },
         {
@@ -872,7 +743,9 @@
         }
       },
       "widgets_values": [
-        "HueSatLight"
+        "HueSatLight",
+        "*",
+        "1"
       ]
     },
     {
@@ -884,10 +757,10 @@
       ],
       "size": [
         270,
-        78
+        126
       ],
       "flags": {},
-      "order": 47,
+      "order": 44,
       "mode": 0,
       "inputs": [
         {
@@ -899,14 +772,16 @@
       "outputs": [
         {
           "name": "passthrough",
-          "type": "COLOR_FX",
+          "type": "*",
           "links": null
         },
         {
           "label": "⬡ sync",
           "name": "sync",
           "type": "INT",
-          "links": null
+          "links": [
+            293
+          ]
         }
       ],
       "properties": {
@@ -918,7 +793,9 @@
         }
       },
       "widgets_values": [
-        "CSS_Filters"
+        "CSS_Filters",
+        "*",
+        "1"
       ]
     },
     {
@@ -930,10 +807,10 @@
       ],
       "size": [
         270,
-        78
+        126
       ],
       "flags": {},
-      "order": 39,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -945,7 +822,7 @@
       "outputs": [
         {
           "name": "passthrough",
-          "type": "COLOR_FX",
+          "type": "*",
           "links": null
         },
         {
@@ -964,440 +841,9 @@
         }
       },
       "widgets_values": [
-        "Channel_Mixer"
-      ]
-    },
-    {
-      "id": 146,
-      "type": "PyCodeMax_BusGet",
-      "pos": [
-        5367.895319616398,
-        -641.7003830755323
-      ],
-      "size": [
-        270,
-        58
-      ],
-      "flags": {},
-      "order": 37,
-      "mode": 0,
-      "inputs": [
-        {
-          "color_off": "#445544",
-          "color_on": "#445544",
-          "label": "⬡ dependency",
-          "name": "dependency",
-          "shape": 7,
-          "type": "INT",
-          "link": null
-        },
-        {
-          "name": "variable_name",
-          "type": "STRING",
-          "widget": {
-            "name": "variable_name"
-          },
-          "link": 228
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "*",
-          "links": [
-            216
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PyCodeMax_BusGet",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "CSS_Filters"
-      ]
-    },
-    {
-      "id": 139,
-      "type": "PyCodeMax_BusSet",
-      "pos": [
-        2894.739556745136,
-        -748.0210426114769
-      ],
-      "size": [
-        270,
-        78
-      ],
-      "flags": {},
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "input",
-          "type": "*",
-          "link": 212
-        }
-      ],
-      "outputs": [
-        {
-          "name": "passthrough",
-          "type": "IMAGE",
-          "links": null
-        },
-        {
-          "label": "⬡ sync",
-          "name": "sync",
-          "type": "INT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PyCodeMax_BusSet",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "image2"
-      ]
-    },
-    {
-      "id": 142,
-      "type": "PyCodeMax_BusSet",
-      "pos": [
-        2873.731646034528,
-        96.28438463738568
-      ],
-      "size": [
-        270,
-        78
-      ],
-      "flags": {},
-      "order": 21,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "input",
-          "type": "*",
-          "link": 213
-        }
-      ],
-      "outputs": [
-        {
-          "name": "passthrough",
-          "type": "IMAGE",
-          "links": null
-        },
-        {
-          "label": "⬡ sync",
-          "name": "sync",
-          "type": "INT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PyCodeMax_BusSet",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "image3"
-      ]
-    },
-    {
-      "id": 105,
-      "type": "PyCodeMax_BusGet",
-      "pos": [
-        3409.61839418168,
-        263.1922315923946
-      ],
-      "size": [
-        210,
-        58
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "color_off": "#445544",
-          "color_on": "#445544",
-          "label": "⬡ dependency",
-          "name": "dependency",
-          "shape": 7,
-          "type": "INT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "*",
-          "links": [
-            167
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PyCodeMax_BusGet",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "image1"
-      ]
-    },
-    {
-      "id": 98,
-      "type": "PyCodeMax_BusGet",
-      "pos": [
-        3394.6055301621827,
-        -498.08088356039127
-      ],
-      "size": [
-        210,
-        58
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "color_off": "#445544",
-          "color_on": "#445544",
-          "label": "⬡ dependency",
-          "name": "dependency",
-          "shape": 7,
-          "type": "INT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "*",
-          "links": [
-            191
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PyCodeMax_BusGet",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "image1"
-      ]
-    },
-    {
-      "id": 97,
-      "type": "PyCodeMax_BusGet",
-      "pos": [
-        3413.3929777723556,
-        -1436.9336390358828
-      ],
-      "size": [
-        210,
-        58
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "color_off": "#445544",
-          "color_on": "#445544",
-          "label": "⬡ dependency",
-          "name": "dependency",
-          "shape": 7,
-          "type": "INT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "*",
-          "links": [
-            162
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PyCodeMax_BusGet",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "image1"
-      ]
-    },
-    {
-      "id": 107,
-      "type": "PyCodeMax_BusGet",
-      "pos": [
-        3386.2115318627457,
-        1020.7405741688274
-      ],
-      "size": [
-        210,
-        58
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "color_off": "#445544",
-          "color_on": "#445544",
-          "label": "⬡ dependency",
-          "name": "dependency",
-          "shape": 7,
-          "type": "INT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "*",
-          "links": [
-            190
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PyCodeMax_BusGet",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "image1"
-      ]
-    },
-    {
-      "id": 144,
-      "type": "PyCodeMax_ColorProReceiver",
-      "pos": [
-        5449.588787877133,
-        -387.4886846324679
-      ],
-      "size": [
-        186.530859375,
-        66
-      ],
-      "flags": {},
-      "order": 51,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 214
-        },
-        {
-          "name": "fx_1",
-          "shape": 7,
-          "type": "COLOR_FX",
-          "link": 216
-        },
-        {
-          "name": "fx_2",
-          "type": "COLOR_FX",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            237
-          ]
-        },
-        {
-          "name": "log",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PyCodeMax_ColorProReceiver",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 143,
-      "type": "PyCodeMax_BusGet",
-      "pos": [
-        5426.916080119554,
-        -512.2058850057489
-      ],
-      "size": [
-        210,
-        58
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "color_off": "#445544",
-          "color_on": "#445544",
-          "label": "⬡ dependency",
-          "name": "dependency",
-          "shape": 7,
-          "type": "INT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "*",
-          "links": [
-            214,
-            238
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PyCodeMax_BusGet",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "image3"
+        "Channel_Mixer",
+        "*",
+        "1"
       ]
     },
     {
@@ -1412,7 +858,7 @@
         26
       ],
       "flags": {},
-      "order": 27,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -1442,52 +888,6 @@
       }
     },
     {
-      "id": 169,
-      "type": "PyCodeMax_BusGet",
-      "pos": [
-        3393.2044048298158,
-        2717.422590257556
-      ],
-      "size": [
-        210,
-        58
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "color_off": "#445544",
-          "color_on": "#445544",
-          "label": "⬡ dependency",
-          "name": "dependency",
-          "shape": 7,
-          "type": "INT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "*",
-          "links": [
-            240
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PyCodeMax_BusGet",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "image1"
-      ]
-    },
-    {
       "id": 170,
       "type": "PyCodeMax_BusSet",
       "pos": [
@@ -1496,10 +896,10 @@
       ],
       "size": [
         270,
-        78
+        126
       ],
       "flags": {},
-      "order": 49,
+      "order": 46,
       "mode": 0,
       "inputs": [
         {
@@ -1511,14 +911,17 @@
       "outputs": [
         {
           "name": "passthrough",
-          "type": "COLOR_FX",
+          "type": "*",
           "links": []
         },
         {
           "label": "⬡ sync",
           "name": "sync",
           "type": "INT",
-          "links": null
+          "links": [
+            296,
+            298
+          ]
         }
       ],
       "properties": {
@@ -1530,7 +933,9 @@
         }
       },
       "widgets_values": [
-        "Curve"
+        "Curve",
+        "*",
+        "1"
       ]
     },
     {
@@ -1545,7 +950,7 @@
         843.4921030284941
       ],
       "flags": {},
-      "order": 36,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -1671,7 +1076,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 10,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1709,7 +1114,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 11,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1748,7 +1153,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 12,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1786,7 +1191,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 13,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1824,7 +1229,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 14,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1862,7 +1267,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 15,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1875,71 +1280,15 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
           "version": "7.8"
-        },
-        "Node name for S&R": "PyCodeMax_TextInput"
+        }
       },
       "widgets_values": [
         "Vibrance"
-      ]
-    },
-    {
-      "id": 185,
-      "type": "PyCodeMax_BusGet",
-      "pos": [
-        4993.582108365299,
-        -1590.93959536129
-      ],
-      "size": [
-        270,
-        58
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 29,
-      "mode": 0,
-      "inputs": [
-        {
-          "color_off": "#445544",
-          "color_on": "#445544",
-          "label": "⬡ dependency",
-          "name": "dependency",
-          "shape": 7,
-          "type": "INT",
-          "link": null
-        },
-        {
-          "name": "variable_name",
-          "type": "STRING",
-          "widget": {
-            "name": "variable_name"
-          },
-          "link": 266
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "*",
-          "links": [
-            267
-          ]
-        }
-      ],
-      "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        },
-        "Node name for S&R": "PyCodeMax_BusGet"
-      },
-      "widgets_values": [
-        ""
       ]
     },
     {
@@ -1951,10 +1300,10 @@
       ],
       "size": [
         210,
-        58
+        106
       ],
       "flags": {},
-      "order": 16,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1964,7 +1313,7 @@
           "name": "dependency",
           "shape": 7,
           "type": "INT",
-          "link": null
+          "link": 295
         }
       ],
       "outputs": [
@@ -1986,242 +1335,9 @@
         }
       },
       "widgets_values": [
-        "image3"
-      ]
-    },
-    {
-      "id": 194,
-      "type": "ShowText|pysssss",
-      "pos": [
-        5475.482691223884,
-        -1387.562371326006
-      ],
-      "size": [
-        210,
-        148.3383455836913
-      ],
-      "flags": {},
-      "order": 53,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 283
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "shape": 6,
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        },
-        "Node name for S&R": "ShowText|pysssss"
-      },
-      "widgets_values": [
-        "=== 🎨 Color Pro Receiver ===\n  1. ✓ [photo_filter] Photo Filter\n  2. ✓ [css_filters] CSS Filters\n→ 2 effet(s) actif(s) sur 2 branché(s)"
-      ]
-    },
-    {
-      "id": 196,
-      "type": "PyCodeMax_BusGet",
-      "pos": [
-        4991.372803429583,
-        -1218.5024403452824
-      ],
-      "size": [
-        270,
-        58
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 30,
-      "mode": 0,
-      "inputs": [
-        {
-          "color_off": "#445544",
-          "color_on": "#445544",
-          "label": "⬡ dependency",
-          "name": "dependency",
-          "shape": 7,
-          "type": "INT",
-          "link": null
-        },
-        {
-          "name": "variable_name",
-          "type": "STRING",
-          "widget": {
-            "name": "variable_name"
-          },
-          "link": 285
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "*",
-          "links": [
-            286
-          ]
-        }
-      ],
-      "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        },
-        "Node name for S&R": "PyCodeMax_BusGet"
-      },
-      "widgets_values": [
-        ""
-      ]
-    },
-    {
-      "id": 175,
-      "type": "PyCodeMax_ColorProReceiver",
-      "pos": [
-        5411.140745125492,
-        -1722.1033927847982
-      ],
-      "size": [
-        186.530859375,
-        86
-      ],
-      "flags": {},
-      "order": 38,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 250
-        },
-        {
-          "name": "fx_1",
-          "shape": 7,
-          "type": "COLOR_FX",
-          "link": 267
-        },
-        {
-          "name": "fx_2",
-          "type": "COLOR_FX",
-          "link": 286
-        },
-        {
-          "name": "fx_3",
-          "type": "COLOR_FX",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            253
-          ]
-        },
-        {
-          "name": "log",
-          "type": "STRING",
-          "links": [
-            283
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PyCodeMax_ColorProReceiver",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 184,
-      "type": "PyCodeMax_MasterCombo",
-      "pos": [
-        4897.042481988176,
-        -1806.6677489642755
-      ],
-      "size": [
-        260.17232211410646,
-        136
-      ],
-      "flags": {},
-      "order": 17,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "selected_text",
-          "type": "STRING",
-          "links": [
-            266
-          ]
-        }
-      ],
-      "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        },
-        "Node name for S&R": "PyCodeMax_MasterCombo"
-      },
-      "widgets_values": [
-        "color_grading",
-        "Photo_Filter",
-        "",
-        null
-      ]
-    },
-    {
-      "id": 195,
-      "type": "PyCodeMax_MasterCombo",
-      "pos": [
-        4894.83317705246,
-        -1434.2305939482678
-      ],
-      "size": [
-        260.17232211410646,
-        136
-      ],
-      "flags": {},
-      "order": 18,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "selected_text",
-          "type": "STRING",
-          "links": [
-            285
-          ]
-        }
-      ],
-      "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        },
-        "Node name for S&R": "PyCodeMax_MasterCombo"
-      },
-      "widgets_values": [
-        "color_grading",
-        "CSS_Filters",
-        "",
-        null
+        "image3",
+        "*",
+        "1"
       ]
     },
     {
@@ -2236,7 +1352,7 @@
         542
       ],
       "flags": {},
-      "order": 28,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -2327,34 +1443,592 @@
       ]
     },
     {
-      "id": 166,
-      "type": "Orion4D_ImageComparer",
+      "id": 96,
+      "type": "PyCodeMax_BusSet",
       "pos": [
-        5660.8965512886525,
-        -876.7184635512225
+        2898.404043454438,
+        -1637.5773950020616
       ],
       "size": [
-        1202.4729819783088,
-        904.9296925487961
+        270,
+        126
       ],
       "flags": {},
-      "order": 54,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
-          "name": "image_a",
-          "type": "IMAGE",
-          "link": 238
-        },
-        {
-          "name": "image_b",
-          "type": "IMAGE",
-          "link": 237
+          "name": "input",
+          "type": "*",
+          "link": 161
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "name": "passthrough",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "label": "⬡ sync",
+          "name": "sync",
+          "type": "INT",
+          "links": [
+            287,
+            288,
+            289,
+            290,
+            291,
+            292
+          ]
+        }
+      ],
       "properties": {
-        "Node name for S&R": "Orion4D_ImageComparer",
+        "Node name for S&R": "PyCodeMax_BusSet",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "image1",
+        "IMAGE",
+        "1"
+      ]
+    },
+    {
+      "id": 139,
+      "type": "PyCodeMax_BusSet",
+      "pos": [
+        2894.739556745136,
+        -767.6763983832634
+      ],
+      "size": [
+        270,
+        126
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input",
+          "type": "*",
+          "link": 212
+        }
+      ],
+      "outputs": [
+        {
+          "name": "passthrough",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "label": "⬡ sync",
+          "name": "sync",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_BusSet",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "image2",
+        "IMAGE",
+        "1"
+      ]
+    },
+    {
+      "id": 142,
+      "type": "PyCodeMax_BusSet",
+      "pos": [
+        2901.6511854830874,
+        46.02921362997746
+      ],
+      "size": [
+        270,
+        126
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input",
+          "type": "*",
+          "link": 213
+        }
+      ],
+      "outputs": [
+        {
+          "name": "passthrough",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "label": "⬡ sync",
+          "name": "sync",
+          "type": "INT",
+          "links": [
+            294,
+            295
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_BusSet",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "image3",
+        "IMAGE",
+        "1"
+      ]
+    },
+    {
+      "id": 107,
+      "type": "PyCodeMax_BusGet",
+      "pos": [
+        3386.2115318627457,
+        1020.7405741688274
+      ],
+      "size": [
+        210,
+        106
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": "#445544",
+          "color_on": "#445544",
+          "label": "⬡ dependency",
+          "name": "dependency",
+          "shape": 7,
+          "type": "INT",
+          "link": 291
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "IMAGE",
+          "links": [
+            190
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_BusGet",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "image1",
+        "IMAGE",
+        "1"
+      ]
+    },
+    {
+      "id": 105,
+      "type": "PyCodeMax_BusGet",
+      "pos": [
+        3409.61839418168,
+        263.1922315923946
+      ],
+      "size": [
+        210,
+        106
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": "#445544",
+          "color_on": "#445544",
+          "label": "⬡ dependency",
+          "name": "dependency",
+          "shape": 7,
+          "type": "INT",
+          "link": 288
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "IMAGE",
+          "links": [
+            167
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_BusGet",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "image1",
+        "IMAGE",
+        "1"
+      ]
+    },
+    {
+      "id": 98,
+      "type": "PyCodeMax_BusGet",
+      "pos": [
+        3394.6055301621827,
+        -498.08088356039127
+      ],
+      "size": [
+        210,
+        106
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": "#445544",
+          "color_on": "#445544",
+          "label": "⬡ dependency",
+          "name": "dependency",
+          "shape": 7,
+          "type": "INT",
+          "link": 289
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "IMAGE",
+          "links": [
+            191
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_BusGet",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "image1",
+        "IMAGE",
+        "1"
+      ]
+    },
+    {
+      "id": 97,
+      "type": "PyCodeMax_BusGet",
+      "pos": [
+        3413.3929777723556,
+        -1436.9336390358828
+      ],
+      "size": [
+        210,
+        106
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": "#445544",
+          "color_on": "#445544",
+          "label": "⬡ dependency",
+          "name": "dependency",
+          "shape": 7,
+          "type": "INT",
+          "link": 290
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "IMAGE",
+          "links": [
+            162
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_BusGet",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "image1",
+        "IMAGE",
+        "1"
+      ]
+    },
+    {
+      "id": 87,
+      "type": "Reroute",
+      "pos": [
+        3661.8510474763384,
+        -1205.635287413612
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 162
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [
+            150,
+            151
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 114,
+      "type": "PyCodeMax_BusGet",
+      "pos": [
+        3409.713599127303,
+        1756.4449261824645
+      ],
+      "size": [
+        210,
+        106
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": "#445544",
+          "color_on": "#445544",
+          "label": "⬡ dependency",
+          "name": "dependency",
+          "shape": 7,
+          "type": "INT",
+          "link": 287
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "IMAGE",
+          "links": [
+            172
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_BusGet",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "image1",
+        "IMAGE",
+        "1"
+      ]
+    },
+    {
+      "id": 169,
+      "type": "PyCodeMax_BusGet",
+      "pos": [
+        3393.2044048298158,
+        2717.422590257556
+      ],
+      "size": [
+        210,
+        106
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": "#445544",
+          "color_on": "#445544",
+          "label": "⬡ dependency",
+          "name": "dependency",
+          "shape": 7,
+          "type": "INT",
+          "link": 292
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "IMAGE",
+          "links": [
+            240
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_BusGet",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "image1",
+        "IMAGE",
+        "1"
+      ]
+    },
+    {
+      "id": 146,
+      "type": "PyCodeMax_BusGet",
+      "pos": [
+        5366.508452626509,
+        -683.9998262671216
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": "#445544",
+          "color_on": "#445544",
+          "label": "⬡ dependency",
+          "name": "dependency",
+          "shape": 7,
+          "type": "INT",
+          "link": 293
+        },
+        {
+          "name": "variable_name",
+          "type": "STRING",
+          "widget": {
+            "name": "variable_name"
+          },
+          "link": 228
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            216
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_BusGet",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "CSS_Filters",
+        "*",
+        "1"
+      ]
+    },
+    {
+      "id": 144,
+      "type": "PyCodeMax_ColorProReceiver",
+      "pos": [
+        5448.895354382189,
+        -338.2549064914376
+      ],
+      "size": [
+        186.530859375,
+        66
+      ],
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 214
+        },
+        {
+          "name": "fx_1",
+          "shape": 7,
+          "type": "COLOR_FX",
+          "link": 216
+        },
+        {
+          "name": "fx_2",
+          "type": "COLOR_FX",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            237
+          ]
+        },
+        {
+          "name": "log",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_ColorProReceiver",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
@@ -2364,41 +2038,247 @@
       "widgets_values": []
     },
     {
-      "id": 177,
-      "type": "Orion4D_ImageComparer",
+      "id": 143,
+      "type": "PyCodeMax_BusGet",
       "pos": [
-        5711.5230071937,
-        -2020.7432276119016
+        5426.916080119554,
+        -512.2058850057489
       ],
       "size": [
-        1202.4729819783088,
-        904.9296925487961
+        210,
+        106
       ],
       "flags": {},
-      "order": 52,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
-          "name": "image_a",
-          "type": "IMAGE",
-          "link": 274
-        },
-        {
-          "name": "image_b",
-          "type": "IMAGE",
-          "link": 253
+          "color_off": "#445544",
+          "color_on": "#445544",
+          "label": "⬡ dependency",
+          "name": "dependency",
+          "shape": 7,
+          "type": "INT",
+          "link": 294
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "IMAGE",
+          "links": [
+            214,
+            238
+          ]
+        }
+      ],
       "properties": {
-        "Node name for S&R": "Orion4D_ImageComparer",
+        "Node name for S&R": "PyCodeMax_BusGet",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
           "version": "7.8"
         }
       },
-      "widgets_values": []
+      "widgets_values": [
+        "image3",
+        "IMAGE",
+        "1"
+      ]
+    },
+    {
+      "id": 184,
+      "type": "PyCodeMax_MasterCombo",
+      "pos": [
+        4897.042481988176,
+        -1806.6677489642755
+      ],
+      "size": [
+        260.17232211410646,
+        136
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "selected_text",
+          "type": "STRING",
+          "links": [
+            297
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_MasterCombo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "color_grading",
+        "Photo_Filter",
+        "",
+        null
+      ]
+    },
+    {
+      "id": 185,
+      "type": "PyCodeMax_BusGet",
+      "pos": [
+        4985.764637319707,
+        -1609.9248821863112
+      ],
+      "size": [
+        270,
+        98
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": "#445544",
+          "color_on": "#445544",
+          "label": "⬡ dependency",
+          "name": "dependency",
+          "shape": 7,
+          "type": "INT",
+          "link": 296
+        },
+        {
+          "name": "variable_name",
+          "type": "STRING",
+          "widget": {
+            "name": "variable_name"
+          },
+          "link": 297
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            267
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_BusGet",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Curve",
+        "*",
+        "1"
+      ]
+    },
+    {
+      "id": 195,
+      "type": "PyCodeMax_MasterCombo",
+      "pos": [
+        4898.894200972252,
+        -1436.261105908163
+      ],
+      "size": [
+        260.17232211410646,
+        136
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "selected_text",
+          "type": "STRING",
+          "links": [
+            299
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_MasterCombo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "color_grading",
+        "CSS_Filters",
+        "",
+        null
+      ]
+    },
+    {
+      "id": 196,
+      "type": "PyCodeMax_BusGet",
+      "pos": [
+        4951.777820211625,
+        -1229.6702561247066
+      ],
+      "size": [
+        270,
+        98
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": "#445544",
+          "color_on": "#445544",
+          "label": "⬡ dependency",
+          "name": "dependency",
+          "shape": 7,
+          "type": "INT",
+          "link": 298
+        },
+        {
+          "name": "variable_name",
+          "type": "STRING",
+          "widget": {
+            "name": "variable_name"
+          },
+          "link": 299
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            286
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_BusGet",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Curve",
+        "*",
+        "1"
+      ]
     },
     {
       "id": 86,
@@ -2412,7 +2292,7 @@
         600
       ],
       "flags": {},
-      "order": 46,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -2438,43 +2318,6 @@
       "widgets_values": []
     },
     {
-      "id": 93,
-      "type": "Orion4D_ImageComparer",
-      "pos": [
-        4002.5747415037454,
-        -1046.8291632542303
-      ],
-      "size": [
-        512,
-        600
-      ],
-      "flags": {},
-      "order": 44,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image_a",
-          "type": "IMAGE",
-          "link": 203
-        },
-        {
-          "name": "image_b",
-          "type": "IMAGE",
-          "link": 183
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "Orion4D_ImageComparer",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": []
-    },
-    {
       "id": 103,
       "type": "Orion4D_ImageComparer",
       "pos": [
@@ -2486,7 +2329,7 @@
         600
       ],
       "flags": {},
-      "order": 42,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -2523,7 +2366,7 @@
         600
       ],
       "flags": {},
-      "order": 48,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
@@ -2560,7 +2403,7 @@
         600
       ],
       "flags": {},
-      "order": 40,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -2597,7 +2440,7 @@
         600
       ],
       "flags": {},
-      "order": 50,
+      "order": 47,
       "mode": 0,
       "inputs": [
         {
@@ -2609,6 +2452,267 @@
           "name": "image_b",
           "type": "IMAGE",
           "link": 248
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Orion4D_ImageComparer",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 177,
+      "type": "Orion4D_ImageComparer",
+      "pos": [
+        5711.5230071937,
+        -2020.7432276119016
+      ],
+      "size": [
+        1202.4729819783088,
+        904.9296925487961
+      ],
+      "flags": {},
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 274
+        },
+        {
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 253
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Orion4D_ImageComparer",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 166,
+      "type": "Orion4D_ImageComparer",
+      "pos": [
+        5660.8965512886525,
+        -876.7184635512225
+      ],
+      "size": [
+        1202.4729819783088,
+        904.9296925487961
+      ],
+      "flags": {},
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 238
+        },
+        {
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 237
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Orion4D_ImageComparer",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 175,
+      "type": "PyCodeMax_ColorProReceiver",
+      "pos": [
+        5452.908376140536,
+        -1682.7926812412256
+      ],
+      "size": [
+        186.530859375,
+        86
+      ],
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 250
+        },
+        {
+          "name": "fx_1",
+          "shape": 7,
+          "type": "COLOR_FX",
+          "link": 267
+        },
+        {
+          "name": "fx_2",
+          "type": "COLOR_FX",
+          "link": 286
+        },
+        {
+          "name": "fx_3",
+          "type": "COLOR_FX",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            253
+          ]
+        },
+        {
+          "name": "log",
+          "type": "STRING",
+          "links": [
+            283
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_ColorProReceiver",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 194,
+      "type": "ShowText|pysssss",
+      "pos": [
+        5430.029681001629,
+        -1440.3861399626817
+      ],
+      "size": [
+        210,
+        148.3383455836913
+      ],
+      "flags": {},
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 283
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "=== 🎨 Color Pro Receiver ===\n  1. ✓ [photo_filter] Photo Filter\n  2. ✓ [css_filters] CSS Filters\n→ 2 effet(s) actif(s) sur 2 branché(s)"
+      ]
+    },
+    {
+      "id": 197,
+      "type": "PyCodeMax_BusClear",
+      "pos": [
+        2894.3002241130857,
+        -1907.7067139678074
+      ],
+      "size": [
+        270,
+        154
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "trigger",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "done",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "PyCodeMax_BusClear"
+      },
+      "widgets_values": [
+        false,
+        "none",
+        "",
+        null,
+        null
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 93,
+      "type": "Orion4D_ImageComparer",
+      "pos": [
+        4002.5747415037454,
+        -1046.8291632542303
+      ],
+      "size": [
+        512,
+        600
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 203
+        },
+        {
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 183
         }
       ],
       "outputs": [],
@@ -3001,14 +3105,6 @@
       "STRING"
     ],
     [
-      266,
-      184,
-      0,
-      185,
-      1,
-      "STRING"
-    ],
-    [
       267,
       185,
       0,
@@ -3033,20 +3129,116 @@
       "STRING"
     ],
     [
-      285,
-      195,
-      0,
-      196,
-      1,
-      "STRING"
-    ],
-    [
       286,
       196,
       0,
       175,
       2,
       "COLOR_FX"
+    ],
+    [
+      287,
+      96,
+      1,
+      114,
+      0,
+      "INT"
+    ],
+    [
+      288,
+      96,
+      1,
+      105,
+      0,
+      "INT"
+    ],
+    [
+      289,
+      96,
+      1,
+      98,
+      0,
+      "INT"
+    ],
+    [
+      290,
+      96,
+      1,
+      97,
+      0,
+      "INT"
+    ],
+    [
+      291,
+      96,
+      1,
+      107,
+      0,
+      "INT"
+    ],
+    [
+      292,
+      96,
+      1,
+      169,
+      0,
+      "INT"
+    ],
+    [
+      293,
+      101,
+      1,
+      146,
+      0,
+      "INT"
+    ],
+    [
+      294,
+      142,
+      1,
+      143,
+      0,
+      "INT"
+    ],
+    [
+      295,
+      142,
+      1,
+      176,
+      0,
+      "INT"
+    ],
+    [
+      296,
+      170,
+      1,
+      185,
+      0,
+      "INT"
+    ],
+    [
+      297,
+      184,
+      0,
+      185,
+      1,
+      "STRING"
+    ],
+    [
+      298,
+      170,
+      1,
+      196,
+      0,
+      "INT"
+    ],
+    [
+      299,
+      195,
+      0,
+      196,
+      1,
+      "STRING"
     ]
   ],
   "groups": [
@@ -3143,10 +3335,10 @@
     },
     {
       "id": 11,
-      "title": "Group 1",
+      "title": "Group 2",
       "bounding": [
-        4887.878944992303,
-        -1530.1662255071149,
+        4891.9399689120955,
+        -1532.19673746701,
         309.14140492659135,
         322.1408539747122
       ],
@@ -3160,10 +3352,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 0.8140274938684497,
+      "scale": 0.3138428376721199,
       "offset": [
-        -2782.1953265778075,
-        2486.200432149277
+        115.50937147684354,
+        2649.8844106772153
       ]
     },
     "frontendVersion": "1.42.10",

@@ -1,15 +1,15 @@
 {
   "id": "368d11ff-660c-4eda-8ef2-f45226909b29",
   "revision": 0,
-  "last_node_id": 65,
-  "last_link_id": 79,
+  "last_node_id": 66,
+  "last_link_id": 129,
   "nodes": [
     {
       "id": 1,
       "type": "LoadImage",
       "pos": [
-        3845.174205766479,
-        -562.307520412864
+        3854.5881430080094,
+        -562.4244514842708
       ],
       "size": [
         526.796875,
@@ -42,7 +42,7 @@
         }
       },
       "widgets_values": [
-        "ComfyUI_0094.png",
+        "004.jpg",
         "image"
       ]
     },
@@ -50,15 +50,15 @@
       "id": 2,
       "type": "PyCodeMax_PhotoFilterFX",
       "pos": [
-        4940.350568731557,
-        -152.06149779299267
+        4940.349488267245,
+        -152.06228343164048
       ],
       "size": [
         225,
         506.25
       ],
       "flags": {},
-      "order": 24,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -110,15 +110,15 @@
       "id": 3,
       "type": "PyCodeMax_ChannelMixerFX",
       "pos": [
-        4961.4648556387465,
-        2071.825760028533
+        4961.463536843509,
+        2071.823252262305
       ],
       "size": [
         225,
         533.96875
       ],
       "flags": {},
-      "order": 22,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -173,15 +173,15 @@
       "id": 5,
       "type": "PyCodeMax_VibranceFX",
       "pos": [
-        4920.386207490132,
-        -888.7318317195518
+        4920.385198304354,
+        -888.7319936055076
       ],
       "size": [
         243.5,
         439.3125
       ],
       "flags": {},
-      "order": 25,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -233,15 +233,15 @@
       "id": 6,
       "type": "PyCodeMax_HSLFX",
       "pos": [
-        4905.542460224718,
-        586.8743243310084
+        4905.5414051542,
+        586.8730583283025
       ],
       "size": [
         273.109375,
         545.96875
       ],
       "flags": {},
-      "order": 23,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -296,8 +296,8 @@
       "id": 11,
       "type": "LoadImage",
       "pos": [
-        3839.8053040634386,
-        298.78507474763273
+        3846.561481873707,
+        360.9440788985455
       ],
       "size": [
         526.796875,
@@ -330,7 +330,7 @@
         }
       },
       "widgets_values": [
-        "ComfyUI_0105.png",
+        "003.jpg",
         "image"
       ]
     },
@@ -338,8 +338,8 @@
       "id": 12,
       "type": "LoadImage",
       "pos": [
-        3842.870242125461,
-        1167.6924099295613
+        3844.2210194978124,
+        1263.6333087685869
       ],
       "size": [
         526.796875,
@@ -372,7 +372,7 @@
         }
       },
       "widgets_values": [
-        "ComfyUI_0088.png",
+        "002.jpg",
         "image"
       ]
     },
@@ -380,15 +380,15 @@
       "id": 13,
       "type": "PyCodeMax_BusSet",
       "pos": [
-        4098.511327768423,
-        -758.5036654830992
+        4102.1079231529375,
+        -823.2531699787528
       ],
       "size": [
         270,
-        132.65625
+        201.3125
       ],
       "flags": {},
-      "order": 19,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -407,7 +407,15 @@
           "label": "⬡ sync",
           "name": "sync",
           "type": "INT",
-          "links": null
+          "links": [
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109
+          ]
         }
       ],
       "properties": {
@@ -419,22 +427,24 @@
         }
       },
       "widgets_values": [
-        "image1"
+        "image1",
+        "IMAGE",
+        "1"
       ]
     },
     {
       "id": 14,
       "type": "PyCodeMax_BusGet",
       "pos": [
-        4614.218287731602,
-        2650.8038265459963
+        4614.217139614624,
+        2650.801309569166
       ],
       "size": [
         225,
-        108.65625
+        177.3125
       ],
       "flags": {},
-      "order": 3,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -444,13 +454,13 @@
           "name": "dependency",
           "shape": 7,
           "type": "INT",
-          "link": null
+          "link": 104
         }
       ],
       "outputs": [
         {
           "name": "output",
-          "type": "*",
+          "type": "IMAGE",
           "links": [
             57,
             76
@@ -466,22 +476,24 @@
         }
       },
       "widgets_values": [
-        "image1"
+        "image1",
+        "IMAGE",
+        "1"
       ]
     },
     {
       "id": 15,
       "type": "PyCodeMax_CSSFiltersFX",
       "pos": [
-        4927.44822587604,
-        1327.0807937541317
+        4927.447059947286,
+        1327.0789939549907
       ],
       "size": [
         242.375,
         571.3125
       ],
       "flags": {},
-      "order": 26,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -537,17 +549,17 @@
       "id": 16,
       "type": "PyCodeMax_BusSet",
       "pos": [
-        4940.339364772521,
-        -361.1612921938356
+        4943.384674942489,
+        -362.17674677722835
       ],
       "size": [
         270,
-        132.65625
+        201.3125
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 37,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -559,7 +571,7 @@
       "outputs": [
         {
           "name": "passthrough",
-          "type": "COLOR_FX",
+          "type": "*",
           "links": null
         },
         {
@@ -578,24 +590,26 @@
         }
       },
       "widgets_values": [
-        "Vibrance"
+        "Vibrance",
+        "*",
+        "1"
       ]
     },
     {
       "id": 17,
       "type": "PyCodeMax_BusSet",
       "pos": [
-        4945.325171336252,
-        409.21656927450124
+        4945.3246294802175,
+        409.2157214922163
       ],
       "size": [
         270,
-        132
+        201.3125
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 35,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -607,7 +621,7 @@
       "outputs": [
         {
           "name": "passthrough",
-          "type": "COLOR_FX",
+          "type": "*",
           "links": []
         },
         {
@@ -626,24 +640,26 @@
         }
       },
       "widgets_values": [
-        "Photo_Filter"
+        "Photo_Filter",
+        "*",
+        "1"
       ]
     },
     {
       "id": 18,
       "type": "PyCodeMax_BusSet",
       "pos": [
-        4930.144089879706,
-        1186.4621536528246
+        4930.143500792034,
+        1186.4611315876973
       ],
       "size": [
         270,
-        132
+        201.3125
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 33,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -655,7 +671,7 @@
       "outputs": [
         {
           "name": "passthrough",
-          "type": "COLOR_FX",
+          "type": "STRING",
           "links": null
         },
         {
@@ -674,24 +690,26 @@
         }
       },
       "widgets_values": [
-        "HueSatLight"
+        "HueSatLight",
+        "STRING",
+        "1"
       ]
     },
     {
       "id": 19,
       "type": "PyCodeMax_BusSet",
       "pos": [
-        4930.7777068850355,
-        1941.3566721676082
+        4930.777259375751,
+        1941.355199657704
       ],
       "size": [
         270,
-        132
+        201.3125
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 39,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -703,14 +721,16 @@
       "outputs": [
         {
           "name": "passthrough",
-          "type": "COLOR_FX",
+          "type": "*",
           "links": null
         },
         {
           "label": "⬡ sync",
           "name": "sync",
           "type": "INT",
-          "links": null
+          "links": [
+            121
+          ]
         }
       ],
       "properties": {
@@ -722,24 +742,26 @@
         }
       },
       "widgets_values": [
-        "CSS_Filters"
+        "CSS_Filters",
+        "*",
+        "1"
       ]
     },
     {
       "id": 20,
       "type": "PyCodeMax_BusSet",
       "pos": [
-        4965.433894019416,
-        2658.9877105461273
+        4961.74168495149,
+        2661.754903012929
       ],
       "size": [
         270,
-        132
+        201.3125
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 31,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -751,7 +773,7 @@
       "outputs": [
         {
           "name": "passthrough",
-          "type": "COLOR_FX",
+          "type": "*",
           "links": null
         },
         {
@@ -770,24 +792,26 @@
         }
       },
       "widgets_values": [
-        "Channel_Mixer"
+        "Channel_Mixer",
+        "*",
+        "1"
       ]
     },
     {
       "id": 21,
       "type": "PyCodeMax_BusGet",
       "pos": [
-        6559.477867434327,
-        152.05599333042576
+        6632.762290303693,
+        111.4307281520546
       ],
       "size": [
         270,
-        108
+        177.3125
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 42,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -797,7 +821,7 @@
           "name": "dependency",
           "shape": 7,
           "type": "INT",
-          "link": null
+          "link": 121
         },
         {
           "name": "variable_name",
@@ -826,22 +850,24 @@
         }
       },
       "widgets_values": [
-        "CSS_Filters"
+        "CSS_Filters",
+        "*",
+        "1"
       ]
     },
     {
       "id": 22,
       "type": "PyCodeMax_BusSet",
       "pos": [
-        4097.398046723517,
-        106.65099012451128
+        4097.39734846556,
+        106.64999442250382
       ],
       "size": [
         270,
-        132.65625
+        201.3125
       ],
       "flags": {},
-      "order": 20,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -872,22 +898,24 @@
         }
       },
       "widgets_values": [
-        "image2"
+        "image2",
+        "IMAGE",
+        "1"
       ]
     },
     {
       "id": 23,
       "type": "PyCodeMax_BusSet",
       "pos": [
-        4096.51035120394,
-        991.6585239532883
+        4093.8071177729166,
+        1014.6293846255924
       ],
       "size": [
         270,
-        132.65625
+        201.3125
       ],
       "flags": {},
-      "order": 21,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -906,7 +934,10 @@
           "label": "⬡ sync",
           "name": "sync",
           "type": "INT",
-          "links": null
+          "links": [
+            95,
+            125
+          ]
         }
       ],
       "properties": {
@@ -918,22 +949,24 @@
         }
       },
       "widgets_values": [
-        "image3"
+        "image3",
+        "IMAGE",
+        "1"
       ]
     },
     {
       "id": 24,
       "type": "PyCodeMax_BusGet",
       "pos": [
-        4614.122577953219,
-        1157.5512293974384
+        4614.1213656163345,
+        1157.549604304296
       ],
       "size": [
         225,
-        108.65625
+        177.3125
       ],
       "flags": {},
-      "order": 4,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -943,13 +976,13 @@
           "name": "dependency",
           "shape": 7,
           "type": "INT",
-          "link": null
+          "link": 105
         }
       ],
       "outputs": [
         {
           "name": "output",
-          "type": "*",
+          "type": "IMAGE",
           "links": [
             55,
             74
@@ -965,22 +998,24 @@
         }
       },
       "widgets_values": [
-        "image1"
+        "image1",
+        "IMAGE",
+        "1"
       ]
     },
     {
       "id": 25,
       "type": "PyCodeMax_BusGet",
       "pos": [
-        4599.109437336658,
-        396.27835612282024
+        4599.108614896715,
+        396.2771541250652
       ],
       "size": [
         225,
-        108.65625
+        177.3125
       ],
       "flags": {},
-      "order": 5,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -990,13 +1025,13 @@
           "name": "dependency",
           "shape": 7,
           "type": "INT",
-          "link": null
+          "link": 106
         }
       ],
       "outputs": [
         {
           "name": "output",
-          "type": "*",
+          "type": "IMAGE",
           "links": [
             61,
             73
@@ -1012,22 +1047,24 @@
         }
       },
       "widgets_values": [
-        "image1"
+        "image1",
+        "IMAGE",
+        "1"
       ]
     },
     {
       "id": 26,
       "type": "PyCodeMax_BusGet",
       "pos": [
-        4617.897002068123,
-        -542.5742934979285
+        4617.895849480134,
+        -542.5748785340743
       ],
       "size": [
         225,
-        108.65625
+        177.3125
       ],
       "flags": {},
-      "order": 6,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -1037,13 +1074,13 @@
           "name": "dependency",
           "shape": 7,
           "type": "INT",
-          "link": null
+          "link": 107
         }
       ],
       "outputs": [
         {
           "name": "output",
-          "type": "*",
+          "type": "IMAGE",
           "links": [
             72,
             77
@@ -1059,22 +1096,24 @@
         }
       },
       "widgets_values": [
-        "image1"
+        "image1",
+        "IMAGE",
+        "1"
       ]
     },
     {
       "id": 27,
       "type": "PyCodeMax_BusGet",
       "pos": [
-        4590.715368674324,
-        1915.0994206020678
+        4590.714153370947,
+        1915.09745781294
       ],
       "size": [
         225,
-        108.65625
+        177.3125
       ],
       "flags": {},
-      "order": 7,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -1084,13 +1123,13 @@
           "name": "dependency",
           "shape": 7,
           "type": "INT",
-          "link": null
+          "link": 108
         }
       ],
       "outputs": [
         {
           "name": "output",
-          "type": "*",
+          "type": "IMAGE",
           "links": [
             53,
             75
@@ -1106,15 +1145,17 @@
         }
       },
       "widgets_values": [
-        "image1"
+        "image1",
+        "IMAGE",
+        "1"
       ]
     },
     {
       "id": 28,
       "type": "PyCodeMax_ColorProReceiver",
       "pos": [
-        6559.950424535749,
-        447.8009747145702
+        6631.587932473146,
+        435.4033032543641
       ],
       "size": [
         225,
@@ -1169,15 +1210,17 @@
       "id": 29,
       "type": "PyCodeMax_BusGet",
       "pos": [
-        6556.659900948396,
-        229.86502103075009
+        6628.722242666828,
+        190.04396801925782
       ],
       "size": [
         225,
-        108.65625
+        177.3125
       ],
-      "flags": {},
-      "order": 8,
+      "flags": {
+        "collapsed": false
+      },
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -1187,13 +1230,13 @@
           "name": "dependency",
           "shape": 7,
           "type": "INT",
-          "link": null
+          "link": 95
         }
       ],
       "outputs": [
         {
           "name": "output",
-          "type": "*",
+          "type": "IMAGE",
           "links": [
             20,
             69
@@ -1209,22 +1252,24 @@
         }
       },
       "widgets_values": [
-        "image3"
+        "image3",
+        "IMAGE",
+        "1"
       ]
     },
     {
       "id": 31,
       "type": "PyCodeMax_BusGet",
       "pos": [
-        4597.708548126046,
-        3611.7810251328383
+        4597.707302464737,
+        3611.778312417966
       ],
       "size": [
         225,
-        108.65625
+        177.3125
       ],
       "flags": {},
-      "order": 9,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -1234,13 +1279,13 @@
           "name": "dependency",
           "shape": 7,
           "type": "INT",
-          "link": null
+          "link": 109
         }
       ],
       "outputs": [
         {
           "name": "output",
-          "type": "*",
+          "type": "IMAGE",
           "links": [
             59
           ]
@@ -1255,22 +1300,24 @@
         }
       },
       "widgets_values": [
-        "image1"
+        "image1",
+        "IMAGE",
+        "1"
       ]
     },
     {
       "id": 32,
       "type": "PyCodeMax_BusSet",
       "pos": [
-        5562.565302301546,
-        2852.521831515714
+        5562.56421117054,
+        2852.5187634214617
       ],
       "size": [
         270,
-        132.65625
+        201.3125
       ],
       "flags": {},
-      "order": 41,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -1282,14 +1329,17 @@
       "outputs": [
         {
           "name": "passthrough",
-          "type": "COLOR_FX",
+          "type": "*",
           "links": []
         },
         {
           "label": "⬡ sync",
           "name": "sync",
           "type": "INT",
-          "links": null
+          "links": [
+            122,
+            126
+          ]
         }
       ],
       "properties": {
@@ -1301,22 +1351,24 @@
         }
       },
       "widgets_values": [
-        "Curve"
+        "Curve",
+        "*",
+        "1"
       ]
     },
     {
       "id": 33,
       "type": "PyCodeMax_CurvesPro",
       "pos": [
-        4977.519086552128,
-        2841.109722019435
+        4977.517800379909,
+        2841.106832657196
       ],
       "size": [
         528.671875,
         968.328125
       ],
       "flags": {},
-      "order": 27,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -1356,10 +1408,10 @@
       "widgets_values": [
         true,
         "Curves",
-        "Blue",
-        "{\"rgb\":[[0,0],[0.3151441205986726,0.3954222794266192],[0.5384740813363091,0.6798519829797915],[1,1]],\"r\":[[0,0],[1,1]],\"g\":[[0,0],[0.5637567184009472,0.4291324665144026],[1,1]],\"b\":[[0,0],[0.2140135723401202,0.29429171816326904],[1,1]]}",
+        "RGB",
+        "{\"rgb\":[[0,0],[0.4375,0.375],[0.6443577759871072,0.6875],[0.875,0.875],[1,1]],\"r\":[[0,0],[1,1]],\"g\":[[0,0],[1,1]],\"b\":[[0,0],[1,1]]}",
         "",
-        "(none)",
+        "Orion4d-001",
         null,
         null,
         null,
@@ -1372,12 +1424,16 @@
             "y": 0
           },
           {
-            "x": 0.3151441205986726,
-            "y": 0.3954222794266192
+            "x": 0.4375,
+            "y": 0.375
           },
           {
-            "x": 0.5384740813363091,
-            "y": 0.6798519829797915
+            "x": 0.6443577759871072,
+            "y": 0.6875
+          },
+          {
+            "x": 0.875,
+            "y": 0.875
           },
           {
             "x": 1,
@@ -1400,10 +1456,6 @@
             "y": 0
           },
           {
-            "x": 0.5637567184009472,
-            "y": 0.4291324665144026
-          },
-          {
             "x": 1,
             "y": 1
           }
@@ -1412,10 +1464,6 @@
           {
             "x": 0,
             "y": 0
-          },
-          {
-            "x": 0.2140135723401202,
-            "y": 0.29429171816326904
           },
           {
             "x": 1,
@@ -1430,17 +1478,17 @@
       "id": 34,
       "type": "PyCodeMax_TextInput",
       "pos": [
-        5929.240481359309,
-        215.43344571811497
+        5929.240815823308,
+        215.4334182725152
       ],
       "size": [
-        215.9248612356705,
-        88
+        225,
+        140
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 10,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1468,17 +1516,17 @@
       "id": 35,
       "type": "PyCodeMax_TextInput",
       "pos": [
-        5930.347353484167,
-        158.21130649253712
+        5930.347284348715,
+        158.21125542271005
       ],
       "size": [
-        216.84782121744138,
-        88
+        225,
+        140
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 11,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1506,17 +1554,17 @@
       "id": 36,
       "type": "PyCodeMax_TextInput",
       "pos": [
-        5927.475409095387,
-        285.68747477554814
+        5927.475504787042,
+        285.68738401536086
       ],
       "size": [
-        215.00190125389963,
-        88
+        225,
+        140
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 12,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1544,17 +1592,17 @@
       "id": 37,
       "type": "PyCodeMax_TextInput",
       "pos": [
-        5928.39380127728,
-        373.4281784987985
+        5928.3939253988,
+        373.42815618447423
       ],
       "size": [
-        216.84782121744138,
-        88
+        225,
+        140
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 13,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1582,17 +1630,17 @@
       "id": 38,
       "type": "PyCodeMax_TextInput",
       "pos": [
-        5926.209973386945,
-        448.80273737412926
+        5926.209855352275,
+        448.80267861266293
       ],
       "size": [
-        215.83256523749424,
-        88
+        225,
+        140
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 14,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1620,17 +1668,17 @@
       "id": 39,
       "type": "PyCodeMax_TextInput",
       "pos": [
-        5929.179461427055,
-        542.406895624104
+        5929.179557790832,
+        542.4068267177263
       ],
       "size": [
-        215.83256523749424,
-        88
+        225,
+        140
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 15,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1658,17 +1706,17 @@
       "id": 40,
       "type": "PyCodeMax_BusGet",
       "pos": [
-        6131.4822879675685,
-        -648.3649294010291
+        6134.730760985149,
+        -918.5929736955045
       ],
       "size": [
         270,
-        108.65625
+        177.3125
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 29,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -1678,7 +1726,7 @@
           "name": "dependency",
           "shape": 7,
           "type": "INT",
-          "link": null
+          "link": 126
         },
         {
           "name": "variable_name",
@@ -1686,7 +1734,7 @@
           "widget": {
             "name": "variable_name"
           },
-          "link": 25
+          "link": 115
         }
       ],
       "outputs": [
@@ -1694,7 +1742,7 @@
           "name": "output",
           "type": "*",
           "links": [
-            29
+            128
           ]
         }
       ],
@@ -1707,22 +1755,26 @@
         }
       },
       "widgets_values": [
-        ""
+        "Curve",
+        "*",
+        "1"
       ]
     },
     {
       "id": 41,
       "type": "PyCodeMax_BusGet",
       "pos": [
-        6633.501276735387,
-        -991.1995429183644
+        6640.624573953049,
+        -1168.4664875965245
       ],
       "size": [
         225,
-        108.65625
+        177.3125
       ],
-      "flags": {},
-      "order": 16,
+      "flags": {
+        "collapsed": false
+      },
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1732,16 +1784,16 @@
           "name": "dependency",
           "shape": 7,
           "type": "INT",
-          "link": null
+          "link": 125
         }
       ],
       "outputs": [
         {
           "name": "output",
-          "type": "*",
+          "type": "IMAGE",
           "links": [
-            28,
-            71
+            124,
+            127
           ]
         }
       ],
@@ -1754,80 +1806,43 @@
         }
       },
       "widgets_values": [
-        "image3"
-      ]
-    },
-    {
-      "id": 42,
-      "type": "ShowText|pysssss",
-      "pos": [
-        6679.986597868035,
-        -493.2029197660331
-      ],
-      "size": [
-        225,
-        148.328125
-      ],
-      "flags": {},
-      "order": 46,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 26
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "shape": 6,
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ShowText|pysssss",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        "=== 🎨 Color Pro Receiver ===\n  1. ✓ [photo_filter] Photo Filter\n  2. ✓ [curves] Curves\n→ 2 effet(s) actif(s) sur 2 branché(s)"
+        "image3",
+        "IMAGE",
+        "1"
       ]
     },
     {
       "id": 44,
       "type": "PyCodeMax_ColorProReceiver",
       "pos": [
-        6615.643862672454,
-        -827.7438693151403
+        6463.495858747644,
+        -613.1085455447615
       ],
       "size": [
         225,
         144
       ],
-      "flags": {},
-      "order": 43,
+      "flags": {
+        "collapsed": false
+      },
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 28
+          "link": 127
         },
         {
           "name": "fx_1",
           "shape": 7,
           "type": "COLOR_FX",
-          "link": 29
+          "link": 128
         },
         {
           "name": "fx_2",
           "type": "COLOR_FX",
-          "link": 79
+          "link": 129
         },
         {
           "name": "fx_3",
@@ -1846,9 +1861,7 @@
         {
           "name": "log",
           "type": "STRING",
-          "links": [
-            26
-          ]
+          "links": []
         }
       ],
       "properties": {
@@ -1865,15 +1878,17 @@
       "id": 45,
       "type": "PyCodeMax_MasterCombo",
       "pos": [
-        6101.54621581627,
-        -912.3080963515522
+        6118.73440850141,
+        -843.9778866627071
       ],
       "size": [
         260.171875,
         206.3125
       ],
-      "flags": {},
-      "order": 17,
+      "flags": {
+        "collapsed": false
+      },
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1881,7 +1896,7 @@
           "name": "selected_text",
           "type": "STRING",
           "links": [
-            25
+            115
           ]
         }
       ],
@@ -1895,7 +1910,7 @@
       },
       "widgets_values": [
         "color_grading",
-        "Photo_Filter",
+        "Curve",
         "",
         null
       ]
@@ -1904,15 +1919,15 @@
       "id": 47,
       "type": "PyCodeMax_DynamicRoad",
       "pos": [
-        6244.847920915599,
-        144.52795183733951
+        6262.830271657891,
+        105.28421484984233
       ],
       "size": [
         270,
-        542
+        756
       ],
       "flags": {},
-      "order": 28,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -1979,23 +1994,23 @@
         }
       },
       "widgets_values": [
-        1,
+        4,
         "Channel_Mixer",
+        false,
+        "",
+        "CSS_Filters",
+        false,
+        "",
+        "Curve",
+        false,
+        "",
+        "HueSatLight",
         true,
         "",
-        "Mémo 2",
+        "Photo_Filter",
         false,
         "",
-        "Mémo 3",
-        false,
-        "",
-        "Mémo 4",
-        false,
-        "",
-        "Mémo 5",
-        false,
-        "",
-        "Mémo 6",
+        "Vibrance",
         false,
         "",
         "Mémo 7",
@@ -2006,15 +2021,15 @@
       "id": 56,
       "type": "Orion4D_ImageComparerV2",
       "pos": [
-        5243.259229721453,
-        -906.8068402492704
+        5243.257936577838,
+        -906.807159100905
       ],
       "size": [
         512,
         600
       ],
       "flags": {},
-      "order": 38,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -2047,15 +2062,15 @@
       "id": 57,
       "type": "Orion4D_ImageComparerV2",
       "pos": [
-        5248.259496457057,
-        -149.12974059689122
+        5248.257480478729,
+        -149.1339993168574
       ],
       "size": [
-        512,
-        188.359375
+        503.078125,
+        606.046875
       ],
       "flags": {},
-      "order": 36,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -2088,15 +2103,15 @@
       "id": 59,
       "type": "Orion4D_ImageComparerV2",
       "pos": [
-        5236.757724752209,
-        585.435579339894
+        5236.756599907698,
+        585.4343305014156
       ],
       "size": [
         512,
         600
       ],
       "flags": {},
-      "order": 34,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -2129,15 +2144,15 @@
       "id": 60,
       "type": "Orion4D_ImageComparerV2",
       "pos": [
-        5244.764560326486,
-        1336.102524777115
+        5244.763494418275,
+        1336.1008104670989
       ],
       "size": [
         512,
         600
       ],
       "flags": {},
-      "order": 40,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -2170,15 +2185,15 @@
       "id": 61,
       "type": "Orion4D_ImageComparerV2",
       "pos": [
-        5238.008204834932,
-        2075.266777243284
+        5238.007074175293,
+        2075.264056692259
       ],
       "size": [
         512,
         600
       ],
       "flags": {},
-      "order": 32,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -2211,15 +2226,15 @@
       "id": 62,
       "type": "Orion4D_ImageComparerV2",
       "pos": [
-        6928.159856228074,
-        113.45173602534578
+        6928.156942174591,
+        113.45065425191842
       ],
       "size": [
         864.6875,
         981.0625
       ],
       "flags": {},
-      "order": 47,
+      "order": 46,
       "mode": 0,
       "inputs": [
         {
@@ -2252,21 +2267,21 @@
       "id": 63,
       "type": "Orion4D_ImageComparerV2",
       "pos": [
-        6928.296182104288,
-        -1174.9548814569744
+        6928.292955371178,
+        -1174.954940663701
       ],
       "size": [
         864.6875,
         981.0625
       ],
       "flags": {},
-      "order": 45,
+      "order": 47,
       "mode": 0,
       "inputs": [
         {
           "name": "image_a",
           "type": "IMAGE",
-          "link": 71
+          "link": 124
         },
         {
           "name": "image_b",
@@ -2293,17 +2308,17 @@
       "id": 64,
       "type": "PyCodeMax_BusGet",
       "pos": [
-        6125.0234834174025,
-        -206.1311947542565
+        6135.416064621236,
+        -466.01189178988466
       ],
       "size": [
         270,
-        108.65625
+        177.3125
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 30,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -2313,7 +2328,7 @@
           "name": "dependency",
           "shape": 7,
           "type": "INT",
-          "link": null
+          "link": 122
         },
         {
           "name": "variable_name",
@@ -2321,7 +2336,7 @@
           "widget": {
             "name": "variable_name"
           },
-          "link": 78
+          "link": 117
         }
       ],
       "outputs": [
@@ -2329,35 +2344,37 @@
           "name": "output",
           "type": "*",
           "links": [
-            79
+            129
           ]
         }
       ],
       "properties": {
+        "Node name for S&R": "PyCodeMax_BusGet",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
           "version": "7.8"
-        },
-        "Node name for S&R": "PyCodeMax_BusGet"
+        }
       },
       "widgets_values": [
-        ""
+        "Curve",
+        "*",
+        "1"
       ]
     },
     {
       "id": 65,
       "type": "PyCodeMax_MasterCombo",
       "pos": [
-        6111.700727332883,
-        -481.14989112411024
+        6114.401282200412,
+        -391.9642656413532
       ],
       "size": [
         260.171875,
         206.3125
       ],
       "flags": {},
-      "order": 18,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2365,22 +2382,67 @@
           "name": "selected_text",
           "type": "STRING",
           "links": [
-            78
+            117
           ]
         }
       ],
       "properties": {
+        "Node name for S&R": "PyCodeMax_MasterCombo",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
           "version": "7.8"
-        },
-        "Node name for S&R": "PyCodeMax_MasterCombo"
+        }
       },
       "widgets_values": [
         "color_grading",
-        "Curve",
+        "Photo_Filter",
         "",
+        null
+      ]
+    },
+    {
+      "id": 66,
+      "type": "PyCodeMax_BusClear",
+      "pos": [
+        4902.70254148008,
+        -1289.1900242453244
+      ],
+      "size": [
+        270,
+        234.65625
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "trigger",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "done",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_BusClear",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        false,
+        "none",
+        "",
+        null,
         null
       ]
     }
@@ -2480,38 +2542,6 @@
       0,
       32,
       0,
-      "COLOR_FX"
-    ],
-    [
-      25,
-      45,
-      0,
-      40,
-      1,
-      "STRING"
-    ],
-    [
-      26,
-      44,
-      1,
-      42,
-      0,
-      "STRING"
-    ],
-    [
-      28,
-      41,
-      0,
-      44,
-      0,
-      "IMAGE"
-    ],
-    [
-      29,
-      40,
-      0,
-      44,
-      1,
       "COLOR_FX"
     ],
     [
@@ -2667,14 +2697,6 @@
       "IMAGE"
     ],
     [
-      71,
-      41,
-      0,
-      63,
-      0,
-      "IMAGE"
-    ],
-    [
       72,
       26,
       0,
@@ -2723,7 +2745,79 @@
       "IMAGE"
     ],
     [
-      78,
+      95,
+      23,
+      1,
+      29,
+      0,
+      "INT"
+    ],
+    [
+      103,
+      13,
+      1,
+      -1,
+      0,
+      "INT"
+    ],
+    [
+      104,
+      13,
+      1,
+      14,
+      0,
+      "INT"
+    ],
+    [
+      105,
+      13,
+      1,
+      24,
+      0,
+      "INT"
+    ],
+    [
+      106,
+      13,
+      1,
+      25,
+      0,
+      "INT"
+    ],
+    [
+      107,
+      13,
+      1,
+      26,
+      0,
+      "INT"
+    ],
+    [
+      108,
+      13,
+      1,
+      27,
+      0,
+      "INT"
+    ],
+    [
+      109,
+      13,
+      1,
+      31,
+      0,
+      "INT"
+    ],
+    [
+      115,
+      45,
+      0,
+      40,
+      1,
+      "STRING"
+    ],
+    [
+      117,
       65,
       0,
       64,
@@ -2731,7 +2825,63 @@
       "STRING"
     ],
     [
-      79,
+      121,
+      19,
+      1,
+      21,
+      0,
+      "INT"
+    ],
+    [
+      122,
+      32,
+      1,
+      64,
+      0,
+      "INT"
+    ],
+    [
+      124,
+      41,
+      0,
+      63,
+      0,
+      "IMAGE"
+    ],
+    [
+      125,
+      23,
+      1,
+      41,
+      0,
+      "INT"
+    ],
+    [
+      126,
+      32,
+      1,
+      40,
+      0,
+      "INT"
+    ],
+    [
+      127,
+      41,
+      0,
+      44,
+      0,
+      "IMAGE"
+    ],
+    [
+      128,
+      40,
+      0,
+      44,
+      1,
+      "COLOR_FX"
+    ],
+    [
+      129,
       64,
       0,
       44,
@@ -2833,7 +2983,7 @@
     },
     {
       "id": 9,
-      "title": "Group 1",
+      "title": "Group 2",
       "bounding": [
         6099.209446427255,
         -568.7792329741504,
@@ -2849,10 +2999,10 @@
   "extra": {
     "ue_links": [],
     "ds": {
-      "scale": 0.5559917313492586,
+      "scale": 0.45949729863575534,
       "offset": [
-        -3888.6148691638004,
-        827.9660301676158
+        -1327.522467090983,
+        1335.7705531950892
       ]
     },
     "links_added_by_ue": [],
