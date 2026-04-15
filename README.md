@@ -7,14 +7,14 @@
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Nodes](https://img.shields.io/badge/Nodes-29+-orange?style=for-the-badge)
 
-**Ce projet est l'aboutissement de mes contributions custom nodes pour ComfyUI, reprenez le contrôle total de l'interface avec ma suite de nœuds avancés, articulée autour du moteur "PyCode Max" qui permet d'exécuter du Python directement dans les workflows. Routing dynamique, bus de variables, UI enrichie, gestion de fichiers, traitement d'image…\
+**Ce projet est l'aboutissement de mes contributions pour ComfyUI, reprenez le contrôle total de l'interface avec ma suite de nœuds avancés, articulée autour du moteur "PyCode Max" qui permet d'exécuter du Python directement dans les workflows. Routing dynamique, bus de variables, UI enrichie, gestion de fichiers, traitement d'image…\
 Tout est réuni pour transformer ComfyUI en véritable environnement programmable. A noter, pratiquement tous les nodes sont compatibles Nodes V2**
 
 </div>
 
 ## 🚧 Status
 
-**Version : 1** (14/04/2026)
+**Version : 1** (15/04/2026)
 
 ---
 
@@ -93,6 +93,8 @@ Tout est réuni pour transformer ComfyUI en véritable environnement programmabl
 
 ### 📝 Text Road
 > Concaténateur de textes multi-entrées avec contrôle fin par entrée.
+> 
+<img width="1250" height="850" alt="image" src="https://github.com/user-attachments/assets/e9185f96-9480-4e56-b6c4-98fa1f2ee3b1" />
 
 - Entrées `STRING` dynamiques (ports apparaissent à la connexion)
 - Chaque entrée dispose d'un **mémo**, d'un **toggle actif/inactif**, d'un **préfixe** et d'un **suffixe**
@@ -174,6 +176,7 @@ Sert principalement à **piloter l'affichage des câbles** du bus dans le graph 
 
 ### 📋 List Selector Max
 > Un "must have" pour la génération de prompts : Sélecteur de lignes multi-groupes depuis des fichiers `.txt` / `.csv`, avec seed indépendant par groupe.
+> - En Bonus : **lists_starter_pack** comprenant 82 fichiers
 > Astuce : le résultat peut être enrichi via PycodeMax avec un modèle LLM, le tout en automatique !
 > 
 <img width="683" height="1163" alt="image" src="https://github.com/user-attachments/assets/892fa828-94b7-43cf-9c90-dc6c039518bb" />
@@ -186,7 +189,6 @@ Sert principalement à **piloter l'affichage des câbles** du bus dans le graph 
 - **Tokens de chemin** : `{COMFY}` et `{CUSTOM}` pour des chemins portables entre machines
 - **Sécurité** : l'accès est restreint à la racine ComfyUI et au dossier personnalisé défini
 - Retourne : `concatenated` (STRING), `lines_json` (STRING), `total_count` (INT)
-
 ---
 
 ### 🎚️ Parametric Slider
@@ -315,6 +317,8 @@ Sert principalement à **piloter l'affichage des câbles** du bus dans le graph 
 
 ### 🎨 Color Pro — Chaîne de colorimétrie modulaire
 
+<img width="869" height="1075" alt="image" src="https://github.com/user-attachments/assets/e7436444-8954-4a57-bad8-4b7bcb036d56" />
+
 > Un système d'effets colorimétrique en pipeline : des nœuds **émetteurs** produisent des descripteurs `COLOR_FX`, que le nœud **récepteur** applique dans l'ordre sur une image. Chaque émetteur peut aussi fonctionner en mode **standalone** (image directe en entrée/sortie).
 
 **🎨 Color Pro Receiver** — Récepteur / point d'application
@@ -333,12 +337,18 @@ Sert principalement à **piloter l'affichage des câbles** du bus dans le graph 
 | **🎨 Hue/Sat/Light FX** | Ajustement TSL global ou ciblé par famille de teintes (Reds, Yellows, Greens, Cyans, Blues, Magentas) avec transition douce gaussienne. Mode Colorize inclus. |
 | **🎨 Photo Filter FX** | Filtre de réchauffement/refroidissement couleur avec opacité et mode préservation luminosité, inspiré du filtre Photo de Photoshop. |
 | **🎨 Vibrance FX** | Ajustement de Vibrance (protection des tons chair) et Saturation globale, indépendamment contrôlables. |
+| **🎨 Curves Pro** | Compatibilité avec l'outil |
 
 > 💡 Les émetteurs peuvent être utilisés en **mode chaîne** (sortie `fx` → slot `fx_N` du Receiver) ou en **mode standalone** (image directe en entrée/sortie), ou les deux simultanément.
 
 ---
 
 ### 📦 List Packer / Dict Packer / 📤 List Unpacker / 🖨️ Logger
+
+<img width="1399" height="1037" alt="image" src="https://github.com/user-attachments/assets/479d8312-1b36-4598-b99f-a3e9e74c28c3" />
+<img width="741" height="1066" alt="image" src="https://github.com/user-attachments/assets/f882f421-d939-48cf-8823-12f8ec7d9eff" />
+<img width="756" height="1101" alt="image" src="https://github.com/user-attachments/assets/261803a3-22a0-4aa1-82a8-6d7a038030b7" />
+<img width="524" height="375" alt="image" src="https://github.com/user-attachments/assets/f091ac92-dbb0-4265-abd6-29e5d0ec633e" />
 
 | Nœud | Comportement |
 |------|-------------|
