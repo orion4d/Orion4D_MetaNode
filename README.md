@@ -76,6 +76,8 @@ response = llm["generate"](
 )
 
 OUT["txt_out_1"] = response
+```
+---
 
 ### 📂 Folder File Max
 > A complete visual file explorer, directly inside a ComfyUI node.
