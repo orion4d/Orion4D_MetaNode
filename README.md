@@ -49,7 +49,33 @@ Everything is designed to push beyond the limits of traditional node-based syste
 - **Automatic documentation**: comments at the top of a `.py` script are displayed in the console
 - **Built-in console** with execution time and structured logging
 
----
+✨ **Built-in LLM & GPU Helpers**
+The execution scope now includes powerful dictionaries (`llm` and `gpu`) to interact with local AI models and hardware without writing boilerplate code.
+
+- 🧠 **Native Ollama Integration (`llm`)**:
+  - Communicate with local models easily: `llm["generate"]("prompt", model="gemma4:e4b")`.
+  - **Vision support**: Pass ComfyUI image inputs directly to models like LLaVA or Qwen2.5-VL (`images=IN["img_in_1"]`). PyCodeMax handles the PIL to Base64 conversion automatically.
+  - **Advanced features**: Supports streaming (`stream=True`), conversational mode (`llm["chat"]`), and reasoning token injection (`think=True` for Gemma 4).
+  - *Optimized*: HTTP sessions are persisted in the node's STATE to avoid connection overheads.
+  - **VRAM Management**: Unload models on the fly before a heavy ComfyUI generation using `llm["unload"]("model_name")`.
+- 📊 **Hardware Monitoring (`gpu`)**:
+  - Track memory usage inside your scripts to prevent Out-Of-Memory errors.
+  - Read PyTorch allocated memory with `gpu["torch_vram"]()`.
+  - Read total system VRAM usage (including external processes like Ollama) with `gpu["vram"]()` *(requires `pip install nvidia-ml-py`)*.
+
+#### 💡 Quick Example (Vision LLM):
+```python
+# Pass an image to a local Vision model and output the description
+prompt = f"Describe this image based on the user request: {IN['txt_in_1']}"
+
+response = llm["generate"](
+    prompt=prompt,
+    model="qwen2.5-vl:7b",
+    images=IN["img_in_1"], # Direct pass from ComfyUI IMAGE input
+    temperature=0.7
+)
+
+OUT["txt_out_1"] = response
 
 ### 📂 Folder File Max
 > A complete visual file explorer, directly inside a ComfyUI node.
