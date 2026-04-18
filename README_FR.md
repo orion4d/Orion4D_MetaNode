@@ -34,19 +34,46 @@ Tout est pensé pour repousser les limites du système nodal classique.
 ## 🔧 Nodes
 
 ### ⚙️ PyCode Max
-> Véritable "cerveau" de cette suite, exécutez du code Python directement dans votre workflow ComfyUI.
+> Le véritable "cerveau" de cette suite, exécutez du code Python directement au sein de vos workflows.
 > 
 <img width="606" height="1110" alt="image" src="https://github.com/user-attachments/assets/702f3a5a-34e5-43b8-8993-c2e97a51f9af" />
 
-- **Deux modes** : saisie directe (`text_input`) ou fichier externe (`file`)
-- **Entrées universelles** : texte, entiers, floats, images, masks, latents, conditioning, model, clip, vae, audio, vidéo, et types personnalisés
-- **STATE persistant** par nœud entre les exécutions (réinitialisable)
-- **Timeout configurable** (5–600 sec) contre les boucles infinies
-- **Mode sécurisé** : l'exécution en mode texte est verrouillée par défaut (nécessite `"developer_mode": true` dans `config.json`)
-- **Documentation automatique** : les commentaires en tête d'un script `.py` sont affichés dans la console
-- **Console** intégrée avec durée d'exécution et logs structurés
+- **Deux modes** : saisie directe (`text_input`) ou fichier externe (`file`).
+- **Entrées universelles** : texte, entiers, flottants, images, masques, latents, conditionnement, modèles, clip, vae, audio, vidéo et types personnalisés.
+- **STATE persistant** par nœud entre les exécutions (réinitialisable).
+- **Timeout configurable** (5–600 sec) pour se protéger des boucles infinies.
+- **Mode sécurité** : l'exécution en mode texte est verrouillée par défaut (nécessite `"developer_mode": true` dans le fichier `config.json`).
+- **Documentation automatique** : les commentaires situés en haut d'un script `.py` s'affichent automatiquement dans la console.
+- **Console intégrée** avec temps d'exécution et journalisation structurée.
 
----
+✨ **Helpers LLM & GPU intégrés**
+L'environnement d'exécution inclut désormais de puissants dictionnaires (`llm` et `gpu`) pour interagir avec vos modèles d'IA locaux et votre matériel, sans avoir à écrire de code redondant.
+
+- 🧠 **Intégration native d'Ollama (`llm`)** :
+  - Communiquez facilement avec vos modèles locaux : `llm["generate"]("prompt", model="gemma4:e4b")`.
+  - **Support de la Vision** : Transmettez directement les images provenant de ComfyUI à des modèles comme LLaVA ou Qwen2.5-VL (`images=IN["img_in_1"]`). PyCodeMax gère automatiquement la conversion PIL vers Base64.
+  - **Fonctionnalités avancées** : Support du streaming (`stream=True`), du mode conversationnel (`llm["chat"]`), et de l'injection du token de raisonnement (`think=True` pour Gemma 4).
+  - *Optimisé* : Les sessions HTTP sont conservées dans le STATE du nœud pour éviter les latences de connexion à chaque exécution.
+  - **Gestion de la VRAM** : Déchargez les modèles LLM de la mémoire à la volée avant une génération ComfyUI lourde en utilisant `llm["unload"]("nom_du_modele")`.
+- 📊 **Surveillance du matériel (`gpu`)** :
+  - Surveillez l'utilisation de la mémoire directement dans vos scripts pour éviter les erreurs Out-Of-Memory (OOM).
+  - Lisez la mémoire allouée par PyTorch avec `gpu["torch_vram"]()`.
+  - Lisez l'utilisation totale de la VRAM du système (y compris les processus externes comme Ollama) avec `gpu["vram"]()` *(nécessite `pip install nvidia-ml-py`)*.
+
+#### 💡 Exemple rapide (Vision LLM) :
+```python
+# Transmet une image à un modèle de Vision local et génère une description
+prompt = f"Décris cette image en fonction de la demande de l'utilisateur : {IN['txt_in_1']}"
+
+response = llm["generate"](
+    prompt=prompt,
+    model="qwen2.5-vl:7b",
+    images=IN["img_in_1"], # Transmission directe depuis l'entrée IMAGE de ComfyUI
+    temperature=0.7
+)
+
+OUT["txt_out_1"] = response
+```
 
 ### 📂 Folder File Max
 > Un explorateur de fichiers visuel complet, directement dans un nœud ComfyUI.
