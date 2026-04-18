@@ -1,21 +1,24 @@
-# Orion4D_MetaNode — dépendances Python
+# Orion4D_MetaNode — Python Dependencies
 #
-# Dépendances *runtime* (obligatoires) :
-# Toutes sont normalement déjà installées par ComfyUI lui-même,
-# ce fichier sert surtout de documentation et de garde-fou pour
-# les installations manuelles ou les environnements atypiques.
+# Runtime Dependencies (Mandatory):
+# These are normally already installed by ComfyUI itself.
+# This file mainly serves as documentation and a safety net for
+# manual installations or custom environments.
 
 numpy
 Pillow
 torch
 opencv-python
 
-# Dépendances optionnelles (le pack fonctionne sans, avec fallback) :
+# Optional Dependencies (the pack works without them, using fallbacks):
 #
-# scipy     → interpolation avancée pour LUT Generator (griddata, gaussian_filter)
-#             Sans scipy : fallback cKDTree nearest-neighbor, qualité dégradée.
-# tifffile  → export TIFF multi-canaux (alpha) dans Super Saver
-#             Sans tifffile : fallback PIL (pas d'alpha multi-canal).
+# scipy        -> advanced interpolation for LUT Generator (griddata, gaussian_filter).
+#                 Without scipy: fallback to cKDTree nearest-neighbor, reduced quality.
+# tifffile     -> multi-channel TIFF export (alpha) in Super Saver.
+#                 Without tifffile: fallback to PIL (no multi-channel alpha).
+# nvidia-ml-py -> global GPU VRAM monitoring (including external processes like Ollama) in PyCode Max.
+#                 Without nvidia-ml-py: gpu["vram"]() gracefully falls back to {"available": False}.
 
 scipy
 tifffile
+nvidia-ml-py
