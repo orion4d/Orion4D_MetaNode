@@ -378,6 +378,7 @@ Sert principalement à **piloter l'affichage des câbles** du bus dans le graph 
 | **🎨 Photo Filter FX** | Filtre de réchauffement/refroidissement couleur avec opacité et mode préservation luminosité, inspiré du filtre Photo de Photoshop. |
 | **🎨 Vibrance FX** | Ajustement de Vibrance (protection des tons chair) et Saturation globale, indépendamment contrôlables. |
 | **🎨 Curves Pro** | Compatibilité avec l'outil |
+| **🎨 Matrix 3x3 FX** | Transformation RGB complète via une matrice 3x3 avec offsets R/G/B. Inclut intensité, préservation de la luminosité et limitation de sortie. Les presets sont gérés par le système JSON unifié. || **🎨 DCTL Tone Mapper FX** | Tone mapper filmique créatif / technique inspiré des workflows DCTL de Resolve. Inclut les modes Filmic Soft, Filmic Strong, ACES Approx, Reinhard et Cineon-ish, avec réglages d’exposition, contraste, pivot, rolloff des hautes lumières, lift des ombres, niveau de noir, saturation et préservation de la luminosité. |
 
 > 💡 Les émetteurs peuvent être utilisés en **mode chaîne** (sortie `fx` → slot `fx_N` du Receiver) ou en **mode standalone** (image directe en entrée/sortie), ou les deux simultanément.
 
