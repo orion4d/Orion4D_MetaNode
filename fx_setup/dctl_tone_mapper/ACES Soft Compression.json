@@ -1,0 +1,13 @@
+{
+  "mode": "ACES Approx",
+  "exposure": 0.0,
+  "contrast": 1.0,
+  "pivot": 0.18,
+  "highlight_rolloff": 0.65,
+  "shadow_lift": 0.0,
+  "black_floor": 0.0,
+  "saturation": 1.0,
+  "preserve_luminosity": false,
+  "strength": 0.7,
+  "clamp_output": true
+}

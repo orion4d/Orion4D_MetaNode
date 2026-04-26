@@ -44,6 +44,8 @@ ALLOWED_FX_TYPES = {
     "photo_filter",
     "vibrance",
     "curves",
+    "matrix_3x3",
+    "dctl_tone_mapper",
 }
 
 # ---------------------------------------------------------------------------

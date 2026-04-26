@@ -1,0 +1,17 @@
+{
+  "m00": 1.12,
+  "m01": -0.03,
+  "m02": 0.02,
+  "m10": 0.03,
+  "m11": 1.06,
+  "m12": -0.04,
+  "m20": -0.02,
+  "m21": 0.06,
+  "m22": 1.12,
+  "offset_r": 0.0,
+  "offset_g": 0.0,
+  "offset_b": 0.0,
+  "strength": 1.0,
+  "preserve_luminosity": false,
+  "clamp_output": true
+}

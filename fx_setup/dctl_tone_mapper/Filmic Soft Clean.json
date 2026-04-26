@@ -1,0 +1,13 @@
+{
+  "mode": "Filmic Soft",
+  "exposure": 0.0,
+  "contrast": 1.08,
+  "pivot": 0.18,
+  "highlight_rolloff": 0.75,
+  "shadow_lift": 0.05,
+  "black_floor": 0.0,
+  "saturation": 1.05,
+  "preserve_luminosity": false,
+  "strength": 1.0,
+  "clamp_output": true
+}

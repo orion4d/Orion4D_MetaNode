@@ -86,6 +86,36 @@ const FX_NODE_CONFIG = {
             "strength",
         ],
     },
+    "PyCodeMax_Matrix3x3FX": {
+        fxType: "matrix_3x3",
+        paramWidgets: [
+            "m00", "m01", "m02",
+            "m10", "m11", "m12",
+            "m20", "m21", "m22",
+            "offset_r",
+            "offset_g",
+            "offset_b",
+            "strength",
+            "preserve_luminosity",
+            "clamp_output",
+        ],
+    },
+    "PyCodeMax_DCTLToneMapperFX": {
+        fxType: "dctl_tone_mapper",
+        paramWidgets: [
+            "mode",
+            "exposure",
+            "contrast",
+            "pivot",
+            "highlight_rolloff",
+            "shadow_lift",
+            "black_floor",
+            "saturation",
+            "preserve_luminosity",
+            "strength",
+            "clamp_output",
+        ],
+    },
     "PyCodeMax_CurvesPro": {
         fxType: "curves",
         paramWidgets: [

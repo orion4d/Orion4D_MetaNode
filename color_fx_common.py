@@ -849,4 +849,170 @@ def _apply_curves(img: np.ndarray, params: dict) -> np.ndarray:
     return np.clip(result, 0.0, 1.0)
 
 
+
+# ---------------------------------------------------------------------------
+# FX 8 : Matrix 3x3 (transformation RGB complète)
+# ---------------------------------------------------------------------------
+# Transformation RGB par matrice complète. Les looks prédéfinis sont maintenant
+# de simples presets JSON chargés par le système unifié fx_setup/matrix_3x3/.
+
+def _luma_709(img: np.ndarray) -> np.ndarray:
+    """Luminance Rec.709 perceptuelle sur RGB [0..1]."""
+    return (
+        0.2126 * img[..., 0]
+        + 0.7152 * img[..., 1]
+        + 0.0722 * img[..., 2]
+    )
+
+
+def _preserve_luma_np(original: np.ndarray, transformed: np.ndarray) -> np.ndarray:
+    """Réajuste transformed pour conserver la luminance de original."""
+    old_luma = _luma_709(original)
+    new_luma = _luma_709(transformed)
+    ratio = np.where(new_luma > 1e-6, old_luma / np.maximum(new_luma, 1e-6), 1.0)
+    return transformed * ratio[..., np.newaxis]
+
+
+@register_fx("matrix_3x3")
+def _apply_matrix_3x3(img: np.ndarray, params: dict) -> np.ndarray:
+    """Applique une matrice RGB 3x3 sur une image numpy RGB [0..1]."""
+    original = img.astype(np.float32)
+    result = original.copy()
+
+    matrix_values = [
+        [float(params.get("m00", 1.0)), float(params.get("m01", 0.0)), float(params.get("m02", 0.0))],
+        [float(params.get("m10", 0.0)), float(params.get("m11", 1.0)), float(params.get("m12", 0.0))],
+        [float(params.get("m20", 0.0)), float(params.get("m21", 0.0)), float(params.get("m22", 1.0))],
+    ]
+    offset_values = [
+        float(params.get("offset_r", 0.0)),
+        float(params.get("offset_g", 0.0)),
+        float(params.get("offset_b", 0.0)),
+    ]
+
+    matrix = np.array(matrix_values, dtype=np.float32)
+    offset = np.array(offset_values, dtype=np.float32).reshape(1, 1, 3)
+
+    # RGB row-vector × matrice transposée.
+    result = result @ matrix.T + offset
+
+    if bool(params.get("preserve_luminosity", False)):
+        result = _preserve_luma_np(original, result)
+
+    strength = float(params.get("strength", 1.0))
+    result = original + (result - original) * strength
+
+    if bool(params.get("clamp_output", True)):
+        result = np.clip(result, 0.0, 1.0)
+
+    return result.astype(np.float32)
+
+
+# ---------------------------------------------------------------------------
+# FX 9 : DCTL Tone Mapper (tone mapping filmique)
+# ---------------------------------------------------------------------------
+# Tone mapper créatif/technique inspiré des DCTLs :
+# exposition en stops, contraste avec pivot, shoulder, toe, saturation finale.
+
+def _tone_map_reinhard_np(x: np.ndarray, rolloff: float) -> np.ndarray:
+    k = max(0.001, 1.0 + rolloff)
+    return x / np.maximum(x + k, 1e-6)
+
+
+def _tone_map_aces_approx_np(x: np.ndarray) -> np.ndarray:
+    # Approximation ACES fitted courante.
+    a = 2.51
+    b = 0.03
+    c = 2.43
+    d = 0.59
+    e = 0.14
+    return (x * (a * x + b)) / np.maximum(x * (c * x + d) + e, 1e-6)
+
+
+def _tone_map_filmic_soft_np(x: np.ndarray, rolloff: float) -> np.ndarray:
+    shoulder = 1.0 + rolloff * 1.75
+    return 1.0 - np.exp(-x / max(0.001, shoulder))
+
+
+def _tone_map_filmic_strong_np(x: np.ndarray, rolloff: float) -> np.ndarray:
+    shoulder = 0.85 + rolloff * 1.35
+    y = 1.0 - np.exp(-x / max(0.001, shoulder))
+    return np.power(np.clip(y, 0.0, None), 0.92)
+
+
+def _tone_map_cineon_ish_np(x: np.ndarray, rolloff: float) -> np.ndarray:
+    k = 4.0 + rolloff * 4.0
+    return np.log1p(x * k) / np.log1p(k)
+
+
+@register_fx("dctl_tone_mapper")
+def _apply_dctl_tone_mapper(img: np.ndarray, params: dict) -> np.ndarray:
+    """Tone mapper filmique inspiré DCTL, en numpy RGB [0..1]."""
+    original = img.astype(np.float32)
+    result = np.clip(original.copy(), 0.0, None)
+
+    mode = params.get("mode", "Filmic Soft")
+
+    exposure = float(params.get("exposure", 0.0))
+    contrast = float(params.get("contrast", 1.0))
+    pivot = max(0.001, float(params.get("pivot", 0.18)))
+
+    highlight_rolloff = float(params.get("highlight_rolloff", 0.65))
+    shadow_lift = float(params.get("shadow_lift", 0.0))
+    black_floor = float(params.get("black_floor", 0.0))
+
+    saturation = float(params.get("saturation", 1.0))
+    preserve_luminosity = bool(params.get("preserve_luminosity", False))
+    strength = float(params.get("strength", 1.0))
+    clamp_output = bool(params.get("clamp_output", True))
+
+    # Exposition en stops.
+    result = result * (2.0 ** exposure)
+
+    # Contraste avec pivot, en domaine positif.
+    if abs(contrast - 1.0) > 1e-6:
+        result = pivot * np.power(np.clip(result / pivot, 0.0, None), contrast)
+
+    # Shadow lift / crush doux.
+    if abs(shadow_lift) > 1e-6:
+        shadow_mask = np.power(np.clip(1.0 - result, 0.0, 1.0), 2.0)
+        result = result + shadow_mask * shadow_lift * 0.25
+        result = np.clip(result, 0.0, None)
+
+    # Tone mapping principal.
+    if mode == "ACES Approx":
+        mapped = _tone_map_aces_approx_np(result)
+    elif mode == "Reinhard":
+        mapped = _tone_map_reinhard_np(result, highlight_rolloff)
+    elif mode == "Cineon-ish":
+        mapped = _tone_map_cineon_ish_np(result, highlight_rolloff)
+    elif mode == "Filmic Strong":
+        mapped = _tone_map_filmic_strong_np(result, highlight_rolloff)
+    else:
+        mapped = _tone_map_filmic_soft_np(result, highlight_rolloff)
+
+    # Black floor optionnel.
+    if black_floor > 0.0:
+        mapped = mapped * (1.0 - black_floor) + black_floor
+
+    # Saturation finale.
+    if abs(saturation - 1.0) > 1e-6:
+        luma = _luma_709(mapped)
+        gray = np.stack([luma, luma, luma], axis=-1)
+        sat_mapped = gray + (mapped - gray) * saturation
+
+        if preserve_luminosity:
+            sat_mapped = _preserve_luma_np(mapped, sat_mapped)
+
+        mapped = sat_mapped
+
+    # Strength global.
+    result = original + (mapped - original) * strength
+
+    if clamp_output:
+        result = np.clip(result, 0.0, 1.0)
+
+    return result.astype(np.float32)
+
+
 # --- END OF FILE color_fx_common.py ---

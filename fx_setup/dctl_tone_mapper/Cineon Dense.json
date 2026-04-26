@@ -1,0 +1,13 @@
+{
+  "mode": "Cineon-ish",
+  "exposure": 0.0,
+  "contrast": 1.15,
+  "pivot": 0.18,
+  "highlight_rolloff": 0.85,
+  "shadow_lift": -0.05,
+  "black_floor": 0.0,
+  "saturation": 0.95,
+  "preserve_luminosity": false,
+  "strength": 0.8,
+  "clamp_output": true
+}
