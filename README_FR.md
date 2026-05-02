@@ -27,7 +27,7 @@ Tout est pensé pour repousser les limites du système nodal classique.
 
 ## 🚧 Status
 
-**Version : 1** (15/04/2026)
+**Version : 1** (2/05/2026)
 
 ---
 
