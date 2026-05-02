@@ -1,43 +1,65 @@
-import requests
-import json
+# ============================================================
+# Ollama Text Generate - PyCodeMax optimisé
+# Entrées :
+# - txt_in_1   : prompt
+# - txt_in_2   : modèle Ollama
+# - txt_in_3   : system prompt
+# - float_in_1 : temperature
+# - int_in_1   : seed
+# - int_in_2   : think mode, 0/1
+#
+# Sorties :
+# - txt_out_1  : réponse nettoyée
+# - txt_out_2  : infos exécution
+# ============================================================
+
 import re
 
-OLLAMA_API_URL = "http://127.0.0.1:11434/api/generate"
+DEFAULT_MODEL = "gemma4:e4b"
 
-prompt      = IN.get("txt_in_1", "")
-model_name  = IN.get("txt_in_2", "gemma4:e4b")
-system      = IN.get("txt_in_3", "")
+prompt = (IN.get("txt_in_1") or "").strip()
+model_name = (IN.get("txt_in_2") or DEFAULT_MODEL).strip()
+system = (IN.get("txt_in_3") or "").strip()
 temperature = float(IN.get("float_in_1") or 0.5)
-seed        = int(IN.get("int_in_1") or -1)
-think_mode  = bool(IN.get("int_in_2") or 0)  # 0 = off, 1 = on
+seed = int(IN.get("int_in_1") or -1)
+think_mode = bool(IN.get("int_in_2") or 0)
 
 if not prompt:
-    OUT["txt_out_1"] = "Erreur: prompt manquant"
+    OUT["txt_out_1"] = "Erreur : prompt manquant"
+    OUT["txt_out_2"] = ""
+
 else:
-    payload = {
-        "model":   model_name,
-        "prompt":  prompt,
-        "system":  system,
-        "stream":  False,
-        "think":   think_mode,
-        "options": {
-            "temperature": temperature,
-            "seed": seed
-        }
-    }
-    try:
-        t0 = time.time()
-        r = requests.post(OLLAMA_API_URL, json=payload, timeout=120)
-        r.raise_for_status()
-        raw = r.json().get("response", "").strip()
+    print(f"Envoi à Ollama : {model_name}")
+    print(f"think:{think_mode} | temp:{temperature} | seed:{seed}")
 
-        # Nettoyage défensif des blocs <think>
-        clean = re.sub(r"<think>.*?</think>", "", raw, flags=re.DOTALL).strip()
+    t0 = time.time()
 
-        elapsed = time.time() - t0
-        OUT["txt_out_1"] = clean
-        OUT["txt_out_2"] = f"think:{think_mode} | {elapsed:.1f}s | {model_name}"
-        print(f"OK | think:{think_mode} | {elapsed:.1f}s | temp:{temperature} | seed:{seed}")
+    extra_options = {}
+    if seed >= 0:
+        extra_options["seed"] = seed
 
-    except Exception as e:
-        OUT["txt_out_1"] = f"Erreur: {e}"
+    raw = llm["generate"](
+        prompt=prompt,
+        model=model_name,
+        system=system,
+        temperature=temperature,
+        think=think_mode,
+        stream=False,
+        timeout=120,
+        **extra_options,
+    )
+
+    clean = re.sub(r"<think>.*?</think>", "", raw or "", flags=re.DOTALL).strip()
+
+    elapsed = time.time() - t0
+
+    OUT["txt_out_1"] = clean or "Erreur : réponse vide du modèle."
+    OUT["txt_out_2"] = (
+        f"Modèle : {model_name}\n"
+        f"Think : {think_mode}\n"
+        f"Temperature : {temperature}\n"
+        f"Seed : {seed if seed >= 0 else 'non fixée'}\n"
+        f"Temps : {elapsed:.1f}s"
+    )
+
+    print(f"OK | think:{think_mode} | {elapsed:.1f}s | temp:{temperature} | seed:{seed}")

@@ -1,0 +1,1380 @@
+{
+  "id": "ee0ab0e8-360f-4bec-899c-124aeecc65c6",
+  "revision": 0,
+  "last_node_id": 58,
+  "last_link_id": 64,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "ShowText|pysssss",
+      "pos": [
+        18356.26993132448,
+        3900.0140947210507
+      ],
+      "size": [
+        343.5,
+        302.34375
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "[PyCodeMax | 16675.3 ms]\n────────────────────────────────────────\n=== 📖 DOCUMENTATION DU SCRIPT ===\n# ============================================================\n# Ollama Vision + VRAM + Seed - PyCodeMax\n# Entrées :\n# - txt_in_1   : prompt\n# - txt_in_2   : modèle Ollama\n# - float_in_1 : temperature\n# - int_in_1   : seed\n# - img_in_1   : image\n#\n# Sorties :\n# - txt_out_1  : réponse Ollama Vision\n# - txt_out_2  : état VRAM\n# ============================================================\n==================================\n\n=== Inputs connectés ===\n  txt_in_1: str\n  txt_in_2: str\n  int_in_1: int\n  float_in_1: float\n  img_in_1: list length=1\n\nEnvoi à Ollama avec le modèle : gemma4:e4b\nSeed utilisée : 332421105388240\nRéponse Ollama reçue.\n"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 3,
+      "type": "PyCodeMax",
+      "pos": [
+        17827.385241702832,
+        2984.7990209414456
+      ],
+      "size": [
+        479.921875,
+        1055
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "txt_in_1",
+          "shape": 7,
+          "type": "STRING",
+          "link": 45
+        },
+        {
+          "name": "txt_in_2",
+          "shape": 7,
+          "type": "STRING",
+          "link": 3
+        },
+        {
+          "name": "txt_in_3",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "txt_in_4",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "int_in_1",
+          "shape": 7,
+          "type": "INT",
+          "link": 60
+        },
+        {
+          "name": "int_in_2",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        },
+        {
+          "name": "float_in_1",
+          "shape": 7,
+          "type": "FLOAT",
+          "link": 50
+        },
+        {
+          "name": "float_in_2",
+          "shape": 7,
+          "type": "FLOAT",
+          "link": null
+        },
+        {
+          "name": "img_in_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 16
+        },
+        {
+          "name": "img_in_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "mask_in",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "latent_in",
+          "shape": 7,
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "name": "positive",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "negative",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "model",
+          "shape": 7,
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "audio_in",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "video_in",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "custom_in_1",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "custom_in_2",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "trigger",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "txt_out_1",
+          "type": "STRING",
+          "links": [
+            12,
+            43
+          ]
+        },
+        {
+          "name": "txt_out_2",
+          "type": "STRING",
+          "links": [
+            61
+          ]
+        },
+        {
+          "name": "txt_out_3",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "txt_out_4",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "int_out_1",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "int_out_2",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "float_out_1",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "float_out_2",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "img_out_1",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "img_out_2",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "mask_out",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "latent_out",
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "links": null
+        },
+        {
+          "name": "audio_out",
+          "type": "*",
+          "links": null
+        },
+        {
+          "name": "video_out",
+          "type": "*",
+          "links": null
+        },
+        {
+          "name": "custom_out_1",
+          "type": "*",
+          "links": null
+        },
+        {
+          "name": "custom_out_2",
+          "type": "*",
+          "links": null
+        },
+        {
+          "name": "Console",
+          "type": "STRING",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "file",
+        "",
+        "Ollama_vision.py",
+        120,
+        false
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 8,
+      "type": "PyCodeMax_MasterCombo",
+      "pos": [
+        17443.1426515221,
+        3081.8864753560692
+      ],
+      "size": [
+        270,
+        205.625
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "selected_text",
+          "type": "STRING",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "title": "Ollama model",
+      "properties": {
+        "Node name for S&R": "PyCodeMax_MasterCombo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Ollama_model",
+        "gemma4:e4b",
+        "",
+        null
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 14,
+      "type": "ShowText|pysssss",
+      "pos": [
+        18366.853614108742,
+        2982.805775734487
+      ],
+      "size": [
+        588.90625,
+        824.28125
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "This is a highly dramatic and richly detailed piece of fantasy digital art, featuring a powerful, imposing warrior framed within a rugged, deep canyon.\n\n**The Central Figure (The Warrior):**\nThe main subject is a heavily armed warrior who commands attention. He has a massive, braided beard, intense expression, and is wearing elaborate, battle-worn armor. His armor suggests a blend of ancient Greek or barbarian styles, including metal pauldrons and segmented metal skirt armor.\n\nKey details of his appearance include:\n*   **Headwear:** He wears an ornate helmet adorned with striking, upward-curving metallic plumes or feathers, emphasizing his height and menace.\n*   **Attire:** A rich, crimson cape or cloak dramatically billows behind him, adding a theatrical flair.\n*   **Weapons:** In his right hand, he holds a large, brutal-looking axe that is stained red, implying recent combat.\n*   **Stance:** He adopts a confrontational, ready stance, with his left hand resting on or near a massive rock pillar, anchoring him within the frame.\n\n**The Foreground and Elements:**\nThe immediate foreground is littered with symbols of conflict and death:\n*   **Skeletons/Skulls:** A cluster of scattered human skulls and skeletal remains lie at his feet, suggesting he has recently battled monstrous foes.\n*   **Serpent:** A massive, dark, coiled snake dominates the lower left corner, adding a mythological or sinister element to the scene.\n*   **Blood:** There are visible streaks of blood on the weapons, armor, and the ground, enhancing the intensity of the action.\n\n**The Setting and Mood:**\nThe setting is a narrow, vertical passage—a deep, sun-dappled canyon or chasm.\n*   **Composition:** The warrior is framed by two towering, dark rock walls that narrow towards the background, creating a powerful sense of depth and dramatic focus on the character.\n*   **Lighting:** The lighting is extremely dramatic, utilizing strong backlighting. A blinding, bright light source emanates from the distance, illuminating the dust and creating a powerful halo effect around the warrior and the canyon walls. This strong contrast highlights the warrior's muscular physique and the glossy metal of his gear.\n\n**Overall Impression:**\nThe image evokes a sense of epic confrontation, raw power, and ancient mythology. The combination of the formidable warrior, the death symbols, and the overwhelming, theatrical lighting suggests a moment immediately before or after a great battle."
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 19,
+      "type": "ImageScaleToTotalPixels",
+      "pos": [
+        17471.40131855201,
+        3913.493296972944
+      ],
+      "size": [
+        354.875,
+        201.171875
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 63
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            16,
+            64
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixels",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "nearest-exact",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 30,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        16590.522402036797,
+        3072.0713322541465
+      ],
+      "size": [
+        269.15625,
+        140
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            36
+          ]
+        }
+      ],
+      "title": "📝 Describe (simple)",
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Describe the image"
+      ]
+    },
+    {
+      "id": 34,
+      "type": "PyCodeMax_DynamicRoad",
+      "pos": [
+        16939.47728861684,
+        3110.8333895977867
+      ],
+      "size": [
+        370,
+        542
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_1",
+          "type": "*",
+          "link": 36
+        },
+        {
+          "name": "input_2",
+          "type": "*",
+          "link": 39
+        },
+        {
+          "name": "input_3",
+          "type": "*",
+          "link": 48
+        },
+        {
+          "name": "input_4",
+          "type": "*",
+          "link": 49
+        },
+        {
+          "name": "input_5",
+          "type": "*",
+          "link": 51
+        },
+        {
+          "name": "input_6",
+          "type": "*",
+          "link": 52
+        },
+        {
+          "name": "input_7",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "selected_output",
+          "type": "*",
+          "links": [
+            44,
+            45
+          ]
+        },
+        {
+          "name": "text_out",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "log_out",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_DynamicRoad",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        1,
+        "Describe (simple)",
+        true,
+        "",
+        "Description (rendu photo) FR",
+        false,
+        "",
+        "Describe (creative)",
+        false,
+        "",
+        "Describe (photo render)",
+        false,
+        "",
+        "Description (sans style) FR",
+        false,
+        "",
+        "Description  (sans style/couleur) FR",
+        false,
+        "",
+        "Mémo 7",
+        false
+      ]
+    },
+    {
+      "id": 35,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        16587.546011793944,
+        3130.340670287128
+      ],
+      "size": [
+        434.859375,
+        381.5
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            39
+          ]
+        }
+      ],
+      "title": "📝 Description (rendu photo) FR",
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Decris cette image et ajoute des détails de texture réalistes et photographiques. Reste factuel et deterministe.\n\nOubli du style : Ne mentionne JAMAIS s'il s'agit d'un dessin, d'une illustration ou d'un cartoon. Décris la scène comme si elle se déroulait dans le monde réel.\n\nL'Approche 'Haute Résolution' : Si l'image est simple ou minimaliste, invente des détails plausibles pour la rendre 'photographique'. (Exemple : si c'est un rond jaune, décris une sphère de métal poli avec des reflets ambrés et des micro-rayures).\n\nStructure de la description :\n\nSujet principal : Morphologie, vêtements (matière, plis), expression, posture précise.\n\nEnvironnement : Décor, arrière-plan, météo, présence d'objets secondaires.\n\nLumière et Couleurs : Direction de la lumière, ombres portées, palette de couleurs exactes (ex: bleu cobalt, ocre, vert forêt).\n\nDétails techniques : Textures de peau, grain de bois, reflets sur l'eau, poussière en suspension.\n\nInterdiction : N'utilise pas de mots comme 'artistique', 'dessiné', 'peint'. Reste purement descriptif et factuel.\"\n\nNe jamais inclure dans la réponse des éléments de langage comme \"Voici une description détaillée de l'image, respectant vos consignes\", reste factuel"
+      ]
+    },
+    {
+      "id": 38,
+      "type": "PyCodeMax_SuperSaver",
+      "pos": [
+        18995.675360552,
+        3064.8399732388625
+      ],
+      "size": [
+        500.625,
+        695.203125
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "caption_image",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "alpha_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "txt",
+          "shape": 7,
+          "type": "STRING",
+          "link": 43
+        },
+        {
+          "name": "add_metadata",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image_path",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "text_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_SuperSaver",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Disabled",
+        false,
+        4,
+        false,
+        false,
+        "Images",
+        "img",
+        "PNG",
+        95,
+        90,
+        "deflate",
+        true,
+        "Ollama_vision",
+        "Prompt_ollama",
+        "txt"
+      ]
+    },
+    {
+      "id": 39,
+      "type": "ShowText|pysssss",
+      "pos": [
+        17002.207725246353,
+        2982.742449489033
+      ],
+      "size": [
+        237.71875,
+        140.15625
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 44
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Describe the image"
+      ]
+    },
+    {
+      "id": 40,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        16582.001029141484,
+        3193.3484581151233
+      ],
+      "size": [
+        309.9375,
+        185.265625
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            48
+          ]
+        }
+      ],
+      "title": "📝 Describe (creative)",
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Analyze the image and write a single rich prompt sentence packed with specific visual details.\n\n- 200 words minimum\n\nInclude ALL of the following that apply:\n- Character: skin tone, facial features, expression, makeup details, hair color/style/texture\n- Clothing: fabric, cut, colors, accessories, jewelry\n- Art style: illustration technique, line weight, shading style, influences\n- Color palette: dominant colors, contrast level, saturation\n- Composition: framing, background elements, decorative motifs\n- Mood and atmosphere \n"
+      ]
+    },
+    {
+      "id": 41,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        16582.849601872473,
+        3262.486898808768
+      ],
+      "size": [
+        406.375,
+        301.671875
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            49
+          ]
+        }
+      ],
+      "title": "📝 Describe (photo render)",
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Describe this image and add realistic, photographic texture details. Remain factual and deterministic.\n\nForget about style: NEVER mention whether it is a drawing, illustration, or cartoon. Describe the scene as if it were taking place in the real world.\n\nThe “High-Resolution” approach: If the image is simple or minimalistic, invent plausible details to make it feel photographic. (Example: if it is a yellow circle, describe a polished metal sphere with amber reflections and fine micro-scratches).\n\nStructure of the description:\n\nMain subject: Morphology, clothing (materials, folds), expression, precise posture.\n\nEnvironment: Setting, background, weather, presence of secondary objects.\n\nLighting and colors: Direction of the light, cast shadows, exact color palette (e.g., cobalt blue, ochre, forest green).\n\nTechnical details: Skin textures, wood grain, reflections on water, dust particles in suspension.\n\nRestriction: Do not use words such as “artistic,” “drawn,” or “painted.” Remain purely descriptive and factual.\n\nNever include phrasing such as “Here is a detailed description of the image, following your instructions.” Stay strictly factual."
+      ]
+    },
+    {
+      "id": 42,
+      "type": "PyCodeMax_NumberInput",
+      "pos": [
+        17442.839950970112,
+        3337.6118208880375
+      ],
+      "size": [
+        266.265625,
+        128.140625
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "float_val",
+          "type": "FLOAT",
+          "links": [
+            50
+          ]
+        },
+        {
+          "name": "int_val",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "title": "temperature",
+      "properties": {
+        "Node name for S&R": "PyCodeMax_NumberInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 43,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        16579.77943488578,
+        3329.370041587934
+      ],
+      "size": [
+        350.78125,
+        556.203125
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            51
+          ]
+        }
+      ],
+      "title": "📝 Description (sans style) FR",
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Décrivez cette image  \n\nRestriction : \n\nOubliez le style : ne mentionnez JAMAIS s’il s’agit d’une photographie, d'un dessin, d’une illustration ou d’une caricature.\n\nStructure de la description :\n\n- Sujet principal : morphologie, vêtements, expression, posture précise.\n\n- Environnement : décor, arrière-plan, météo, présence d’objets secondaires.\n\n- Éclairage et couleurs : palette de couleurs exacte par élements (par exemple, bleu cobalt, ocre, vert forêt).\n\n- N’utilisez pas de termes tels que « artistique », « dessiné » ou « peint ». Restez strictement descriptif et factuel.\n\nN’utilisez jamais de formulations telles que « Voici une description détaillée de l’image, réalisée selon vos instructions.» Tenez-vous-en aux faits."
+      ]
+    },
+    {
+      "id": 44,
+      "type": "PyCodeMax_TextInput",
+      "pos": [
+        16549.21084144232,
+        3427.012410390475
+      ],
+      "size": [
+        350.78125,
+        556.203125
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            52
+          ]
+        }
+      ],
+      "title": "📝 Description  (sans style/couleur) FR",
+      "properties": {
+        "Node name for S&R": "PyCodeMax_TextInput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Décrivez cette image  \n\nRestriction : \n\nOubliez le style : ne mentionnez JAMAIS s’il s’agit d’une photographie, d'un dessin, d’une illustration ou d’une caricature.\n\nStructure de la description :\n\n- Sujet principal : morphologie, vêtements, expression, posture précise.\n\n- Environnement : décor, arrière-plan, météo, présence d’objets secondaires.\n\n- Ne mentionner aucune couleur.\n\n- N’utilisez pas de termes tels que « artistique », « dessiné » ou « peint ». Restez strictement descriptif et factuel.\n\nN’utilisez jamais de formulations telles que « Voici une description détaillée de l’image, réalisée selon vos instructions.» Tenez-vous-en aux faits."
+      ]
+    },
+    {
+      "id": 54,
+      "type": "ShowText|pysssss",
+      "pos": [
+        18740.963863199373,
+        3907.141103361831
+      ],
+      "size": [
+        263.015625,
+        293.65625
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 61
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "=== Paramètres ===\nModèle : gemma4:e4b\nTemperature : 1.0\nSeed : 332421105388240\n\n=== Avant Ollama ===\nVRAM GPU\n- Utilisée : 2.26 GB\n- Libre    : 14.92 GB\n- Total    : 17.18 GB\n- Usage    : 13.1 %\n\n=== Après Ollama ===\nVRAM GPU\n- Utilisée : 12.30 GB\n- Libre    : 4.87 GB\n- Total    : 17.18 GB\n- Usage    : 71.6 %"
+      ]
+    },
+    {
+      "id": 55,
+      "type": "Seed (rgthree)",
+      "pos": [
+        17434.507738997945,
+        3631.705815951231
+      ],
+      "size": [
+        315,
+        188.09375
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "SEED",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            60
+          ]
+        }
+      ],
+      "properties": {
+        "randomMax": 1125899906842624,
+        "randomMin": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        -1,
+        null,
+        "",
+        null
+      ]
+    },
+    {
+      "id": 56,
+      "type": "PyCodeMax_FolderFileMax",
+      "pos": [
+        15360.089297262022,
+        2961.8634037295906
+      ],
+      "size": [
+        1138.453125,
+        1282.921875
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "file_path",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "filename",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "dir_used",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "files_json",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "file_info",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            63
+          ]
+        },
+        {
+          "name": "index_out",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PyCodeMax_FolderFileMax",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "D:\\ComfyUI_python13\\ComfyUI\\output",
+        ".png",
+        "",
+        "include",
+        true,
+        "name",
+        false,
+        "manual",
+        2,
+        true,
+        "RGB",
+        ""
+      ]
+    },
+    {
+      "id": 57,
+      "type": "PreviewImage",
+      "pos": [
+        17474.85486895682,
+        3987.79897058195
+      ],
+      "size": [
+        225,
+        280.15625
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 64
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 58,
+      "type": "Note",
+      "pos": [
+        17374.85496023062,
+        2930.6590134291496
+      ],
+      "size": [
+        413.8125,
+        92.15625
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "https://ollama.com/library/gemma4:e4b"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      3,
+      21,
+      2,
+      0,
+      "STRING"
+    ],
+    [
+      3,
+      8,
+      0,
+      3,
+      1,
+      "STRING"
+    ],
+    [
+      12,
+      3,
+      0,
+      14,
+      0,
+      "STRING"
+    ],
+    [
+      16,
+      19,
+      0,
+      3,
+      8,
+      "IMAGE"
+    ],
+    [
+      36,
+      30,
+      0,
+      34,
+      0,
+      "STRING"
+    ],
+    [
+      39,
+      35,
+      0,
+      34,
+      1,
+      "STRING"
+    ],
+    [
+      43,
+      3,
+      0,
+      38,
+      3,
+      "STRING"
+    ],
+    [
+      44,
+      34,
+      0,
+      39,
+      0,
+      "STRING"
+    ],
+    [
+      45,
+      34,
+      0,
+      3,
+      0,
+      "STRING"
+    ],
+    [
+      48,
+      40,
+      0,
+      34,
+      2,
+      "STRING"
+    ],
+    [
+      49,
+      41,
+      0,
+      34,
+      3,
+      "STRING"
+    ],
+    [
+      50,
+      42,
+      0,
+      3,
+      6,
+      "FLOAT"
+    ],
+    [
+      51,
+      43,
+      0,
+      34,
+      4,
+      "STRING"
+    ],
+    [
+      52,
+      44,
+      0,
+      34,
+      5,
+      "STRING"
+    ],
+    [
+      60,
+      55,
+      0,
+      3,
+      4,
+      "INT"
+    ],
+    [
+      61,
+      3,
+      1,
+      54,
+      0,
+      "STRING"
+    ],
+    [
+      63,
+      56,
+      5,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      64,
+      19,
+      0,
+      57,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Ollama vision - img to prompt",
+      "bounding": [
+        15296.116163297827,
+        2836.6214692345297,
+        4308.125999947026,
+        1460.2674957917202
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "ds": {
+      "scale": 0.6758819645594129,
+      "offset": [
+        -15030.02243345746,
+        -2586.95924942993
+      ]
+    },
+    "links_added_by_ue": [],
+    "frontendVersion": "1.42.11",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
